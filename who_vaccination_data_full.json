@@ -1,0 +1,874 @@
+{
+  "vaccines": [
+    {
+      "name": "BCG",
+      "type": "Live attenuated",
+      "targetGroups": [
+        "Children",
+        "Adolescents (if unvaccinated)",
+        "Adults (if high TB risk)"
+      ],
+      "regions": [
+        "Global",
+        "High TB prevalence"
+      ],
+      "schedules": [
+        {
+          "type": "standard",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "Birth",
+              "isBooster": false,
+              "note": "As soon as possible after birth"
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Universal vs selective vaccination",
+        "Not recommended during pregnancy",
+        "Recommended in HIV+ children if immunologically stable"
+      ]
+    },
+    {
+      "name": "Hepatitis B",
+      "type": "Inactivated",
+      "targetGroups": [
+        "Children",
+        "High-risk adults"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "schedules": [
+        {
+          "type": "3-dose (standard)",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "Birth",
+              "isBooster": false,
+              "note": "Monovalent birth dose"
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "6 weeks",
+              "isBooster": false,
+              "note": "Co-administered with DTP1"
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "10-14 weeks",
+              "isBooster": false,
+              "note": "Final dose"
+            }
+          ]
+        },
+        {
+          "type": "4-dose (optional)",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "Birth",
+              "isBooster": false,
+              "note": "Monovalent birth dose"
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "6 weeks",
+              "isBooster": false,
+              "note": "Combined vaccine"
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "10 weeks",
+              "isBooster": false,
+              "note": "Combined vaccine"
+            },
+            {
+              "doseNumber": 4,
+              "minAge": "14 weeks",
+              "isBooster": false,
+              "note": "Final dose"
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Essential to prevent perinatal HBV transmission",
+        "Recommended in HIV, liver disease, dialysis patients, and health care workers"
+      ]
+    },
+    {
+      "name": "Polio (bOPV + IPV)",
+      "type": "Oral (bOPV) + Inactivated (IPV)",
+      "targetGroups": [
+        "Children"
+      ],
+      "regions": [
+        "Global",
+        "Polio-endemic regions"
+      ],
+      "schedules": [
+        {
+          "type": "standard (bOPV + IPV)",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "isBooster": false,
+              "note": "bOPV"
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "isBooster": false,
+              "note": "bOPV"
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "isBooster": false,
+              "note": "bOPV + IPV"
+            },
+            {
+              "doseNumber": 4,
+              "minAge": "9 months",
+              "isBooster": false,
+              "note": "IPV booster (optional)"
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Use of fractional vs full dose IPV",
+        "Zero dose (bOPV) at birth in high-risk areas",
+        "Important for global polio eradication"
+      ]
+    },
+    {
+      "name": "DTP-containing vaccine (DTPCV)",
+      "type": "Inactivated (combination)",
+      "targetGroups": [
+        "Children",
+        "Adolescents",
+        "Adults (maternal immunization)"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "schedules": [
+        {
+          "type": "standard",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "boosters",
+          "doses": [
+            {
+              "doseNumber": 4,
+              "minAge": "12-23 months",
+              "isBooster": true
+            },
+            {
+              "doseNumber": 5,
+              "minAge": "4-7 years",
+              "isBooster": true
+            },
+            {
+              "doseNumber": 6,
+              "minAge": "9-15 years",
+              "isBooster": true
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Maternal immunization during pregnancy",
+        "Delayed/interrupted schedules acceptable",
+        "Can be part of combination vaccine"
+      ]
+    },
+    {
+      "name": "Haemophilus influenzae type b (Hib)",
+      "type": "Conjugate",
+      "targetGroups": [
+        "Children"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "schedules": [
+        {
+          "type": "3-dose option",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "2-dose + booster",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "9-18 months",
+              "isBooster": true
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Not recommended after age 5 unless immunocompromised",
+        "Booster required for 2-dose schedules"
+      ]
+    },
+    {
+      "name": "Pneumococcal (Conjugate)",
+      "type": "Conjugate",
+      "targetGroups": [
+        "Children",
+        "Older adults"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "schedules": [
+        {
+          "type": "3p+0",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "2p+1",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "9-18 months",
+              "isBooster": true
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "2p+1 preferred in high burden settings",
+        "Booster important for HIV+ and preterm infants"
+      ]
+    },
+    {
+      "name": "Rotavirus",
+      "type": "Live oral",
+      "targetGroups": [
+        "Children"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "schedules": [
+        {
+          "type": "standard (2-dose)",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "standard (3-dose)",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "isBooster": false
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Not recommended after 24 months of age",
+        "Product-specific schedule differences"
+      ]
+    },
+    {
+      "name": "Measles",
+      "type": "Live attenuated",
+      "targetGroups": [
+        "Children",
+        "Adolescents (if unvaccinated)"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "schedules": [
+        {
+          "type": "standard",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "9 months",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "15\u201318 months",
+              "isBooster": false
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Co-administration with rubella and mumps",
+        "Earlier dose at 6 months in outbreak settings",
+        "Safe in HIV-infected infants if not severely immunocompromised"
+      ]
+    },
+    {
+      "name": "Rubella",
+      "type": "Live attenuated",
+      "targetGroups": [
+        "Children",
+        "Adolescent girls",
+        "Women of reproductive age"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "schedules": [
+        {
+          "type": "standard",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "9\u201312 months",
+              "isBooster": false
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Given with measles-containing vaccine",
+        "Pregnancy should be avoided for 1 month after vaccination"
+      ]
+    },
+    {
+      "name": "HPV",
+      "type": "Virus-like particle (non-infectious)",
+      "targetGroups": [
+        "Girls aged 9\u201314",
+        "Immunocompromised individuals"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "schedules": [
+        {
+          "type": "1-dose (preferred)",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "9 years",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "2-dose",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "9 years",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "6\u201312 months after first dose",
+              "isBooster": false
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Off-label single-dose use permitted by WHO",
+        "Vaccinate before sexual debut",
+        "Special schedule for HIV+ individuals"
+      ]
+    },
+    {
+      "name": "Japanese Encephalitis (JE)",
+      "type": "Varies by product (inactivated, live attenuated, recombinant)",
+      "targetGroups": [
+        "Children",
+        "Travelers to endemic areas"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "schedules": [
+        {
+          "type": "inactivated",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 months",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "7 months",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "live attenuated",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "8 months",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "recombinant",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "9 months",
+              "isBooster": false
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Vaccine choice based on availability and national policy",
+        "Avoid during pregnancy"
+      ]
+    },
+    {
+      "name": "Yellow Fever",
+      "type": "Live attenuated",
+      "targetGroups": [
+        "Children",
+        "Travelers to endemic countries"
+      ],
+      "regions": [
+        "Africa",
+        "South America"
+      ],
+      "schedules": [
+        {
+          "type": "standard",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "9\u201312 months",
+              "isBooster": false
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Single dose provides lifelong protection",
+        "Avoid during pregnancy unless high risk",
+        "Co-administer with measles vaccine if needed"
+      ]
+    },
+    {
+      "name": "Typhoid",
+      "type": "Inactivated (Typbar-TCV), Vi polysaccharide, Live oral (Ty21a)",
+      "targetGroups": [
+        "Children in endemic areas",
+        "Travelers",
+        "Healthcare workers (HCWs)"
+      ],
+      "regions": [
+        "Asia",
+        "Africa",
+        "Endemic areas"
+      ],
+      "schedules": [
+        {
+          "type": "Typbar-TCV (conjugate)",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 months",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "Vi polysaccharide",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "2 years",
+              "isBooster": true
+            }
+          ]
+        },
+        {
+          "type": "Ty21a oral",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "5 years",
+              "isBooster": true
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "TCV preferred for routine use",
+        "Revaccination every 2\u20133 years for Vi/Oral",
+        "Recommended for HCWs in endemic settings"
+      ]
+    },
+    {
+      "name": "Cholera",
+      "type": "Inactivated oral (Dukoral, Shanchol, Euvchol, mORCVAX)",
+      "targetGroups": [
+        "Travelers",
+        "Residents in high-risk settings",
+        "HCWs during outbreaks"
+      ],
+      "regions": [
+        "Outbreak-prone areas"
+      ],
+      "schedules": [
+        {
+          "type": "Shanchol/Euvchol/mORCVAX",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "1 year",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "2 weeks after dose 1",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "Dukoral",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "2 years",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "1 week after dose 1",
+              "isBooster": false
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Used in mass vaccination during outbreaks",
+        "Not part of routine childhood immunization",
+        "Protective immunity is short-lived"
+      ]
+    },
+    {
+      "name": "Meningococcal",
+      "type": "Conjugate or Polysaccharide (MenA, MenC, MenACWY)",
+      "targetGroups": [
+        "Children",
+        "Adolescents",
+        "Travelers to endemic areas",
+        "HCWs"
+      ],
+      "regions": [
+        "Sub-Saharan Africa",
+        "Hajj pilgrims",
+        "Military recruits"
+      ],
+      "schedules": [
+        {
+          "type": "MenA (routine in belt countries)",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "9 months",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "MenACWY",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "9\u201312 months",
+              "isBooster": true
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Outbreak response and preventive campaigns",
+        "Travel-related requirements (e.g. Hajj)",
+        "Recommended for HCWs during outbreaks"
+      ]
+    },
+    {
+      "name": "Hepatitis A",
+      "type": "Inactivated",
+      "targetGroups": [
+        "Children in endemic areas",
+        "Travelers",
+        "HCWs"
+      ],
+      "regions": [
+        "Moderate to high endemic areas"
+      ],
+      "schedules": [
+        {
+          "type": "standard",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "12 months",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "6\u201312 months after dose 1",
+              "isBooster": true
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Routine use in high endemic areas",
+        "Used in outbreak response",
+        "HCWs in endemic areas or labs handling HAV"
+      ]
+    },
+    {
+      "name": "Rabies",
+      "type": "Inactivated (cell culture-derived)",
+      "targetGroups": [
+        "High-risk professionals",
+        "Travelers",
+        "Children in endemic areas",
+        "HCWs (post-exposure)"
+      ],
+      "regions": [
+        "Asia",
+        "Africa",
+        "Latin America"
+      ],
+      "schedules": [
+        {
+          "type": "pre-exposure",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "Any age",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "7 days later",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "21\u201328 days after first dose",
+              "isBooster": false
+            }
+          ]
+        },
+        {
+          "type": "post-exposure (with immunoglobulin)",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "Day 0",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "Day 3",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "Day 7",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 4,
+              "minAge": "Day 14",
+              "isBooster": false
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Essential post-exposure prophylaxis",
+        "Pre-exposure for vets, animal handlers, lab workers"
+      ]
+    },
+    {
+      "name": "Dengue",
+      "type": "Live attenuated (TAK-003)",
+      "targetGroups": [
+        "Children in high transmission areas"
+      ],
+      "regions": [
+        "Asia",
+        "Latin America"
+      ],
+      "schedules": [
+        {
+          "type": "standard",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "4 years",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "3 months later",
+              "isBooster": false
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "Only for seropositive individuals (TAK-003 safer)",
+        "Not for travelers or HCWs unless in endemic zones"
+      ]
+    },
+    {
+      "name": "Malaria",
+      "type": "RTS,S/AS01, R21/Matrix-M (recombinant protein)",
+      "targetGroups": [
+        "Children in high transmission settings"
+      ],
+      "regions": [
+        "Africa"
+      ],
+      "schedules": [
+        {
+          "type": "RTS,S/AS01",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "5 months",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "6 months",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "7 months",
+              "isBooster": false
+            },
+            {
+              "doseNumber": 4,
+              "minAge": "20\u201324 months",
+              "isBooster": true
+            }
+          ]
+        }
+      ],
+      "considerations": [
+        "WHO-recommended in high burden areas",
+        "R21 vaccine also prequalified in 2023"
+      ]
+    }
+  ]
+}

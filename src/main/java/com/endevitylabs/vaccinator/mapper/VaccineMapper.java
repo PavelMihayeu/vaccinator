@@ -17,30 +17,12 @@ public interface VaccineMapper {
     @Mapping(target = "schedules", source = "schedules")
     VaccineDto toDto(Vaccine vaccine);
 
-    @Mapping(target = "targetGroups", ignore = true)
-    @Mapping(target = "regions", ignore = true)
-    @Mapping(target = "considerations", ignore = true)
-    @Mapping(target = "schedules", ignore = true)
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "createdAt", ignore = true)
-    @Mapping(target = "updatedAt", ignore = true)
-    Vaccine toEntity(CreateVaccineRequest request);
-
-    @Mapping(target = "vaccine", ignore = true)
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "createdAt", ignore = true)
-    @Mapping(target = "updatedAt", ignore = true)
-    VaccineSchedule toEntity(CreateVaccineScheduleRequest request);
-
     @Mapping(target = "schedule", ignore = true)
     @Mapping(target = "id", ignore = true)
     Dose toEntity(CreateDoseRequest request);
 
     VaccineScheduleDto toDto(VaccineSchedule schedule);
     DoseDto toDto(Dose dose);
-
-    List<VaccineScheduleDto> toScheduleDtoList(List<VaccineSchedule> schedules);
-    List<DoseDto> toDoseDtoList(List<Dose> doses);
 
     @Named("ageGroupsToStrings")
     default Set<String> ageGroupsToStrings(Set<AgeGroup> ageGroups) {

@@ -61,10 +61,17 @@ The application uses a normalized database schema with the following core tables
    docker-compose up -d
    ```
 
-4. **Access the application**
+4. **Load vaccine data (optional)**
+   ```bash
+   curl -X POST http://localhost:8080/api/admin/data/load-vaccines \
+     -H "Content-Type: application/json" \
+     -d @test-vaccine-data.json
+   ```
+
+5. **Access the application**
    - API: http://localhost:8080
-   - Swagger UI: http://localhost:8080/swagger-ui.html
-   - API Docs: http://localhost:8080/api-docs
+   - Swagger UI: http://localhost:8080/swagger-ui/index.html
+   - API Docs: http://localhost:8080/v3/api-docs
 
 ### Local Development
 
@@ -75,22 +82,31 @@ The application uses a normalized database schema with the following core tables
 
 2. **Run the application**
    ```bash
-   ./gradlew bootRun
+   ./gradlew bootRun --args='--spring.profiles.active=dev'
+   ```
+
+3. **Load vaccine data (optional)**
+   ```bash
+   curl -X POST http://localhost:8080/api/admin/data/load-vaccines \
+     -H "Content-Type: application/json" \
+     -d @test-vaccine-data.json
    ```
 
 ## API Endpoints
 
 ### Public Endpoints (No Authentication Required)
 
-- `GET /api/v1/public/vaccines` - Get all vaccines
-- `GET /api/v1/public/vaccines/{id}` - Get vaccine by ID
-- `GET /api/v1/public/vaccines/search?name={name}` - Search vaccines by name
+- `GET /api/vaccines` - Get all vaccines
+- `GET /api/vaccines/{id}` - Get vaccine by ID
+- `GET /api/vaccines/search?name={name}` - Search vaccines by name
 
-### Admin Endpoints (Requires API Key)
+### Admin Endpoints (No Authentication Required in Dev Mode)
 
-- `POST /api/v1/admin/vaccines` - Create a new vaccine
-- `PUT /api/v1/admin/vaccines/{id}` - Update a vaccine
-- `DELETE /api/v1/admin/vaccines/{id}` - Delete a vaccine
+- `POST /api/admin/vaccines` - Create a new vaccine
+- `PUT /api/admin/vaccines/{id}` - Update a vaccine
+- `DELETE /api/admin/vaccines/{id}` - Delete a vaccine
+- `POST /api/admin/data/load-vaccines` - Load vaccine data from JSON
+- `GET /api/admin/data/status` - Get database data status
 
 ### Authentication
 
@@ -127,12 +143,56 @@ SERVER_PORT=8080
 
 ## Example API Usage
 
-### Creating a Vaccine
+### Loading Vaccine Data
+
+The easiest way to populate the database with vaccine data is using the data loading endpoint:
 
 ```bash
-curl -H "X-API-Key: your-api-key" \
-     -H "Content-Type: application/json" \
-     -X POST http://localhost:8080/api/v1/admin/vaccines \
+# Load vaccine data from JSON file
+curl -X POST http://localhost:8080/api/admin/data/load-vaccines \
+  -H "Content-Type: application/json" \
+  -d @test-vaccine-data.json
+```
+
+Or load data directly:
+
+```bash
+curl -X POST http://localhost:8080/api/admin/data/load-vaccines \
+  -H "Content-Type: application/json" \
+  -d '{
+    "vaccines": [
+      {
+        "name": "BCG",
+        "type": "Live attenuated",
+        "description": "Bacille Calmette-Guérin vaccine for tuberculosis prevention",
+        "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/vaccine-standardization/bcg",
+        "targetGroups": ["Children", "Adolescents"],
+        "regions": ["Global", "High TB prevalence"],
+        "considerations": ["Pregnancy", "HIV+"],
+        "schedules": [
+          {
+            "scheduleType": "standard",
+            "description": "Standard BCG vaccination schedule",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "Birth",
+                "isBooster": false,
+                "note": "As soon as possible after birth"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }'
+```
+
+### Creating a Vaccine Manually
+
+```bash
+curl -H "Content-Type: application/json" \
+     -X POST http://localhost:8080/api/admin/vaccines \
      -d '{
        "name": "COVID-19 Vaccine",
        "type": "mRNA",
@@ -167,13 +227,16 @@ curl -H "X-API-Key: your-api-key" \
 
 ```bash
 # Get all vaccines
-curl http://localhost:8080/api/v1/public/vaccines
+curl http://localhost:8080/api/vaccines
 
 # Search vaccines by name
-curl "http://localhost:8080/api/v1/public/vaccines/search?name=COVID"
+curl "http://localhost:8080/api/vaccines/search?name=COVID"
 
 # Get specific vaccine
-curl http://localhost:8080/api/v1/public/vaccines/{vaccine-id}
+curl http://localhost:8080/api/vaccines/{vaccine-id}
+
+# Check data status
+curl http://localhost:8080/api/admin/data/status
 ```
 
 ## Database Migrations

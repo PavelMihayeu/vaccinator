@@ -1,6 +1,5 @@
 package com.endevitylabs.vaccinator.service;
 
-import com.endevitylabs.vaccinator.dto.CreateVaccineRequest;
 import com.endevitylabs.vaccinator.dto.VaccineDto;
 
 import java.util.List;
@@ -13,10 +12,4 @@ public interface VaccineService {
     VaccineDto getVaccineById(UUID id);
     
     List<VaccineDto> searchVaccinesByName(String name);
-    
-    VaccineDto createVaccine(CreateVaccineRequest request, String createdBy);
-    
-    VaccineDto updateVaccine(UUID id, CreateVaccineRequest request, String updatedBy);
-    
-    void deleteVaccine(UUID id);
-} 
+}

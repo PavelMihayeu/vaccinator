@@ -1,0 +1,103 @@
+{
+  "vaccines": [
+    {
+      "name": "BCG",
+      "type": "Live attenuated",
+      "description": "Bacille Calmette-Guérin vaccine for tuberculosis prevention",
+      "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/vaccine-standardization/bcg",
+      "targetGroups": ["Children", "Adolescents (if unvaccinated)", "Adults (if high TB risk)"],
+      "regions": ["Global", "High TB prevalence"],
+      "considerations": ["Pregnancy", "HIV+", "Co-admin"],
+      "schedules": [
+        {
+          "scheduleType": "standard",
+          "description": "Standard BCG vaccination schedule",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "Birth",
+              "isBooster": false,
+              "note": "As soon as possible after birth"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hepatitis B",
+      "type": "Inactivated",
+      "description": "Hepatitis B virus vaccine for prevention of HBV infection",
+      "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/vaccine-standardization/hepatitis-b",
+      "targetGroups": ["Children", "Adults"],
+      "regions": ["Global"],
+      "considerations": ["Universal vs selective vaccination", "Birth dose timing"],
+      "schedules": [
+        {
+          "scheduleType": "3-dose (standard)",
+          "description": "Standard 3-dose Hepatitis B vaccination schedule",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "Birth",
+              "isBooster": false,
+              "note": "Monovalent birth dose"
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "6 weeks",
+              "isBooster": false,
+              "note": "Co-administered with DTP1"
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "10-14 weeks",
+              "isBooster": false,
+              "note": "Final dose"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Polio (bOPV + IPV)",
+      "type": "Oral (bOPV) + Inactivated (IPV)",
+      "description": "Bivalent oral polio vaccine and inactivated polio vaccine combination",
+      "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/vaccine-standardization/polio",
+      "targetGroups": ["Children"],
+      "regions": ["Global", "Polio-endemic regions"],
+      "considerations": ["bOPV vs IPV choice", "Sequential schedule", "Co-administration"],
+      "schedules": [
+        {
+          "scheduleType": "standard (bOPV + IPV)",
+          "description": "Standard polio vaccination schedule with bOPV and IPV",
+          "doses": [
+            {
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "isBooster": false,
+              "note": "bOPV"
+            },
+            {
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "isBooster": false,
+              "note": "bOPV"
+            },
+            {
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "isBooster": false,
+              "note": "bOPV + IPV"
+            },
+            {
+              "doseNumber": 4,
+              "minAge": "9 months",
+              "isBooster": false,
+              "note": "IPV booster (optional)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 
