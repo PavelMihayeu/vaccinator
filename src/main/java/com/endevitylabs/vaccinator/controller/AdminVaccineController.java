@@ -7,6 +7,10 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,16 +21,28 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1/admin/vaccines")
-@RequiredArgsConstructor
 @Tag(name = "Admin Vaccine API", description = "Admin endpoints for vaccine management (requires API key)")
-@SecurityRequirement(name = "ApiKeyAuth")
 public class AdminVaccineController {
 
     private final VaccineService vaccineService;
 
-    @PostMapping
-    @Operation(summary = "Create a new vaccine", description = "Create a new vaccine with schedules and doses")
+    public AdminVaccineController(VaccineService vaccineService) {
+        this.vaccineService = vaccineService;
+    }
+
+    @PostMapping("/vaccines")
+    @Operation(
+        summary = "Create a new vaccine", 
+        description = "Create a new vaccine with schedules and doses"
+    )
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "201", description = "Vaccine created successfully",
+            content = @Content(mediaType = "application/json", 
+                schema = @Schema(implementation = VaccineDto.class))),
+        @ApiResponse(responseCode = "400", description = "Invalid request data"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized - API key required"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
     public ResponseEntity<VaccineDto> createVaccine(
             @Parameter(description = "Vaccine creation request") @Valid @RequestBody CreateVaccineRequest request,
             Authentication authentication) {
@@ -35,7 +51,7 @@ public class AdminVaccineController {
         return ResponseEntity.status(HttpStatus.CREATED).body(vaccine);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/vaccines/{id}")
     @Operation(summary = "Update a vaccine", description = "Update an existing vaccine with new information")
     public ResponseEntity<VaccineDto> updateVaccine(
             @Parameter(description = "Vaccine ID") @PathVariable UUID id,
@@ -46,7 +62,7 @@ public class AdminVaccineController {
         return ResponseEntity.ok(vaccine);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/vaccines/{id}")
     @Operation(summary = "Delete a vaccine", description = "Delete a vaccine by its ID")
     public ResponseEntity<Void> deleteVaccine(
             @Parameter(description = "Vaccine ID") @PathVariable UUID id) {
