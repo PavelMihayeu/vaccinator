@@ -1,6 +1,7 @@
 package com.endevitylabs.vaccinator.service.impl;
 
 import com.endevitylabs.vaccinator.dto.*;
+import com.endevitylabs.vaccinator.mapper.WhoGuidelineMapper;
 import com.endevitylabs.vaccinator.model.*;
 import com.endevitylabs.vaccinator.repository.*;
 import com.endevitylabs.vaccinator.service.DataManagementService;
@@ -33,9 +34,10 @@ public class DataManagementServiceImpl implements DataManagementService {
     private final WhoGuidelineSummaryRepository whoGuidelineSummaryRepository;
     private final WhoGuidelineTableRepository whoGuidelineTableRepository;
     private final VaccineService vaccineService;
+    private final WhoGuidelineMapper whoGuidelineMapper;
 
     @Autowired
-    public DataManagementServiceImpl(VaccineRepository vaccineRepository, AgeGroupRepository ageGroupRepository, RegionRepository regionRepository, ConsiderationRepository considerationRepository, VaccineScheduleRepository vaccineScheduleRepository, DoseRepository doseRepository, WhoGuidelineSummaryRepository whoGuidelineSummaryRepository, WhoGuidelineTableRepository whoGuidelineTableRepository, VaccineService vaccineService) {
+    public DataManagementServiceImpl(VaccineRepository vaccineRepository, AgeGroupRepository ageGroupRepository, RegionRepository regionRepository, ConsiderationRepository considerationRepository, VaccineScheduleRepository vaccineScheduleRepository, DoseRepository doseRepository, WhoGuidelineSummaryRepository whoGuidelineSummaryRepository, WhoGuidelineTableRepository whoGuidelineTableRepository, VaccineService vaccineService, WhoGuidelineMapper whoGuidelineMapper) {
         this.vaccineRepository = vaccineRepository;
         this.ageGroupRepository = ageGroupRepository;
         this.regionRepository = regionRepository;
@@ -45,6 +47,7 @@ public class DataManagementServiceImpl implements DataManagementService {
         this.whoGuidelineSummaryRepository = whoGuidelineSummaryRepository;
         this.whoGuidelineTableRepository = whoGuidelineTableRepository;
         this.vaccineService = vaccineService;
+        this.whoGuidelineMapper = whoGuidelineMapper;
     }
 
     @Override
@@ -95,6 +98,15 @@ public class DataManagementServiceImpl implements DataManagementService {
             result.put("regionsLoaded", regions.size());
             result.put("considerationsLoaded", considerations.size());
             result.put("previousDataCleared", previousDataCleared);
+            
+            // Add WHO guideline summary info if loaded
+            if (whoGuidelineSummary != null) {
+                result.put("whoGuidelineSummaryLoaded", true);
+                result.put("whoGuidelineTablesLoaded", whoGuidelineSummary.tables().size());
+            } else {
+                result.put("whoGuidelineSummaryLoaded", false);
+                result.put("whoGuidelineTablesLoaded", 0);
+            }
 
             // Clear cache after loading new data
             if (vaccineService instanceof VaccineServiceImpl) {
@@ -150,25 +162,25 @@ public class DataManagementServiceImpl implements DataManagementService {
     @Override
     @Cacheable(value = "whoGuidelineSummary", key = "'current'")
     public WhoGuidelineSummaryDto getWhoGuidelineSummary() {
-        // Get the most recent WHO guideline summary
-        List<WhoGuidelineSummary> summaries = whoGuidelineSummaryRepository.findAll();
-        if (summaries.isEmpty()) {
+        try {
+            // Get the single WHO guideline summary
+            Optional<WhoGuidelineSummary> summaryOptional = whoGuidelineSummaryRepository.findSingleSummary();
+            if (summaryOptional.isEmpty()) {
+                return null;
+            }
+            
+            WhoGuidelineSummary summary = summaryOptional.get();
+            return whoGuidelineMapper.toDto(summary);
+            
+        } catch (Exception e) {
+            log.error("Error retrieving WHO guideline summary: {}", e.getMessage(), e);
             return null;
         }
-
-        // Get the most recent one (assuming they're ordered by creation time)
-        WhoGuidelineSummary summary = summaries.get(0);
-
-        List<WhoGuidelineTableDto> tableDtos = summary.getTables().stream()
-                .map(table -> new WhoGuidelineTableDto(table.getTitle(), table.getUrl()))
-                .collect(Collectors.toList());
-
-        return new WhoGuidelineSummaryDto(summary.getTitle(), summary.getUrl(), tableDtos);
     }
 
     private long clearVaccines() {
 
-        log.info("Clearing existing vaccine data before loading new data");
+        log.info("Clearing existing vaccine and WHO guideline data before loading new data");
 
         long vaccinesDeleted = vaccineRepository.count();
         vaccineRepository.deleteAll();
@@ -176,24 +188,31 @@ public class DataManagementServiceImpl implements DataManagementService {
         // Schedules and doses will be automatically deleted due to cascade
         long schedulesDeleted = vaccineScheduleRepository.count();
         long dosesDeleted = doseRepository.count();
+        
+        // Clear WHO guideline data
+        long whoGuidelineSummariesDeleted = whoGuidelineSummaryRepository.count();
+        long whoGuidelineTablesDeleted = whoGuidelineTableRepository.count();
+        whoGuidelineSummaryRepository.deleteAll(); // This will cascade to tables
 
-        log.info("Cleared {} vaccines, {} schedules, {} doses", vaccinesDeleted, schedulesDeleted, dosesDeleted);
+        log.info("Cleared {} vaccines, {} schedules, {} doses, {} WHO summaries, {} WHO tables", 
+                vaccinesDeleted, schedulesDeleted, dosesDeleted, whoGuidelineSummariesDeleted, whoGuidelineTablesDeleted);
 
-        return vaccinesDeleted + schedulesDeleted + dosesDeleted;
+        return vaccinesDeleted + schedulesDeleted + dosesDeleted + whoGuidelineSummariesDeleted + whoGuidelineTablesDeleted;
     }
 
     private void loadWhoGuidelineSummary(WhoGuidelineSummaryDto whoGuidelineSummary) {
         try {
-            // Clear existing WHO guideline summaries
+            // Clear existing WHO guideline summaries - there should only be one
             whoGuidelineSummaryRepository.deleteAll();
-
+            log.info("Cleared existing WHO guideline summaries");
+            
             // Create new summary
             WhoGuidelineSummary newSummary = new WhoGuidelineSummary();
             newSummary.setTitle(whoGuidelineSummary.title());
             newSummary.setUrl(whoGuidelineSummary.url());
             newSummary.setCreatedBy("system");
             newSummary.setUpdatedBy("system");
-
+            
             WhoGuidelineSummary savedSummary = whoGuidelineSummaryRepository.save(newSummary);
             log.info("Saved new WHO guideline summary: {}", savedSummary.getTitle());
 
@@ -208,7 +227,7 @@ public class DataManagementServiceImpl implements DataManagementService {
                 whoGuidelineTableRepository.save(table);
                 log.info("Saved WHO guideline table: {}", table.getTitle());
             }
-
+            
             log.info("Successfully loaded WHO guideline summary with {} tables", whoGuidelineSummary.tables().size());
         } catch (Exception e) {
             log.error("Error loading WHO guideline summary: {}", e.getMessage(), e);
@@ -225,6 +244,8 @@ public class DataManagementServiceImpl implements DataManagementService {
         status.put("considerations", considerationRepository.count());
         status.put("schedules", vaccineScheduleRepository.count());
         status.put("doses", doseRepository.count());
+        status.put("whoGuidelineSummaries", whoGuidelineSummaryRepository.count());
+        status.put("whoGuidelineTables", whoGuidelineTableRepository.count());
         status.put("timestamp", LocalDateTime.now());
         return status;
     }
@@ -233,22 +254,30 @@ public class DataManagementServiceImpl implements DataManagementService {
     @Transactional
     public Map<String, Object> clearAllVaccineData() {
         try {
-            log.info("Clearing all vaccine data from database");
+            log.info("Clearing all vaccine and WHO guideline data from database");
 
             long vaccinesDeleted = vaccineRepository.count();
             vaccineRepository.deleteAll();
-
+            
             // Schedules and doses will be automatically deleted due to cascade
             long schedulesDeleted = vaccineScheduleRepository.count();
             long dosesDeleted = doseRepository.count();
+            
+            // Clear WHO guideline data
+            long whoGuidelineSummariesDeleted = whoGuidelineSummaryRepository.count();
+            long whoGuidelineTablesDeleted = whoGuidelineTableRepository.count();
+            whoGuidelineSummaryRepository.deleteAll(); // This will cascade to tables
 
             Map<String, Object> result = new HashMap<>();
-            result.put("message", "All vaccine data cleared successfully");
+            result.put("message", "All vaccine and WHO guideline data cleared successfully");
             result.put("vaccinesDeleted", vaccinesDeleted);
             result.put("schedulesDeleted", schedulesDeleted);
             result.put("dosesDeleted", dosesDeleted);
+            result.put("whoGuidelineSummariesDeleted", whoGuidelineSummariesDeleted);
+            result.put("whoGuidelineTablesDeleted", whoGuidelineTablesDeleted);
 
-            log.info("Cleared {} vaccines, {} schedules, {} doses", vaccinesDeleted, schedulesDeleted, dosesDeleted);
+            log.info("Cleared {} vaccines, {} schedules, {} doses, {} WHO summaries, {} WHO tables", 
+                    vaccinesDeleted, schedulesDeleted, dosesDeleted, whoGuidelineSummariesDeleted, whoGuidelineTablesDeleted);
             return result;
 
         } catch (Exception e) {
