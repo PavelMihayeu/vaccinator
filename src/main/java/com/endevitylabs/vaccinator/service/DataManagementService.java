@@ -1,6 +1,7 @@
 package com.endevitylabs.vaccinator.service;
 
 import com.endevitylabs.vaccinator.dto.LoadVaccineDataRequest;
+import com.endevitylabs.vaccinator.dto.WhoGuidelineSummaryDto;
 import java.util.Map;
 
 public interface DataManagementService {
@@ -29,4 +30,16 @@ public interface DataManagementService {
      * @return Map containing operation results
      */
     Map<String, Object> clearAllVaccineData();
+    
+    /**
+     * Clears all caches
+     * @return Map containing operation results
+     */
+    Map<String, Object> clearAllCaches();
+    
+    /**
+     * Gets the current WHO guideline summary
+     * @return WHO guideline summary DTO
+     */
+    WhoGuidelineSummaryDto getWhoGuidelineSummary();
 } 

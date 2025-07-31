@@ -6,4 +6,8 @@ import org.springframework.validation.annotation.Validated;
 import java.util.List;
 
 @Validated
-public record LoadVaccineDataRequest(@NotNull List<VaccineData> vaccines) {}
+public record LoadVaccineDataRequest(
+        List<VaccineData> vaccines,
+        WhoGuidelineSummaryDto whoGuidelineSummary
+) {
+}

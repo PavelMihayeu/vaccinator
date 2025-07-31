@@ -5,6 +5,8 @@ import com.endevitylabs.vaccinator.mapper.VaccineMapper;
 import com.endevitylabs.vaccinator.repository.*;
 import com.endevitylabs.vaccinator.service.VaccineService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,14 +28,17 @@ public class VaccineServiceImpl implements VaccineService {
 
     @Override
     @Transactional(readOnly = true)
+    @Cacheable(value = "vaccines", key = "'all'")
     public List<VaccineDto> getAllVaccines() {
-        return vaccineRepository.findAllWithDetails().stream()
+        var vacs = vaccineRepository.findAllWithDetails();
+        return vacs.stream()
                 .map(vaccineMapper::toDto)
                 .toList();
     }
 
     @Override
     @Transactional(readOnly = true)
+    @Cacheable(value = "vaccines", key = "#id.toString()")
     public VaccineDto getVaccineById(UUID id) {
         return vaccineRepository.findByIdWithDetails(id)
                 .map(vaccineMapper::toDto)
@@ -42,10 +47,18 @@ public class VaccineServiceImpl implements VaccineService {
 
     @Override
     @Transactional(readOnly = true)
+    @Cacheable(value = "vaccines", key = "'search:' + #name.toLowerCase()")
     public List<VaccineDto> searchVaccinesByName(String name) {
         return vaccineRepository.findByNameContainingIgnoreCase(name).stream()
                 .map(vaccineMapper::toDto)
                 .toList();
     }
 
+    /**
+     * Clear all vaccine caches when data is updated
+     */
+    @CacheEvict(value = "vaccines", allEntries = true)
+    public void clearVaccineCache() {
+        // Method to clear cache - called when data is updated
+    }
 }

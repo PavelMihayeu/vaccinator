@@ -29,7 +29,9 @@
         "Universal vs selective vaccination",
         "Not recommended during pregnancy",
         "Recommended in HIV+ children if immunologically stable"
-      ]
+      ],
+      "description": "BCG vaccine protects against tuberculosis, especially severe forms in children.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis"
     },
     {
       "name": "Hepatitis B",
@@ -98,7 +100,9 @@
       "considerations": [
         "Essential to prevent perinatal HBV transmission",
         "Recommended in HIV, liver disease, dialysis patients, and health care workers"
-      ]
+      ],
+      "description": "Hepatitis B vaccine prevents liver infection and chronic complications caused by hepatitis B virus.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b"
     },
     {
       "name": "Polio (bOPV + IPV)",
@@ -145,7 +149,9 @@
         "Use of fractional vs full dose IPV",
         "Zero dose (bOPV) at birth in high-risk areas",
         "Important for global polio eradication"
-      ]
+      ],
+      "description": "Polio vaccines protect against poliomyelitis, a disease that can cause paralysis.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/polio"
     },
     {
       "name": "DTP-containing vaccine (DTPCV)",
@@ -204,7 +210,9 @@
         "Maternal immunization during pregnancy",
         "Delayed/interrupted schedules acceptable",
         "Can be part of combination vaccine"
-      ]
+      ],
+      "description": "Combination vaccine protects against diphtheria, tetanus, and pertussis (whooping cough).",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage"
     },
     {
       "name": "Haemophilus influenzae type b (Hib)",
@@ -260,7 +268,9 @@
       "considerations": [
         "Not recommended after age 5 unless immunocompromised",
         "Booster required for 2-dose schedules"
-      ]
+      ],
+      "description": "Hib vaccine prevents infections like meningitis and pneumonia caused by Hib bacteria.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/haemophilus-influenzae-type-b-(hib)"
     },
     {
       "name": "Pneumococcal (Conjugate)",
@@ -317,7 +327,9 @@
       "considerations": [
         "2p+1 preferred in high burden settings",
         "Booster important for HIV+ and preterm infants"
-      ]
+      ],
+      "description": "Pneumococcal conjugate vaccine (PCV) protects against pneumonia, meningitis, and sepsis.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/pneumococcal-disease"
     },
     {
       "name": "Rotavirus",
@@ -368,7 +380,9 @@
       "considerations": [
         "Not recommended after 24 months of age",
         "Product-specific schedule differences"
-      ]
+      ],
+      "description": "Rotavirus vaccine prevents diarrheal disease caused by rotavirus in young children.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rotavirus"
     },
     {
       "name": "Measles",
@@ -401,7 +415,9 @@
         "Co-administration with rubella and mumps",
         "Earlier dose at 6 months in outbreak settings",
         "Safe in HIV-infected infants if not severely immunocompromised"
-      ]
+      ],
+      "description": "Measles vaccine protects against a highly contagious viral disease that can be fatal.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/measles"
     },
     {
       "name": "Rubella",
@@ -429,7 +445,9 @@
       "considerations": [
         "Given with measles-containing vaccine",
         "Pregnancy should be avoided for 1 month after vaccination"
-      ]
+      ],
+      "description": "Rubella vaccine prevents German measles, especially important for preventing congenital rubella syndrome.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rubella"
     },
     {
       "name": "HPV",
@@ -472,7 +490,9 @@
         "Off-label single-dose use permitted by WHO",
         "Vaccinate before sexual debut",
         "Special schedule for HIV+ individuals"
-      ]
+      ],
+      "description": "HPV vaccine protects against human papillomavirus infections that cause cervical cancer.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/human-papillomavirus-(hpv)-and-cervical-cancer"
     },
     {
       "name": "Japanese Encephalitis (JE)",
@@ -524,7 +544,9 @@
       "considerations": [
         "Vaccine choice based on availability and national policy",
         "Avoid during pregnancy"
-      ]
+      ],
+      "description": "JE vaccine protects against Japanese encephalitis, a mosquito-borne viral brain infection.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/japanese-encephalitis"
     },
     {
       "name": "Yellow Fever",
@@ -553,7 +575,9 @@
         "Single dose provides lifelong protection",
         "Avoid during pregnancy unless high risk",
         "Co-administer with measles vaccine if needed"
-      ]
+      ],
+      "description": "Yellow fever vaccine protects against a mosquito-borne viral hemorrhagic disease.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/yellow-fever"
     },
     {
       "name": "Typhoid",
@@ -604,7 +628,9 @@
         "TCV preferred for routine use",
         "Revaccination every 2\u20133 years for Vi/Oral",
         "Recommended for HCWs in endemic settings"
-      ]
+      ],
+      "description": "Typhoid vaccines protect against Salmonella Typhi infection, a cause of severe fever and complications.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/typhoid"
     },
     {
       "name": "Cholera",
@@ -653,7 +679,9 @@
         "Used in mass vaccination during outbreaks",
         "Not part of routine childhood immunization",
         "Protective immunity is short-lived"
-      ]
+      ],
+      "description": "Oral cholera vaccines are used to prevent cholera outbreaks in high-risk areas.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/cholera"
     },
     {
       "name": "Meningococcal",
@@ -695,7 +723,9 @@
         "Outbreak response and preventive campaigns",
         "Travel-related requirements (e.g. Hajj)",
         "Recommended for HCWs during outbreaks"
-      ]
+      ],
+      "description": "Meningococcal vaccines protect against meningitis caused by Neisseria meningitidis.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/meningococcal-meningitis"
     },
     {
       "name": "Hepatitis A",
@@ -729,7 +759,9 @@
         "Routine use in high endemic areas",
         "Used in outbreak response",
         "HCWs in endemic areas or labs handling HAV"
-      ]
+      ],
+      "description": "Hepatitis A vaccine prevents liver infection caused by the hepatitis A virus.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-a"
     },
     {
       "name": "Rabies",
@@ -795,7 +827,9 @@
       "considerations": [
         "Essential post-exposure prophylaxis",
         "Pre-exposure for vets, animal handlers, lab workers"
-      ]
+      ],
+      "description": "Rabies vaccine is used both before and after exposure to prevent rabies infection.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rabies"
     },
     {
       "name": "Dengue",
@@ -827,7 +861,9 @@
       "considerations": [
         "Only for seropositive individuals (TAK-003 safer)",
         "Not for travelers or HCWs unless in endemic zones"
-      ]
+      ],
+      "description": "Dengue vaccine helps reduce severe disease and hospitalization in seropositive individuals.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue"
     },
     {
       "name": "Malaria",
@@ -868,7 +904,9 @@
       "considerations": [
         "WHO-recommended in high burden areas",
         "R21 vaccine also prequalified in 2023"
-      ]
+      ],
+      "description": "Malaria vaccines are used to prevent severe malaria in children in high-transmission areas.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/malaria"
     },
     {
       "name": "Tick-Borne Encephalitis (TBE)",
@@ -919,7 +957,9 @@
       "considerations": [
         "For people living in or traveling to endemic areas",
         "Recommended for laboratory personnel handling TBE virus"
-      ]
+      ],
+      "description": "TBE vaccine prevents viral brain infection spread by ticks in endemic areas.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/tick-borne-encephalitis"
     },
     {
       "name": "Mumps",
@@ -952,7 +992,9 @@
         "Usually part of MMR combination vaccine",
         "Avoid during pregnancy",
         "Booster recommended in outbreak settings"
-      ]
+      ],
+      "description": "Mumps vaccine, usually given as part of MMR, prevents viral infection of salivary glands.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/mumps"
     },
     {
       "name": "Seasonal Influenza",
@@ -983,7 +1025,9 @@
         "Annual revaccination recommended",
         "Different formulations for northern/southern hemispheres",
         "Intranasal only for certain age groups"
-      ]
+      ],
+      "description": "Flu vaccines protect against seasonal influenza viruses and reduce complications in high-risk groups.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)"
     },
     {
       "name": "Varicella",
@@ -1018,7 +1062,31 @@
         "Contraindicated in pregnancy and immunosuppression",
         "Recommended for susceptible HCWs",
         "Can be combined with MMR"
-      ]
+      ],
+      "description": "Varicella vaccine prevents chickenpox, a common and contagious childhood disease.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/varicella"
     }
-  ]
+  ],
+  "whoGuidelineSummary": {
+    "title": "WHO Recommendations for Routine Immunization \u2013 A User\u2019s Guide to the Summary Tables",
+    "url": "https://www.who.int/publications/m/item/who-recommendations-for-routine-immunization--a-user-s-guide-to-the-summary-tables",
+    "tables": [
+      {
+        "title": "Table 1 \u2013 Recommended Routine Immunization for Children",
+        "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-1-january-2025.pdf"
+      },
+      {
+        "title": "Table 2 \u2013 Recommended Immunization for Adolescents and Adults",
+        "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-2-january-2025.pdf"
+      },
+      {
+        "title": "Table 3 \u2013 Vaccines Recommended in Special Situations or for High-Risk Groups",
+        "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-3-december-2024.pdf"
+      },
+      {
+        "title": "Table 4 \u2013 Vaccination of Healthcare Workers",
+        "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-4-december-2024.pdf"
+      }
+    ]
+  }
 }

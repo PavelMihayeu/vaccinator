@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/admin/data")
+@RequestMapping("/api/v1/admin/data")
 @Tag(name = "Data Management", description = "Admin endpoints for data management operations")
 public class DataManagementController {
 
@@ -58,5 +58,14 @@ public class DataManagementController {
     )
     public ResponseEntity<Map<String, Object>> loadDefaultWhoData() {
         return ResponseEntity.ok(dataManagementService.loadDefaultWhoData());
+    }
+
+    @DeleteMapping("/clear-caches")
+    @Operation(
+            summary = "Clear all caches",
+            description = "Clears all application caches"
+    )
+    public ResponseEntity<Map<String, Object>> clearAllCaches() {
+        return ResponseEntity.ok(dataManagementService.clearAllCaches());
     }
 } 

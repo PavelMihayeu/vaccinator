@@ -4,15 +4,19 @@ import com.endevitylabs.vaccinator.dto.*;
 import com.endevitylabs.vaccinator.model.*;
 import com.endevitylabs.vaccinator.repository.*;
 import com.endevitylabs.vaccinator.service.DataManagementService;
+import com.endevitylabs.vaccinator.service.VaccineService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
@@ -26,27 +30,40 @@ public class DataManagementServiceImpl implements DataManagementService {
     private final ConsiderationRepository considerationRepository;
     private final VaccineScheduleRepository vaccineScheduleRepository;
     private final DoseRepository doseRepository;
+    private final WhoGuidelineSummaryRepository whoGuidelineSummaryRepository;
+    private final WhoGuidelineTableRepository whoGuidelineTableRepository;
+    private final VaccineService vaccineService;
 
     @Autowired
-    public DataManagementServiceImpl(VaccineRepository vaccineRepository, AgeGroupRepository ageGroupRepository, RegionRepository regionRepository, ConsiderationRepository considerationRepository, VaccineScheduleRepository vaccineScheduleRepository, DoseRepository doseRepository) {
+    public DataManagementServiceImpl(VaccineRepository vaccineRepository, AgeGroupRepository ageGroupRepository, RegionRepository regionRepository, ConsiderationRepository considerationRepository, VaccineScheduleRepository vaccineScheduleRepository, DoseRepository doseRepository, WhoGuidelineSummaryRepository whoGuidelineSummaryRepository, WhoGuidelineTableRepository whoGuidelineTableRepository, VaccineService vaccineService) {
         this.vaccineRepository = vaccineRepository;
         this.ageGroupRepository = ageGroupRepository;
         this.regionRepository = regionRepository;
         this.considerationRepository = considerationRepository;
         this.vaccineScheduleRepository = vaccineScheduleRepository;
         this.doseRepository = doseRepository;
+        this.whoGuidelineSummaryRepository = whoGuidelineSummaryRepository;
+        this.whoGuidelineTableRepository = whoGuidelineTableRepository;
+        this.vaccineService = vaccineService;
     }
 
     @Override
     @Transactional
+    @CacheEvict(value = "whoGuidelineSummary", allEntries = true)
     public Map<String, Object> loadVaccineData(LoadVaccineDataRequest request) {
         try {
             log.info("Starting to load vaccine data from request");
 
             List<VaccineData> vaccines = request.vaccines();
+            WhoGuidelineSummaryDto whoGuidelineSummary = request.whoGuidelineSummary();
 
             // Clear existing vaccine data first (delete in reverse order due to foreign key constraints)
             long previousDataCleared = clearVaccines();
+
+            // Load WHO guideline summary if provided
+            if (whoGuidelineSummary != null) {
+                loadWhoGuidelineSummary(whoGuidelineSummary);
+            }
 
             // Load lookup data first
             Map<String, AgeGroup> ageGroups = loadAgeGroups(vaccines);
@@ -79,6 +96,19 @@ public class DataManagementServiceImpl implements DataManagementService {
             result.put("considerationsLoaded", considerations.size());
             result.put("previousDataCleared", previousDataCleared);
 
+            // Clear cache after loading new data
+            if (vaccineService instanceof VaccineServiceImpl) {
+                ((VaccineServiceImpl) vaccineService).clearVaccineCache();
+                log.info("Cleared vaccine cache after loading new data");
+            }
+
+            // Clear WHO guideline summary cache if WHO data was loaded
+            if (whoGuidelineSummary != null) {
+                // The cache will be automatically cleared by the @CacheEvict annotation
+                // when the method completes, but we can log it for clarity
+                log.info("WHO guideline summary cache will be cleared after loading new data");
+            }
+
             log.info("Successfully loaded {} vaccines, failed to load {} vaccines", savedVaccines.size(), failedVaccines.size());
             return result;
 
@@ -93,28 +123,47 @@ public class DataManagementServiceImpl implements DataManagementService {
     public Map<String, Object> loadDefaultWhoData() {
         try {
             log.info("Loading default WHO vaccination data from resources");
-            
+
             // Load the JSON file from resources
             String jsonContent = new String(getClass().getResourceAsStream("/who_vaccination_data_full.json").readAllBytes());
-            
+
             // Parse the JSON content
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.registerModule(new JavaTimeModule());
-            
+
             // Parse as LoadVaccineDataRequest
             LoadVaccineDataRequest request = objectMapper.readValue(jsonContent, LoadVaccineDataRequest.class);
-            
+
             // Use the existing loadVaccineData method
             Map<String, Object> result = loadVaccineData(request);
             result.put("source", "WHO vaccination data (default)");
-            
+
             log.info("Successfully loaded default WHO vaccination data");
             return result;
-            
+
         } catch (Exception e) {
             log.error("Error loading default WHO vaccination data: {}", e.getMessage(), e);
             throw new RuntimeException("Failed to load default WHO vaccination data: " + e.getMessage(), e);
         }
+    }
+
+    @Override
+    @Cacheable(value = "whoGuidelineSummary", key = "'current'")
+    public WhoGuidelineSummaryDto getWhoGuidelineSummary() {
+        // Get the most recent WHO guideline summary
+        List<WhoGuidelineSummary> summaries = whoGuidelineSummaryRepository.findAll();
+        if (summaries.isEmpty()) {
+            return null;
+        }
+
+        // Get the most recent one (assuming they're ordered by creation time)
+        WhoGuidelineSummary summary = summaries.get(0);
+
+        List<WhoGuidelineTableDto> tableDtos = summary.getTables().stream()
+                .map(table -> new WhoGuidelineTableDto(table.getTitle(), table.getUrl()))
+                .collect(Collectors.toList());
+
+        return new WhoGuidelineSummaryDto(summary.getTitle(), summary.getUrl(), tableDtos);
     }
 
     private long clearVaccines() {
@@ -131,6 +180,40 @@ public class DataManagementServiceImpl implements DataManagementService {
         log.info("Cleared {} vaccines, {} schedules, {} doses", vaccinesDeleted, schedulesDeleted, dosesDeleted);
 
         return vaccinesDeleted + schedulesDeleted + dosesDeleted;
+    }
+
+    private void loadWhoGuidelineSummary(WhoGuidelineSummaryDto whoGuidelineSummary) {
+        try {
+            // Clear existing WHO guideline summaries
+            whoGuidelineSummaryRepository.deleteAll();
+
+            // Create new summary
+            WhoGuidelineSummary newSummary = new WhoGuidelineSummary();
+            newSummary.setTitle(whoGuidelineSummary.title());
+            newSummary.setUrl(whoGuidelineSummary.url());
+            newSummary.setCreatedBy("system");
+            newSummary.setUpdatedBy("system");
+
+            WhoGuidelineSummary savedSummary = whoGuidelineSummaryRepository.save(newSummary);
+            log.info("Saved new WHO guideline summary: {}", savedSummary.getTitle());
+
+            // Add tables
+            for (WhoGuidelineTableDto tableDto : whoGuidelineSummary.tables()) {
+                WhoGuidelineTable table = new WhoGuidelineTable();
+                table.setGuidelineSummary(savedSummary);
+                table.setTitle(tableDto.title());
+                table.setUrl(tableDto.url());
+                table.setCreatedBy("system");
+                table.setUpdatedBy("system");
+                whoGuidelineTableRepository.save(table);
+                log.info("Saved WHO guideline table: {}", table.getTitle());
+            }
+
+            log.info("Successfully loaded WHO guideline summary with {} tables", whoGuidelineSummary.tables().size());
+        } catch (Exception e) {
+            log.error("Error loading WHO guideline summary: {}", e.getMessage(), e);
+            throw new RuntimeException("Failed to load WHO guideline summary: " + e.getMessage(), e);
+        }
     }
 
     @Override
@@ -154,7 +237,7 @@ public class DataManagementServiceImpl implements DataManagementService {
 
             long vaccinesDeleted = vaccineRepository.count();
             vaccineRepository.deleteAll();
-            
+
             // Schedules and doses will be automatically deleted due to cascade
             long schedulesDeleted = vaccineScheduleRepository.count();
             long dosesDeleted = doseRepository.count();
@@ -171,6 +254,30 @@ public class DataManagementServiceImpl implements DataManagementService {
         } catch (Exception e) {
             log.error("Error clearing vaccine data: {}", e.getMessage(), e);
             throw new RuntimeException("Failed to clear vaccine data: " + e.getMessage(), e);
+        }
+    }
+
+    @Override
+    @CacheEvict(value = {"vaccines", "whoGuidelineSummary"}, allEntries = true)
+    public Map<String, Object> clearAllCaches() {
+        try {
+            log.info("Clearing all caches");
+
+            // Clear vaccine cache by calling the method on VaccineService
+            if (vaccineService instanceof VaccineServiceImpl) {
+                ((VaccineServiceImpl) vaccineService).clearVaccineCache();
+            }
+
+            Map<String, Object> result = new HashMap<>();
+            result.put("message", "All caches cleared successfully");
+            result.put("timestamp", LocalDateTime.now());
+
+            log.info("Successfully cleared all caches");
+            return result;
+
+        } catch (Exception e) {
+            log.error("Error clearing caches: {}", e.getMessage(), e);
+            throw new RuntimeException("Failed to clear caches: " + e.getMessage(), e);
         }
     }
 
@@ -311,11 +418,11 @@ public class DataManagementServiceImpl implements DataManagementService {
             // Check if a dose with the same number already exists for this schedule
             Optional<Dose> existingDose = doseRepository.findByScheduleAndDoseNumber(schedule.getId(), doseData.doseNumber());
             if (existingDose.isPresent()) {
-                log.warn("Dose with number {} already exists for schedule {}. Skipping duplicate.", 
+                log.warn("Dose with number {} already exists for schedule {}. Skipping duplicate.",
                         doseData.doseNumber(), schedule.getScheduleType());
                 return;
             }
-            
+
             Dose dose = new Dose();
             dose.setSchedule(schedule);
             dose.setDoseNumber(doseData.doseNumber());
@@ -324,13 +431,13 @@ public class DataManagementServiceImpl implements DataManagementService {
             dose.setNote(doseData.note());
 
             Dose savedDose = doseRepository.save(dose);
-            
+
             // Ensure the dose is added to the schedule's doses collection
             if (schedule.getDoses() == null) {
                 schedule.setDoses(new HashSet<>());
             }
             schedule.getDoses().add(savedDose);
-            
+
         } catch (Exception e) {
             log.error("Failed to load dose with number {} for schedule {}: {}",
                     doseData.doseNumber(), schedule.getScheduleType(), e.getMessage(), e);

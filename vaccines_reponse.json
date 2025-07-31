@@ -1,1551 +1,1575 @@
-[
-  {
-    "id": "0b357604-70a8-4b3f-9eeb-695388c71920",
-    "name": "Haemophilus influenzae type b (Hib)",
-    "type": "Conjugate",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.30149",
-    "updatedAt": "2025-07-31T10:55:24.30149",
-    "targetGroups": [
-      "Children"
-    ],
-    "regions": [
-      "Global"
-    ],
-    "considerations": [
-      "Booster required for 2-dose schedules",
-      "Not recommended after age 5 unless immunocompromised"
-    ],
-    "schedules": [
+{
+  "vaccines": [
+    {
+      "id": "022f823a-6858-4254-8f24-a826ed7cd150",
+      "name": "Typhoid",
+      "type": "Inactivated (Typbar-TCV), Vi polysaccharide, Live oral (Ty21a)",
+      "description": "Typhoid vaccines protect against Salmonella Typhi infection, a cause of severe fever and complications.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.113188",
+      "updatedAt": "2025-07-31T16:37:39.113188",
+      "targetGroups": [
+        "Travelers",
+        "Healthcare workers (HCWs)",
+        "Children in endemic areas"
+      ],
+      "regions": [
+        "Asia",
+        "Africa",
+        "Endemic areas"
+      ],
+      "considerations": [
+        "Revaccination every 2–3 years for Vi/Oral",
+        "TCV preferred for routine use",
+        "Recommended for HCWs in endemic settings"
+      ],
+      "schedules": [
+        {
+          "id": "a6f424d9-c722-484e-b0ff-dd6e4fc0954a",
+          "scheduleType": "Vi polysaccharide",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.121681",
+          "updatedAt": "2025-07-31T16:37:39.121681",
+          "doses": [
+            {
+              "id": "1b8345f5-62ca-4f5a-b5aa-d7551a364ff7",
+              "doseNumber": 1,
+              "minAge": "2 years",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "bb069212-e5fe-4841-b5f8-a9f237477620",
+          "scheduleType": "Typbar-TCV (conjugate)",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.113716",
+          "updatedAt": "2025-07-31T16:37:39.113716",
+          "doses": [
+            {
+              "id": "46719c4e-4474-463f-9bdc-ed66f30f856d",
+              "doseNumber": 1,
+              "minAge": "6 months",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "00c352f1-44e8-4101-8ae7-6df208506a5b",
+          "scheduleType": "Ty21a oral",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.124803",
+          "updatedAt": "2025-07-31T16:37:39.124803",
+          "doses": [
+            {
+              "id": "70e4a2e9-4bc3-4315-877d-778960b7cb3c",
+              "doseNumber": 1,
+              "minAge": "5 years",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0ceef55d-e643-4098-a98d-6b553dc9eba8",
+      "name": "Measles",
+      "type": "Live attenuated",
+      "description": "Measles vaccine protects against a highly contagious viral disease that can be fatal.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/measles",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.062894",
+      "updatedAt": "2025-07-31T16:37:39.062894",
+      "targetGroups": [
+        "Adolescents (if unvaccinated)",
+        "Children"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "considerations": [
+        "Co-administration with rubella and mumps",
+        "Earlier dose at 6 months in outbreak settings",
+        "Safe in HIV-infected infants if not severely immunocompromised"
+      ],
+      "schedules": [
+        {
+          "id": "2ca861a4-374f-410d-8368-01eafd436f7e",
+          "scheduleType": "standard",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.063942",
+          "updatedAt": "2025-07-31T16:37:39.063942",
+          "doses": [
+            {
+              "id": "7b0150d1-1eaa-494d-8ec0-2d2a823e963c",
+              "doseNumber": 1,
+              "minAge": "9 months",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "5511f557-5e3e-49c7-ad33-d13808029aeb",
+              "doseNumber": 2,
+              "minAge": "15–18 months",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1a75b266-85e4-4ddd-baf4-aca90b771b40",
+      "name": "Mumps",
+      "type": "Live attenuated",
+      "description": "Mumps vaccine, usually given as part of MMR, prevents viral infection of salivary glands.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/mumps",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.223891",
+      "updatedAt": "2025-07-31T16:37:39.223891",
+      "targetGroups": [
+        "Children",
+        "Adolescents"
+      ],
+      "regions": [
+        "Global (where included in MMR)"
+      ],
+      "considerations": [
+        "Booster recommended in outbreak settings",
+        "Usually part of MMR combination vaccine",
+        "Avoid during pregnancy"
+      ],
+      "schedules": [
+        {
+          "id": "aa683eb8-ec1e-4def-a389-9e1abbdaf87c",
+          "scheduleType": "combined MMR",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.22489",
+          "updatedAt": "2025-07-31T16:37:39.22489",
+          "doses": [
+            {
+              "id": "ea6dca88-3fbf-40d3-84f2-0bd9ce02542f",
+              "doseNumber": 1,
+              "minAge": "9–12 months",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "6f4b242b-958b-4e54-8546-3193bd8ec864",
+              "doseNumber": 2,
+              "minAge": "15–18 months",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24261c06-2d78-4eed-a116-61b513edb3fe",
+      "name": "DTP-containing vaccine (DTPCV)",
+      "type": "Inactivated (combination)",
+      "description": "Combination vaccine protects against diphtheria, tetanus, and pertussis (whooping cough).",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:38.982181",
+      "updatedAt": "2025-07-31T16:37:38.982181",
+      "targetGroups": [
+        "Adults (maternal immunization)",
+        "Children",
+        "Adolescents"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "considerations": [
+        "Delayed/interrupted schedules acceptable",
+        "Can be part of combination vaccine",
+        "Maternal immunization during pregnancy"
+      ],
+      "schedules": [
+        {
+          "id": "b609d52a-9af6-4e17-ab46-a5ce911b721d",
+          "scheduleType": "boosters",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:38.995314",
+          "updatedAt": "2025-07-31T16:37:38.995314",
+          "doses": [
+            {
+              "id": "06ac3c0a-4407-44d8-bfa2-266eaa08ac90",
+              "doseNumber": 4,
+              "minAge": "12-23 months",
+              "is_booster": true,
+              "note": null
+            },
+            {
+              "id": "3643986e-c5b6-4a68-ba59-6c9d2658e89d",
+              "doseNumber": 5,
+              "minAge": "4-7 years",
+              "is_booster": true,
+              "note": null
+            },
+            {
+              "id": "ed3fe403-6625-49d4-b910-84f31375f4c4",
+              "doseNumber": 6,
+              "minAge": "9-15 years",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "427fba49-61d7-429c-9bda-740e9c74094a",
+          "scheduleType": "standard",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:38.982702",
+          "updatedAt": "2025-07-31T16:37:38.982702",
+          "doses": [
+            {
+              "id": "7fbbb45c-69e8-42bd-92ea-ad8d36f881fe",
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "5f364869-f482-4876-bab2-2876663a52b0",
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "e14bb0ba-d8af-4b6d-9325-0f07e18ed8ab",
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40a865d9-62d9-4f42-9943-de771e9e7439",
+      "name": "Japanese Encephalitis (JE)",
+      "type": "Varies by product (inactivated, live attenuated, recombinant)",
+      "description": "JE vaccine protects against Japanese encephalitis, a mosquito-borne viral brain infection.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/japanese-encephalitis",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.091915",
+      "updatedAt": "2025-07-31T16:37:39.091915",
+      "targetGroups": [
+        "Travelers to endemic areas",
+        "Children"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "considerations": [
+        "Vaccine choice based on availability and national policy",
+        "Avoid during pregnancy"
+      ],
+      "schedules": [
+        {
+          "id": "d639ee82-5421-4a21-b9e5-954b1d5ecc4b",
+          "scheduleType": "live attenuated",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.099052",
+          "updatedAt": "2025-07-31T16:37:39.099052",
+          "doses": [
+            {
+              "id": "691b1563-fb26-4434-91fa-4431e0174016",
+              "doseNumber": 1,
+              "minAge": "8 months",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "f7e7e9b3-abd9-4210-97ab-764b349e5056",
+          "scheduleType": "recombinant",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.102054",
+          "updatedAt": "2025-07-31T16:37:39.102054",
+          "doses": [
+            {
+              "id": "9d98fcaf-b8cd-45f1-aba5-9f1ebeba1056",
+              "doseNumber": 1,
+              "minAge": "9 months",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "7d925d2c-11a7-4eaf-bc50-81b2ea42534e",
+          "scheduleType": "inactivated",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.09243",
+          "updatedAt": "2025-07-31T16:37:39.09243",
+          "doses": [
+            {
+              "id": "440ce1a0-bef1-49ed-bae9-87e569ca7db3",
+              "doseNumber": 1,
+              "minAge": "6 months",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "7c91a36a-e4a9-464a-833c-a222dd4323e2",
+              "doseNumber": 2,
+              "minAge": "7 months",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "54357237-e10d-4998-9edb-29675167862f",
+      "name": "Haemophilus influenzae type b (Hib)",
+      "type": "Conjugate",
+      "description": "Hib vaccine prevents infections like meningitis and pneumonia caused by Hib bacteria.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/haemophilus-influenzae-type-b-(hib)",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.003838",
+      "updatedAt": "2025-07-31T16:37:39.003838",
+      "targetGroups": [
+        "Children"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "considerations": [
+        "Booster required for 2-dose schedules",
+        "Not recommended after age 5 unless immunocompromised"
+      ],
+      "schedules": [
+        {
+          "id": "c9ec1840-86be-4a35-8cbb-dc592dc6876e",
+          "scheduleType": "2-dose + booster",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.015914",
+          "updatedAt": "2025-07-31T16:37:39.015914",
+          "doses": [
+            {
+              "id": "ad87496c-46b3-4503-b13e-e640273e6e77",
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "f3d6e9f2-34f5-4874-b51d-69a78f8b0b6c",
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "17213c0b-5d67-485d-a1e1-3ca036192472",
+              "doseNumber": 3,
+              "minAge": "9-18 months",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "9832ff0b-3dbb-4970-a0c2-8bfec60f54ab",
+          "scheduleType": "3-dose option",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.004361",
+          "updatedAt": "2025-07-31T16:37:39.004361",
+          "doses": [
+            {
+              "id": "b338fc31-5b10-4f77-b599-ffeed1637ab8",
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "59887896-487e-4442-b299-a4f262dbc685",
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "b1530a17-0f17-4dfe-85b2-8e83b181388b",
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5638858a-0af1-4ce4-b233-81734d4efeb4",
+      "name": "Hepatitis A",
+      "type": "Inactivated",
+      "description": "Hepatitis A vaccine prevents liver infection caused by the hepatitis A virus.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-a",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.154483",
+      "updatedAt": "2025-07-31T16:37:39.154483",
+      "targetGroups": [
+        "HCWs",
+        "Travelers",
+        "Children in endemic areas"
+      ],
+      "regions": [
+        "Moderate to high endemic areas"
+      ],
+      "considerations": [
+        "HCWs in endemic areas or labs handling HAV",
+        "Used in outbreak response",
+        "Routine use in high endemic areas"
+      ],
+      "schedules": [
+        {
+          "id": "0ad2120f-aca6-4ada-a068-0bdf885afaf6",
+          "scheduleType": "standard",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.155001",
+          "updatedAt": "2025-07-31T16:37:39.155001",
+          "doses": [
+            {
+              "id": "5e596502-f3cb-4c4d-a3d2-20e03cfa6a23",
+              "doseNumber": 1,
+              "minAge": "12 months",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "f8d2cf90-6681-4360-81eb-a63f0ad063c2",
+              "doseNumber": 2,
+              "minAge": "6–12 months after dose 1",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "583ef128-2b81-4d12-80f8-cce966515b49",
+      "name": "Dengue",
+      "type": "Live attenuated (TAK-003)",
+      "description": "Dengue vaccine helps reduce severe disease and hospitalization in seropositive individuals.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.186697",
+      "updatedAt": "2025-07-31T16:37:39.186697",
+      "targetGroups": [
+        "Children in high transmission areas"
+      ],
+      "regions": [
+        "Asia",
+        "Latin America"
+      ],
+      "considerations": [
+        "Only for seropositive individuals (TAK-003 safer)",
+        "Not for travelers or HCWs unless in endemic zones"
+      ],
+      "schedules": [
+        {
+          "id": "b8c5cc2e-403f-4605-ba86-8d6cf56ca96f",
+          "scheduleType": "standard",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.186697",
+          "updatedAt": "2025-07-31T16:37:39.186697",
+          "doses": [
+            {
+              "id": "11c08ac0-60a2-4a7a-a67d-3deacc9388e5",
+              "doseNumber": 1,
+              "minAge": "4 years",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "c4d802d7-5ee4-444e-b357-e6aba3d052c4",
+              "doseNumber": 2,
+              "minAge": "3 months later",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6191e993-f0fa-4950-8155-13fe6ee52f7a",
+      "name": "Polio (bOPV + IPV)",
+      "type": "Oral (bOPV) + Inactivated (IPV)",
+      "description": "Polio vaccines protect against poliomyelitis, a disease that can cause paralysis.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/polio",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:38.967947",
+      "updatedAt": "2025-07-31T16:37:38.967947",
+      "targetGroups": [
+        "Children"
+      ],
+      "regions": [
+        "Polio-endemic regions",
+        "Global"
+      ],
+      "considerations": [
+        "Zero dose (bOPV) at birth in high-risk areas",
+        "Important for global polio eradication",
+        "Use of fractional vs full dose IPV"
+      ],
+      "schedules": [
+        {
+          "id": "4568dc84-1f05-4b9b-94b9-3208befb46a3",
+          "scheduleType": "standard (bOPV + IPV)",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:38.968467",
+          "updatedAt": "2025-07-31T16:37:38.968467",
+          "doses": [
+            {
+              "id": "257c2ccd-64de-4121-9508-2aba4d20b47c",
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": "bOPV"
+            },
+            {
+              "id": "2c9e083c-ac99-440b-be33-5f0781857716",
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "is_booster": false,
+              "note": "bOPV"
+            },
+            {
+              "id": "e6d20724-a677-4207-bb6e-65d5b5e02917",
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "is_booster": false,
+              "note": "bOPV + IPV"
+            },
+            {
+              "id": "38d444f2-d97c-427d-86e7-039107678fdf",
+              "doseNumber": 4,
+              "minAge": "9 months",
+              "is_booster": false,
+              "note": "IPV booster (optional)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6312f3be-5c93-4ca4-98ff-937085a21719",
+      "name": "Rotavirus",
+      "type": "Live oral",
+      "description": "Rotavirus vaccine prevents diarrheal disease caused by rotavirus in young children.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rotavirus",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.048177",
+      "updatedAt": "2025-07-31T16:37:39.048177",
+      "targetGroups": [
+        "Children"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "considerations": [
+        "Product-specific schedule differences",
+        "Not recommended after 24 months of age"
+      ],
+      "schedules": [
+        {
+          "id": "5d1ddbed-8d44-4139-beed-61df681ec009",
+          "scheduleType": "standard (3-dose)",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.056033",
+          "updatedAt": "2025-07-31T16:37:39.056033",
+          "doses": [
+            {
+              "id": "c1f36c64-3ebf-4308-9f2f-a06db0233aeb",
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "4ed7506a-1ae2-4502-bebd-0e70c6a545dd",
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "84ba9a08-b29b-4791-81a0-e87763ae0d64",
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "d5dd81c3-3d5d-4414-ac1f-0df05264e985",
+          "scheduleType": "standard (2-dose)",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.04922",
+          "updatedAt": "2025-07-31T16:37:39.04922",
+          "doses": [
+            {
+              "id": "b1d70fa0-96bc-47a7-8674-23d35065752e",
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "12ad19e7-46b8-43b0-b91e-22244b0c90a3",
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "639c88b0-c429-4566-b574-ec15e90b2685",
+      "name": "Rubella",
+      "type": "Live attenuated",
+      "description": "Rubella vaccine prevents German measles, especially important for preventing congenital rubella syndrome.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rubella",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.072417",
+      "updatedAt": "2025-07-31T16:37:39.072417",
+      "targetGroups": [
+        "Women of reproductive age",
+        "Adolescent girls",
+        "Children"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "considerations": [
+        "Given with measles-containing vaccine",
+        "Pregnancy should be avoided for 1 month after vaccination"
+      ],
+      "schedules": [
+        {
+          "id": "cf3570c7-23eb-4f34-991e-a18318555765",
+          "scheduleType": "standard",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.072943",
+          "updatedAt": "2025-07-31T16:37:39.073473",
+          "doses": [
+            {
+              "id": "7ccd7f9b-cc31-410f-868c-44d5a9d4b0d9",
+              "doseNumber": 1,
+              "minAge": "9–12 months",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8309c2a5-cf9a-4ef5-a642-1d639e8c2772",
+      "name": "Cholera",
+      "type": "Inactivated oral (Dukoral, Shanchol, Euvchol, mORCVAX)",
+      "description": "Oral cholera vaccines are used to prevent cholera outbreaks in high-risk areas.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/cholera",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.127953",
+      "updatedAt": "2025-07-31T16:37:39.127953",
+      "targetGroups": [
+        "HCWs during outbreaks",
+        "Residents in high-risk settings",
+        "Travelers"
+      ],
+      "regions": [
+        "Outbreak-prone areas"
+      ],
+      "considerations": [
+        "Not part of routine childhood immunization",
+        "Protective immunity is short-lived",
+        "Used in mass vaccination during outbreaks"
+      ],
+      "schedules": [
+        {
+          "id": "589b5486-52e6-4268-a419-6c35b88bdf6a",
+          "scheduleType": "Shanchol/Euvchol/mORCVAX",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.128483",
+          "updatedAt": "2025-07-31T16:37:39.128483",
+          "doses": [
+            {
+              "id": "f5293777-52a1-4c5c-a785-4744632fe5cf",
+              "doseNumber": 1,
+              "minAge": "1 year",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "7540e769-c4c7-4e10-89ef-494350932a0d",
+              "doseNumber": 2,
+              "minAge": "2 weeks after dose 1",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "1b9022f6-8fa1-4ca4-82da-663c65d539fa",
+          "scheduleType": "Dukoral",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.137475",
+          "updatedAt": "2025-07-31T16:37:39.137999",
+          "doses": [
+            {
+              "id": "f8f35109-c9d3-4858-9ea2-128a0d4ab8bd",
+              "doseNumber": 1,
+              "minAge": "2 years",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "c67caf36-270a-4678-8906-6b77c101c0b3",
+              "doseNumber": 2,
+              "minAge": "1 week after dose 1",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "93f68a07-7abc-46a8-a4d3-7c2d4669acc3",
+      "name": "BCG",
+      "type": "Live attenuated",
+      "description": "BCG vaccine protects against tuberculosis, especially severe forms in children.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:38.930315",
+      "updatedAt": "2025-07-31T16:37:38.930315",
+      "targetGroups": [
+        "Adolescents (if unvaccinated)",
+        "Children",
+        "Adults (if high TB risk)"
+      ],
+      "regions": [
+        "High TB prevalence",
+        "Global"
+      ],
+      "considerations": [
+        "Universal vs selective vaccination",
+        "Not recommended during pregnancy",
+        "Recommended in HIV+ children if immunologically stable"
+      ],
+      "schedules": [
+        {
+          "id": "c20e6661-c1e2-45d6-989f-811df86fe258",
+          "scheduleType": "standard",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:38.931416",
+          "updatedAt": "2025-07-31T16:37:38.931416",
+          "doses": [
+            {
+              "id": "8f1e97d3-9902-4db6-9453-c3f2ad0cc591",
+              "doseNumber": 1,
+              "minAge": "Birth",
+              "is_booster": false,
+              "note": "As soon as possible after birth"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "993ecf07-0cf9-4372-9d83-b2a89f48c4d7",
+      "name": "Malaria",
+      "type": "RTS,S/AS01, R21/Matrix-M (recombinant protein)",
+      "description": "Malaria vaccines are used to prevent severe malaria in children in high-transmission areas.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.194892",
+      "updatedAt": "2025-07-31T16:37:39.194892",
+      "targetGroups": [
+        "Children in high transmission settings"
+      ],
+      "regions": [
+        "Africa"
+      ],
+      "considerations": [
+        "WHO-recommended in high burden areas",
+        "R21 vaccine also prequalified in 2023"
+      ],
+      "schedules": [
+        {
+          "id": "b9235c12-e3eb-4238-b168-830bd6e2bf15",
+          "scheduleType": "RTS,S/AS01",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.19593",
+          "updatedAt": "2025-07-31T16:37:39.19593",
+          "doses": [
+            {
+              "id": "142f6582-42fd-4bdf-ba88-709a560988b7",
+              "doseNumber": 1,
+              "minAge": "5 months",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "db342b3e-0d5a-44f7-8be3-30a29269fc0c",
+              "doseNumber": 2,
+              "minAge": "6 months",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "4f91ca74-dcf6-4b32-a1a6-e444b41c9cf8",
+              "doseNumber": 3,
+              "minAge": "7 months",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "bd87d14e-f7aa-4178-844f-acac6fbe1060",
+              "doseNumber": 4,
+              "minAge": "20–24 months",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a523f72b-6798-40fa-a6ef-05af503a1c07",
+      "name": "Seasonal Influenza",
+      "type": "Inactivated or Live attenuated (intranasal)",
+      "description": "Flu vaccines protect against seasonal influenza viruses and reduce complications in high-risk groups.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.233129",
+      "updatedAt": "2025-07-31T16:37:39.233129",
+      "targetGroups": [
+        "High-risk individuals",
+        "Pregnant women",
+        "Healthcare workers",
+        "Children",
+        "Older adults"
+      ],
+      "regions": [
+        "Global (especially temperate zones)"
+      ],
+      "considerations": [
+        "Intranasal only for certain age groups",
+        "Annual revaccination recommended",
+        "Different formulations for northern/southern hemispheres"
+      ],
+      "schedules": [
+        {
+          "id": "273d7750-2abd-4c12-99bb-d4d06df255f5",
+          "scheduleType": "annual",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.233654",
+          "updatedAt": "2025-07-31T16:37:39.233654",
+          "doses": [
+            {
+              "id": "479640ab-0d62-44d8-b278-dad9a363c6a0",
+              "doseNumber": 1,
+              "minAge": "6 months",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aba7ce17-d3ce-489b-bef6-9312e756349c",
+      "name": "Yellow Fever",
+      "type": "Live attenuated",
+      "description": "Yellow fever vaccine protects against a mosquito-borne viral hemorrhagic disease.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/yellow-fever",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.105889",
+      "updatedAt": "2025-07-31T16:37:39.105889",
+      "targetGroups": [
+        "Travelers to endemic countries",
+        "Children"
+      ],
+      "regions": [
+        "South America",
+        "Africa"
+      ],
+      "considerations": [
+        "Avoid during pregnancy unless high risk",
+        "Single dose provides lifelong protection",
+        "Co-administer with measles vaccine if needed"
+      ],
+      "schedules": [
+        {
+          "id": "1217e93a-b78e-4271-9252-54c90c0a87ee",
+          "scheduleType": "standard",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.106405",
+          "updatedAt": "2025-07-31T16:37:39.106405",
+          "doses": [
+            {
+              "id": "542e1bfc-b783-40ce-80e0-e5cf0711f3bc",
+              "doseNumber": 1,
+              "minAge": "9–12 months",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ae6ddb2d-c1f7-485f-b21e-a87667791fac",
+      "name": "Meningococcal",
+      "type": "Conjugate or Polysaccharide (MenA, MenC, MenACWY)",
+      "description": "Meningococcal vaccines protect against meningitis caused by Neisseria meningitidis.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/meningococcal-meningitis",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.142245",
+      "updatedAt": "2025-07-31T16:37:39.142245",
+      "targetGroups": [
+        "Travelers to endemic areas",
+        "HCWs",
+        "Children",
+        "Adolescents"
+      ],
+      "regions": [
+        "Hajj pilgrims",
+        "Sub-Saharan Africa",
+        "Military recruits"
+      ],
+      "considerations": [
+        "Travel-related requirements (e.g. Hajj)",
+        "Recommended for HCWs during outbreaks",
+        "Outbreak response and preventive campaigns"
+      ],
+      "schedules": [
+        {
+          "id": "0a6bad88-6c2d-48f4-8b20-cd84dbfc955c",
+          "scheduleType": "MenACWY",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.151875",
+          "updatedAt": "2025-07-31T16:37:39.151875",
+          "doses": [
+            {
+              "id": "4cce8e01-3eb3-4654-a69e-1f798528b343",
+              "doseNumber": 1,
+              "minAge": "9–12 months",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "6f3119ad-f8f5-4661-bb8e-7b3d3248ff33",
+          "scheduleType": "MenA (routine in belt countries)",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.143275",
+          "updatedAt": "2025-07-31T16:37:39.143275",
+          "doses": [
+            {
+              "id": "1984bacb-96d4-4707-8642-988e75ba12c9",
+              "doseNumber": 1,
+              "minAge": "9 months",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beeffd64-bb35-417d-b16b-10ae40a6d9bf",
+      "name": "Rabies",
+      "type": "Inactivated (cell culture-derived)",
+      "description": "Rabies vaccine is used both before and after exposure to prevent rabies infection.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rabies",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.164385",
+      "updatedAt": "2025-07-31T16:37:39.164385",
+      "targetGroups": [
+        "Travelers",
+        "High-risk professionals",
+        "HCWs (post-exposure)",
+        "Children in endemic areas"
+      ],
+      "regions": [
+        "Asia",
+        "Africa",
+        "Latin America"
+      ],
+      "considerations": [
+        "Essential post-exposure prophylaxis",
+        "Pre-exposure for vets, animal handlers, lab workers"
+      ],
+      "schedules": [
+        {
+          "id": "8250119f-f495-422e-8af5-a70634a9d559",
+          "scheduleType": "post-exposure (with immunoglobulin)",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.17619",
+          "updatedAt": "2025-07-31T16:37:39.17619",
+          "doses": [
+            {
+              "id": "4148fd60-f9e5-4115-9493-9254e361a9ad",
+              "doseNumber": 1,
+              "minAge": "Day 0",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "56504065-3888-42ba-9e75-10071aee2c8e",
+              "doseNumber": 2,
+              "minAge": "Day 3",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "209f1c6f-6146-41fb-93e4-92998e560479",
+              "doseNumber": 3,
+              "minAge": "Day 7",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "14c173b7-b48e-4abd-b220-91acdb62b0b6",
+              "doseNumber": 4,
+              "minAge": "Day 14",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "2544b418-3513-4b0b-970c-657b797b0941",
+          "scheduleType": "pre-exposure",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.164908",
+          "updatedAt": "2025-07-31T16:37:39.164908",
+          "doses": [
+            {
+              "id": "db04e7a7-27bb-472d-a2a8-19958b01a8b6",
+              "doseNumber": 1,
+              "minAge": "Any age",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "d3230a49-f5e4-4b64-9b27-e7ff34a8f303",
+              "doseNumber": 2,
+              "minAge": "7 days later",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "cdc5be60-5871-437b-b6b0-0b57e429d3b0",
+              "doseNumber": 3,
+              "minAge": "21–28 days after first dose",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c0e1df31-b2c5-4edd-8e86-854e3dc1366d",
+      "name": "HPV",
+      "type": "Virus-like particle (non-infectious)",
+      "description": "HPV vaccine protects against human papillomavirus infections that cause cervical cancer.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/human-papillomavirus-(hpv)-and-cervical-cancer",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.079879",
+      "updatedAt": "2025-07-31T16:37:39.079879",
+      "targetGroups": [
+        "Girls aged 9–14",
+        "Immunocompromised individuals"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "considerations": [
+        "Off-label single-dose use permitted by WHO",
+        "Special schedule for HIV+ individuals",
+        "Vaccinate before sexual debut"
+      ],
+      "schedules": [
+        {
+          "id": "9c19e73a-ee6a-4881-97e7-022716b9a61f",
+          "scheduleType": "1-dose (preferred)",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.080922",
+          "updatedAt": "2025-07-31T16:37:39.080922",
+          "doses": [
+            {
+              "id": "d7e5b211-e001-4b09-93e7-ab137bbf1505",
+              "doseNumber": 1,
+              "minAge": "9 years",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "1d44f212-d3ec-4e0b-949f-14aec382572b",
+          "scheduleType": "2-dose",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.087185",
+          "updatedAt": "2025-07-31T16:37:39.087185",
+          "doses": [
+            {
+              "id": "8e05afdd-9141-4d36-8321-1190520f8fa8",
+              "doseNumber": 1,
+              "minAge": "9 years",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "f7afc0fe-acbc-4504-ac3c-ef4e8e1ccd1b",
+              "doseNumber": 2,
+              "minAge": "6–12 months after first dose",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c93e60d8-8fff-433e-b3d9-0cc73a9a32aa",
+      "name": "Pneumococcal (Conjugate)",
+      "type": "Conjugate",
+      "description": "Pneumococcal conjugate vaccine (PCV) protects against pneumonia, meningitis, and sepsis.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/pneumococcal-disease",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.022577",
+      "updatedAt": "2025-07-31T16:37:39.022577",
+      "targetGroups": [
+        "Children",
+        "Older adults"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "considerations": [
+        "2p+1 preferred in high burden settings",
+        "Booster important for HIV+ and preterm infants"
+      ],
+      "schedules": [
+        {
+          "id": "ddba70c4-5ee6-4d46-af78-0532b2f0f90c",
+          "scheduleType": "3p+0",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.023628",
+          "updatedAt": "2025-07-31T16:37:39.023628",
+          "doses": [
+            {
+              "id": "753a69d2-5ba8-4b81-b2f3-08acde44f301",
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "758c3420-8ef5-4be3-933a-55192049ce3a",
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "276c7413-413f-4dc7-89ac-d596facb8e28",
+              "doseNumber": 3,
+              "minAge": "14 weeks",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "981183cd-0afb-45b0-8559-065fe6a06482",
+          "scheduleType": "2p+1",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.036211",
+          "updatedAt": "2025-07-31T16:37:39.036211",
+          "doses": [
+            {
+              "id": "157e61d1-a368-4461-9d1d-e7d0f6bf830d",
+              "doseNumber": 1,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "20227acd-3c6c-4b55-943d-81d984d4ab40",
+              "doseNumber": 2,
+              "minAge": "10 weeks",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "8d758d58-05cf-418f-8f62-809b995352a4",
+              "doseNumber": 3,
+              "minAge": "9-18 months",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e1535f85-6f5f-4df3-ae95-c99649a1df82",
+      "name": "Hepatitis B",
+      "type": "Inactivated",
+      "description": "Hepatitis B vaccine prevents liver infection and chronic complications caused by hepatitis B virus.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:38.94609",
+      "updatedAt": "2025-07-31T16:37:38.94609",
+      "targetGroups": [
+        "High-risk adults",
+        "Children"
+      ],
+      "regions": [
+        "Global"
+      ],
+      "considerations": [
+        "Recommended in HIV, liver disease, dialysis patients, and health care workers",
+        "Essential to prevent perinatal HBV transmission"
+      ],
+      "schedules": [
+        {
+          "id": "1ba70a44-9ba5-4fd8-abe2-9f7d4a578186",
+          "scheduleType": "3-dose (standard)",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:38.94675",
+          "updatedAt": "2025-07-31T16:37:38.94675",
+          "doses": [
+            {
+              "id": "3a9ede5d-2e0f-4fee-ae13-72c404fd7947",
+              "doseNumber": 1,
+              "minAge": "Birth",
+              "is_booster": false,
+              "note": "Monovalent birth dose"
+            },
+            {
+              "id": "fc7aae10-031a-47da-abeb-6d28f70475b8",
+              "doseNumber": 2,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": "Co-administered with DTP1"
+            },
+            {
+              "id": "880e3012-be93-4d92-a1eb-dcca7bbc828b",
+              "doseNumber": 3,
+              "minAge": "10-14 weeks",
+              "is_booster": false,
+              "note": "Final dose"
+            }
+          ]
+        },
+        {
+          "id": "004d47c4-062c-44dc-bbac-384e0938b9e1",
+          "scheduleType": "4-dose (optional)",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:38.958909",
+          "updatedAt": "2025-07-31T16:37:38.958909",
+          "doses": [
+            {
+              "id": "a3ff5519-e18a-4064-a182-903275c5959d",
+              "doseNumber": 1,
+              "minAge": "Birth",
+              "is_booster": false,
+              "note": "Monovalent birth dose"
+            },
+            {
+              "id": "685878cf-9266-48ef-ba5f-e53c50cc9570",
+              "doseNumber": 2,
+              "minAge": "6 weeks",
+              "is_booster": false,
+              "note": "Combined vaccine"
+            },
+            {
+              "id": "e20dd122-922c-4273-a371-befb02240c9c",
+              "doseNumber": 3,
+              "minAge": "10 weeks",
+              "is_booster": false,
+              "note": "Combined vaccine"
+            },
+            {
+              "id": "f4dec7e3-a46b-42b4-976a-134c529e02f6",
+              "doseNumber": 4,
+              "minAge": "14 weeks",
+              "is_booster": false,
+              "note": "Final dose"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eb5c45db-2ae3-458b-8564-009f92915212",
+      "name": "Varicella",
+      "type": "Live attenuated",
+      "description": "Varicella vaccine prevents chickenpox, a common and contagious childhood disease.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/varicella",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.242567",
+      "updatedAt": "2025-07-31T16:37:39.242567",
+      "targetGroups": [
+        "Susceptible adolescents and adults",
+        "Healthcare workers",
+        "Children"
+      ],
+      "regions": [
+        "Outbreak-prone areas",
+        "High-income countries"
+      ],
+      "considerations": [
+        "Recommended for susceptible HCWs",
+        "Can be combined with MMR",
+        "Contraindicated in pregnancy and immunosuppression"
+      ],
+      "schedules": [
+        {
+          "id": "85254cee-d131-4ab1-87ba-10994096459f",
+          "scheduleType": "standard",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.243416",
+          "updatedAt": "2025-07-31T16:37:39.243416",
+          "doses": [
+            {
+              "id": "9cc88f04-a287-453d-a6ad-be47a27e6629",
+              "doseNumber": 1,
+              "minAge": "12–15 months",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "aeb18cf7-ee99-4c26-9cff-b25beda2485e",
+              "doseNumber": 2,
+              "minAge": "4–6 years",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f13b5bfc-4900-4523-88bb-9a1ae62599d8",
+      "name": "Tick-Borne Encephalitis (TBE)",
+      "type": "Inactivated",
+      "description": "TBE vaccine prevents viral brain infection spread by ticks in endemic areas.",
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/tick-borne-encephalitis",
+      "createdBy": null,
+      "updatedBy": null,
+      "createdAt": "2025-07-31T16:37:39.207524",
+      "updatedAt": "2025-07-31T16:37:39.207524",
+      "targetGroups": [
+        "Travelers",
+        "Healthcare workers",
+        "Children",
+        "Adolescents"
+      ],
+      "regions": [
+        "Europe",
+        "Asia (endemic areas)",
+        "Russia"
+      ],
+      "considerations": [
+        "For people living in or traveling to endemic areas",
+        "Recommended for laboratory personnel handling TBE virus"
+      ],
+      "schedules": [
+        {
+          "id": "3a572bfe-68da-4fe6-ab38-febe08de4bbd",
+          "scheduleType": "booster",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.220125",
+          "updatedAt": "2025-07-31T16:37:39.220125",
+          "doses": [
+            {
+              "id": "4310bb20-1599-4311-a6b6-e5783ff457c4",
+              "doseNumber": 4,
+              "minAge": "3–5 years after dose 3",
+              "is_booster": true,
+              "note": null
+            }
+          ]
+        },
+        {
+          "id": "5eaa5fbd-b287-4059-b196-50742e113a9c",
+          "scheduleType": "standard",
+          "description": null,
+          "createdBy": null,
+          "updatedBy": null,
+          "createdAt": "2025-07-31T16:37:39.208049",
+          "updatedAt": "2025-07-31T16:37:39.208049",
+          "doses": [
+            {
+              "id": "8f4004da-c341-42d6-93ba-d74173562134",
+              "doseNumber": 1,
+              "minAge": "1 year",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "0c3cdf48-4212-4240-a86f-9799922966c8",
+              "doseNumber": 2,
+              "minAge": "1–3 months after dose 1",
+              "is_booster": false,
+              "note": null
+            },
+            {
+              "id": "6249b51c-6721-48fa-8138-21953e04d23d",
+              "doseNumber": 3,
+              "minAge": "5–12 months after dose 2",
+              "is_booster": false,
+              "note": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "whoGuidelineSummary": {
+    "title": "WHO Recommendations for Routine Immunization – A User’s Guide to the Summary Tables",
+    "url": "https://www.who.int/publications/m/item/who-recommendations-for-routine-immunization--a-user-s-guide-to-the-summary-tables",
+    "tables": [
       {
-        "id": "90ea0cdd-543c-4e74-bebb-d717e009d789",
-        "scheduleType": "2-dose + booster",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.304649",
-        "updatedAt": "2025-07-31T10:55:24.304649",
-        "doses": [
-          {
-            "id": "15e7c6d0-3402-4793-afdb-e5db0f1dc768",
-            "doseNumber": 1,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "24c841d9-6af7-4e44-af30-8d6b264f8ce5",
-            "doseNumber": 2,
-            "minAge": "10 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "291d8145-2f43-403c-aeeb-9541844cbb74",
-            "doseNumber": 3,
-            "minAge": "9-18 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
+        "title": "Table 1 – Recommended Routine Immunization for Children",
+        "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-1-january-2025.pdf"
       },
       {
-        "id": "7edb4582-618a-4152-b764-da0a20a58d79",
-        "scheduleType": "3-dose option",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.302053",
-        "updatedAt": "2025-07-31T10:55:24.302053",
-        "doses": [
-          {
-            "id": "f88148f7-6f0c-47a4-94c5-8fa73f0b1f93",
-            "doseNumber": 1,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "31dd7613-7cb8-422f-adfb-1cd25039d92d",
-            "doseNumber": 2,
-            "minAge": "10 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "b69106e8-4988-4a9c-90c1-42819a6c2134",
-            "doseNumber": 3,
-            "minAge": "14 weeks",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "0e5fc5aa-915d-4613-af5b-abf3cef9efea",
-    "name": "BCG",
-    "type": "Live attenuated",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.268209",
-    "updatedAt": "2025-07-31T10:55:24.26873",
-    "targetGroups": [
-      "Adolescents (if unvaccinated)",
-      "Children",
-      "Adults (if high TB risk)"
-    ],
-    "regions": [
-      "High TB prevalence",
-      "Global"
-    ],
-    "considerations": [
-      "Universal vs selective vaccination",
-      "Not recommended during pregnancy",
-      "Recommended in HIV+ children if immunologically stable"
-    ],
-    "schedules": [
-      {
-        "id": "38280d75-bd22-4aed-be04-6222db791b71",
-        "scheduleType": "standard",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.278747",
-        "updatedAt": "2025-07-31T10:55:24.278747",
-        "doses": [
-          {
-            "id": "dc145853-f642-42de-8947-15aafd5bd702",
-            "doseNumber": 1,
-            "minAge": "Birth",
-            "isBooster": null,
-            "note": "As soon as possible after birth"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "14f777a2-1907-4739-9d29-b93f0d67bb8d",
-    "name": "Rubella",
-    "type": "Live attenuated",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.322503",
-    "updatedAt": "2025-07-31T10:55:24.322503",
-    "targetGroups": [
-      "Women of reproductive age",
-      "Adolescent girls",
-      "Children"
-    ],
-    "regions": [
-      "Global"
-    ],
-    "considerations": [
-      "Given with measles-containing vaccine",
-      "Pregnancy should be avoided for 1 month after vaccination"
-    ],
-    "schedules": [
-      {
-        "id": "f6ce254b-b714-469e-a52a-fc667e2f3079",
-        "scheduleType": "standard",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.323542",
-        "updatedAt": "2025-07-31T10:55:24.323542",
-        "doses": [
-          {
-            "id": "81f99bf6-2ad8-4a84-9eb6-c7afc5139b1c",
-            "doseNumber": 1,
-            "minAge": "9–12 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "159c304a-5b72-46b8-9869-24a4e31480f8",
-    "name": "Polio (bOPV + IPV)",
-    "type": "Oral (bOPV) + Inactivated (IPV)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.289797",
-    "updatedAt": "2025-07-31T10:55:24.289797",
-    "targetGroups": [
-      "Children"
-    ],
-    "regions": [
-      "Polio-endemic regions",
-      "Global"
-    ],
-    "considerations": [
-      "Zero dose (bOPV) at birth in high-risk areas",
-      "Important for global polio eradication",
-      "Use of fractional vs full dose IPV"
-    ],
-    "schedules": [
-      {
-        "id": "5abdb5a2-3091-4533-a372-c6100e925b7b",
-        "scheduleType": "standard (bOPV + IPV)",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.290839",
-        "updatedAt": "2025-07-31T10:55:24.290839",
-        "doses": [
-          {
-            "id": "9c1ce71d-00fe-4426-b757-213ab2768595",
-            "doseNumber": 1,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": "bOPV"
-          },
-          {
-            "id": "7979d86d-5b03-42f5-983f-0d239ae2806a",
-            "doseNumber": 2,
-            "minAge": "10 weeks",
-            "isBooster": null,
-            "note": "bOPV"
-          },
-          {
-            "id": "3134e221-8663-4393-b52c-9ba76b425749",
-            "doseNumber": 3,
-            "minAge": "14 weeks",
-            "isBooster": null,
-            "note": "bOPV + IPV"
-          },
-          {
-            "id": "5899cc26-594d-447d-abbf-92eeb6354ee0",
-            "doseNumber": 4,
-            "minAge": "9 months",
-            "isBooster": null,
-            "note": "IPV booster (optional)"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "28a78b19-c8e0-44ef-aff1-5ce1c68f7638",
-    "name": "Japanese Encephalitis (JE)",
-    "type": "Varies by product (inactivated, live attenuated, recombinant)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.329359",
-    "updatedAt": "2025-07-31T10:55:24.329359",
-    "targetGroups": [
-      "Travelers to endemic areas",
-      "Children"
-    ],
-    "regions": [
-      "Asia-Pacific"
-    ],
-    "considerations": [
-      "Vaccine choice based on availability and national policy",
-      "Avoid during pregnancy"
-    ],
-    "schedules": [
-      {
-        "id": "50044399-2eb6-497e-8550-aecb2d10aede",
-        "scheduleType": "recombinant",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.333664",
-        "updatedAt": "2025-07-31T10:55:24.333664",
-        "doses": [
-          {
-            "id": "d126a6d9-7899-4ccb-9135-bd1fe776bee5",
-            "doseNumber": 1,
-            "minAge": "9 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
+        "title": "Table 2 – Recommended Immunization for Adolescents and Adults",
+        "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-2-january-2025.pdf"
       },
       {
-        "id": "dafe1bfc-e075-4fa6-9649-a9ce62221631",
-        "scheduleType": "inactivated",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.330398",
-        "updatedAt": "2025-07-31T10:55:24.330398",
-        "doses": [
-          {
-            "id": "0b9fcbb9-a21b-45b6-a42f-64ee67573ab1",
-            "doseNumber": 1,
-            "minAge": "6 months",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "5ef16e7e-1621-4f02-bea6-1bbe84a698bc",
-            "doseNumber": 2,
-            "minAge": "7 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
+        "title": "Table 3 – Vaccines Recommended in Special Situations or for High-Risk Groups",
+        "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-3-december-2024.pdf"
       },
       {
-        "id": "6ba64520-aafc-44ee-8d35-827e1e75f91c",
-        "scheduleType": "live attenuated",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.331963",
-        "updatedAt": "2025-07-31T10:55:24.331963",
-        "doses": [
-          {
-            "id": "c2720468-f1f9-478c-95f8-8d1b5e68a36e",
-            "doseNumber": 1,
-            "minAge": "8 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "36196007-da72-4a31-95a5-a102a75b640f",
-    "name": "DTP-containing vaccine (DTPCV)",
-    "type": "Inactivated (combination)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.293966",
-    "updatedAt": "2025-07-31T10:55:24.293966",
-    "targetGroups": [
-      "Adults (maternal immunization)",
-      "Children",
-      "Adolescents"
-    ],
-    "regions": [
-      "Global"
-    ],
-    "considerations": [
-      "Delayed/interrupted schedules acceptable",
-      "Can be part of combination vaccine",
-      "Maternal immunization during pregnancy"
-    ],
-    "schedules": [
-      {
-        "id": "c5522a75-1bce-4602-9ce0-5f3ef50f2469",
-        "scheduleType": "boosters",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.298343",
-        "updatedAt": "2025-07-31T10:55:24.298343",
-        "doses": [
-          {
-            "id": "32ec0f74-0ce1-4ea8-960f-4c841557a334",
-            "doseNumber": 4,
-            "minAge": "12-23 months",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "1297914c-bd9e-44c6-884c-21efae1d0ffa",
-            "doseNumber": 5,
-            "minAge": "4-7 years",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "648154fd-d744-4815-9c20-32ea9ab5dfd0",
-            "doseNumber": 6,
-            "minAge": "9-15 years",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "50abda92-d0a2-4e0b-a3c4-3203adcea57b",
-        "scheduleType": "standard",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.29501",
-        "updatedAt": "2025-07-31T10:55:24.29501",
-        "doses": [
-          {
-            "id": "c29b0513-9f5e-466e-852f-6c9fedc82ca6",
-            "doseNumber": 1,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "172ad299-8053-492b-8174-65c37aca0647",
-            "doseNumber": 2,
-            "minAge": "10 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "a7c5b4f3-2a1b-4cc1-a6b6-6a2c725f52a6",
-            "doseNumber": 3,
-            "minAge": "14 weeks",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "38add04f-bcec-464f-b92d-659ed3b1d37a",
-    "name": "Meningococcal",
-    "type": "Conjugate or Polysaccharide (MenA, MenC, MenACWY)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.346817",
-    "updatedAt": "2025-07-31T10:55:24.346817",
-    "targetGroups": [
-      "Travelers to endemic areas",
-      "HCWs",
-      "Children",
-      "Adolescents"
-    ],
-    "regions": [
-      "Hajj pilgrims",
-      "Sub-Saharan Africa",
-      "Military recruits"
-    ],
-    "considerations": [
-      "Travel-related requirements (e.g. Hajj)",
-      "Recommended for HCWs during outbreaks",
-      "Outbreak response and preventive campaigns"
-    ],
-    "schedules": [
-      {
-        "id": "74e505a3-61be-4c0d-9c3c-33773d154342",
-        "scheduleType": "MenA (routine in belt countries)",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.346817",
-        "updatedAt": "2025-07-31T10:55:24.346817",
-        "doses": [
-          {
-            "id": "6213ac22-c394-44ed-89ff-870a436008ff",
-            "doseNumber": 1,
-            "minAge": "9 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "ff4d073b-abae-4d63-9aa5-b71a42f5ee70",
-        "scheduleType": "MenACWY",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.348424",
-        "updatedAt": "2025-07-31T10:55:24.348424",
-        "doses": [
-          {
-            "id": "0dea4e92-a11b-4320-830e-41422dbdbd87",
-            "doseNumber": 1,
-            "minAge": "9–12 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "3cc892d9-daa7-4231-b008-cf57046ed961",
-    "name": "Dengue",
-    "type": "Live attenuated (TAK-003)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.360288",
-    "updatedAt": "2025-07-31T10:55:24.360288",
-    "targetGroups": [
-      "Children in high transmission areas"
-    ],
-    "regions": [
-      "Asia",
-      "Latin America"
-    ],
-    "considerations": [
-      "Only for seropositive individuals (TAK-003 safer)",
-      "Not for travelers or HCWs unless in endemic zones"
-    ],
-    "schedules": [
-      {
-        "id": "21aef1f6-7bae-4f98-a240-26669ac896ec",
-        "scheduleType": "standard",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.360808",
-        "updatedAt": "2025-07-31T10:55:24.360808",
-        "doses": [
-          {
-            "id": "44143e91-b49f-4e83-9ce2-c70474c5e259",
-            "doseNumber": 1,
-            "minAge": "4 years",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "c0f0ce3f-6d11-45ed-8089-1e013d9c8a2c",
-            "doseNumber": 2,
-            "minAge": "3 months later",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "48a5b5a0-b59b-40ee-833f-92dc8b17cb3b",
-    "name": "HPV",
-    "type": "Virus-like particle (non-infectious)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.325706",
-    "updatedAt": "2025-07-31T10:55:24.325706",
-    "targetGroups": [
-      "Girls aged 9–14",
-      "Immunocompromised individuals"
-    ],
-    "regions": [
-      "Global"
-    ],
-    "considerations": [
-      "Off-label single-dose use permitted by WHO",
-      "Special schedule for HIV+ individuals",
-      "Vaccinate before sexual debut"
-    ],
-    "schedules": [
-      {
-        "id": "35c734d7-e762-40f2-b1dc-b7011a201137",
-        "scheduleType": "1-dose (preferred)",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.326227",
-        "updatedAt": "2025-07-31T10:55:24.326227",
-        "doses": [
-          {
-            "id": "9a625c5c-39a2-4ab1-a058-b2aa731ddf6d",
-            "doseNumber": 1,
-            "minAge": "9 years",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "c57e7943-afc3-43dc-bfe6-4939aba64337",
-        "scheduleType": "2-dose",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.327277",
-        "updatedAt": "2025-07-31T10:55:24.327277",
-        "doses": [
-          {
-            "id": "6fe1668f-4365-4525-8197-f80e36096f37",
-            "doseNumber": 1,
-            "minAge": "9 years",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "d914c3f9-fce6-411d-bdad-c88e0d7f453f",
-            "doseNumber": 2,
-            "minAge": "6–12 months after first dose",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "55d67d46-ea67-4f76-a9ef-32dcad81416c",
-    "name": "Rabies",
-    "type": "Inactivated (cell culture-derived)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.353531",
-    "updatedAt": "2025-07-31T10:55:24.353531",
-    "targetGroups": [
-      "Travelers",
-      "High-risk professionals",
-      "HCWs (post-exposure)",
-      "Children in endemic areas"
-    ],
-    "regions": [
-      "Asia",
-      "Africa",
-      "Latin America"
-    ],
-    "considerations": [
-      "Essential post-exposure prophylaxis",
-      "Pre-exposure for vets, animal handlers, lab workers"
-    ],
-    "schedules": [
-      {
-        "id": "aa1448ff-272b-41b6-8386-a197fc8751d0",
-        "scheduleType": "post-exposure (with immunoglobulin)",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.35666",
-        "updatedAt": "2025-07-31T10:55:24.35666",
-        "doses": [
-          {
-            "id": "cf22cb1d-0fe5-42ff-b573-47f3e556f777",
-            "doseNumber": 1,
-            "minAge": "Day 0",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "02d4cac0-338e-469e-996e-0640b0bfb415",
-            "doseNumber": 2,
-            "minAge": "Day 3",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "56f1389d-8739-4731-bede-b85bf3e0cd4d",
-            "doseNumber": 3,
-            "minAge": "Day 7",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "1d4bf63f-ccd4-43c1-9a28-502c54cea55a",
-            "doseNumber": 4,
-            "minAge": "Day 14",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "36a190d6-de61-4eb5-8d27-69b74d02d7d8",
-        "scheduleType": "pre-exposure",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.354581",
-        "updatedAt": "2025-07-31T10:55:24.354581",
-        "doses": [
-          {
-            "id": "8e0db989-3870-4c10-9161-4fac04542470",
-            "doseNumber": 1,
-            "minAge": "Any age",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "5a98d3a5-47dc-4187-8772-e0c6426acf17",
-            "doseNumber": 2,
-            "minAge": "7 days later",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "8ad06fef-1928-4ba2-a2f1-b6ee7fc70a78",
-            "doseNumber": 3,
-            "minAge": "21–28 days after first dose",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "5f3e44d8-5079-41d2-be3a-54d9ca288475",
-    "name": "Rotavirus",
-    "type": "Live oral",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.314107",
-    "updatedAt": "2025-07-31T10:55:24.314107",
-    "targetGroups": [
-      "Children"
-    ],
-    "regions": [
-      "Global"
-    ],
-    "considerations": [
-      "Product-specific schedule differences",
-      "Not recommended after 24 months of age"
-    ],
-    "schedules": [
-      {
-        "id": "0d73b1fb-07ef-4dd6-99d8-c181935f9bdf",
-        "scheduleType": "standard (2-dose)",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.315143",
-        "updatedAt": "2025-07-31T10:55:24.315143",
-        "doses": [
-          {
-            "id": "a504f231-4f3f-4c5a-8ae9-cf34043cf18c",
-            "doseNumber": 1,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "c40b1565-1038-414f-9f33-5716f795525f",
-            "doseNumber": 2,
-            "minAge": "10 weeks",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "bda35a17-e068-4d42-a171-39b1971e16ed",
-        "scheduleType": "standard (3-dose)",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.317286",
-        "updatedAt": "2025-07-31T10:55:24.317286",
-        "doses": [
-          {
-            "id": "29bd0520-92e2-4102-959f-fb8db778f903",
-            "doseNumber": 1,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "45fbd49b-509e-4161-a3e6-d86351ba32cf",
-            "doseNumber": 2,
-            "minAge": "10 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "c351b019-ef5e-469b-aee1-69bdbc84de98",
-            "doseNumber": 3,
-            "minAge": "14 weeks",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "60c37d74-5c1f-4b23-af08-7e739a267e84",
-    "name": "Pneumococcal (Conjugate)",
-    "type": "Conjugate",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.30779",
-    "updatedAt": "2025-07-31T10:55:24.30779",
-    "targetGroups": [
-      "Children",
-      "Older adults"
-    ],
-    "regions": [
-      "Global"
-    ],
-    "considerations": [
-      "2p+1 preferred in high burden settings",
-      "Booster important for HIV+ and preterm infants"
-    ],
-    "schedules": [
-      {
-        "id": "6882e06d-beb5-44dd-affb-bb503476b551",
-        "scheduleType": "3p+0",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.308317",
-        "updatedAt": "2025-07-31T10:55:24.308317",
-        "doses": [
-          {
-            "id": "a0e94b36-78b8-42ad-bd7a-f3503224d3ff",
-            "doseNumber": 1,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "b3db74ca-b096-48c9-8539-7e3dc45fdb5b",
-            "doseNumber": 2,
-            "minAge": "10 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "ed05ac16-8a76-45e7-819e-353f10dc2578",
-            "doseNumber": 3,
-            "minAge": "14 weeks",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "2ccb7733-5182-433c-8b3a-b16b365acbec",
-        "scheduleType": "2p+1",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.311501",
-        "updatedAt": "2025-07-31T10:55:24.311501",
-        "doses": [
-          {
-            "id": "afde2e50-61ae-4577-88cd-eac9a996a86f",
-            "doseNumber": 1,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "5d3550b3-84a7-4592-a507-02fe75674514",
-            "doseNumber": 2,
-            "minAge": "10 weeks",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "61878af6-b38d-4a07-8ac9-b9e9ff3ff60b",
-            "doseNumber": 3,
-            "minAge": "9-18 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "61920531-0b11-4734-a351-e936fd51757b",
-    "name": "Malaria",
-    "type": "RTS,S/AS01, R21/Matrix-M (recombinant protein)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.362893",
-    "updatedAt": "2025-07-31T10:55:24.362893",
-    "targetGroups": [
-      "Children in high transmission settings"
-    ],
-    "regions": [
-      "Africa"
-    ],
-    "considerations": [
-      "WHO-recommended in high burden areas",
-      "R21 vaccine also prequalified in 2023"
-    ],
-    "schedules": [
-      {
-        "id": "944b321b-033a-48c2-af20-006715f16fee",
-        "scheduleType": "RTS,S/AS01",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.36341",
-        "updatedAt": "2025-07-31T10:55:24.36341",
-        "doses": [
-          {
-            "id": "c3601ef9-2ff4-4a0b-a126-404f79a6b10b",
-            "doseNumber": 1,
-            "minAge": "5 months",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "cd3e93dd-494b-4915-aa7b-25323c91ccbd",
-            "doseNumber": 2,
-            "minAge": "6 months",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "ccc8a248-557f-43fe-a7c2-161595d0e7c4",
-            "doseNumber": 3,
-            "minAge": "7 months",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "8f915adb-6765-4fc6-8db6-85b2072b05fa",
-            "doseNumber": 4,
-            "minAge": "20–24 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "74d5bfac-ae95-4e20-93dc-4adab0fa6181",
-    "name": "Mumps",
-    "type": "Live attenuated",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.372429",
-    "updatedAt": "2025-07-31T10:55:24.372429",
-    "targetGroups": [
-      "Children",
-      "Adolescents"
-    ],
-    "regions": [
-      "Global (where included in MMR)"
-    ],
-    "considerations": [
-      "Booster recommended in outbreak settings",
-      "Usually part of MMR combination vaccine",
-      "Avoid during pregnancy"
-    ],
-    "schedules": [
-      {
-        "id": "9443ea96-417e-4eb4-944e-6af2ae7b650f",
-        "scheduleType": "combined MMR",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.372974",
-        "updatedAt": "2025-07-31T10:55:24.372974",
-        "doses": [
-          {
-            "id": "99562d2a-4ed4-4b25-8235-b4e534f5e22d",
-            "doseNumber": 1,
-            "minAge": "9–12 months",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "859be783-f6da-44f3-9868-677d9da090f6",
-            "doseNumber": 2,
-            "minAge": "15–18 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "7c1129ee-b7fd-4507-8c8b-54338f4053a9",
-    "name": "Hepatitis B",
-    "type": "Inactivated",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.281883",
-    "updatedAt": "2025-07-31T10:55:24.281883",
-    "targetGroups": [
-      "High-risk adults",
-      "Children"
-    ],
-    "regions": [
-      "Global"
-    ],
-    "considerations": [
-      "Recommended in HIV, liver disease, dialysis patients, and health care workers",
-      "Essential to prevent perinatal HBV transmission"
-    ],
-    "schedules": [
-      {
-        "id": "815ce96d-5f3f-4211-ad5a-c36ce601345d",
-        "scheduleType": "4-dose (optional)",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.286093",
-        "updatedAt": "2025-07-31T10:55:24.286093",
-        "doses": [
-          {
-            "id": "69322908-d4b1-4a49-a923-24db65bb8799",
-            "doseNumber": 1,
-            "minAge": "Birth",
-            "isBooster": null,
-            "note": "Monovalent birth dose"
-          },
-          {
-            "id": "241f7b91-ce07-451f-951a-81ed1bd9429a",
-            "doseNumber": 2,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": "Combined vaccine"
-          },
-          {
-            "id": "5e24b518-111d-4e20-aed9-0eff8cd55fe8",
-            "doseNumber": 3,
-            "minAge": "10 weeks",
-            "isBooster": null,
-            "note": "Combined vaccine"
-          },
-          {
-            "id": "e39f7d1d-d837-474a-911e-ada0b8881fff",
-            "doseNumber": 4,
-            "minAge": "14 weeks",
-            "isBooster": null,
-            "note": "Final dose"
-          }
-        ]
-      },
-      {
-        "id": "0b4221d3-ca21-49c8-8857-f4e2cce94cfe",
-        "scheduleType": "3-dose (standard)",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.282933",
-        "updatedAt": "2025-07-31T10:55:24.282933",
-        "doses": [
-          {
-            "id": "ac46853e-a77e-41b2-9d1a-990394c97dc7",
-            "doseNumber": 1,
-            "minAge": "Birth",
-            "isBooster": null,
-            "note": "Monovalent birth dose"
-          },
-          {
-            "id": "54480872-6162-4787-8292-e67e8c1e7a9d",
-            "doseNumber": 2,
-            "minAge": "6 weeks",
-            "isBooster": null,
-            "note": "Co-administered with DTP1"
-          },
-          {
-            "id": "92078233-be62-4f9f-83ac-f5da796f0fce",
-            "doseNumber": 3,
-            "minAge": "10-14 weeks",
-            "isBooster": null,
-            "note": "Final dose"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "97d49dc8-add2-4d9a-9eeb-f409a754f112",
-    "name": "Yellow Fever",
-    "type": "Live attenuated",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.334717",
-    "updatedAt": "2025-07-31T10:55:24.334717",
-    "targetGroups": [
-      "Travelers to endemic countries",
-      "Children"
-    ],
-    "regions": [
-      "South America",
-      "Africa"
-    ],
-    "considerations": [
-      "Avoid during pregnancy unless high risk",
-      "Single dose provides lifelong protection",
-      "Co-administer with measles vaccine if needed"
-    ],
-    "schedules": [
-      {
-        "id": "920a956d-5270-4e63-823d-0214e26a758c",
-        "scheduleType": "standard",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.335751",
-        "updatedAt": "2025-07-31T10:55:24.335751",
-        "doses": [
-          {
-            "id": "9da1b6e7-c354-43fa-93bf-88b0dd7d515e",
-            "doseNumber": 1,
-            "minAge": "9–12 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "b7ea35a0-7a06-4693-9f8f-121dd83f4fc0",
-    "name": "Measles",
-    "type": "Live attenuated",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.319891",
-    "updatedAt": "2025-07-31T10:55:24.319891",
-    "targetGroups": [
-      "Adolescents (if unvaccinated)",
-      "Children"
-    ],
-    "regions": [
-      "Global"
-    ],
-    "considerations": [
-      "Co-administration with rubella and mumps",
-      "Earlier dose at 6 months in outbreak settings",
-      "Safe in HIV-infected infants if not severely immunocompromised"
-    ],
-    "schedules": [
-      {
-        "id": "9dabf98a-389f-4328-aab8-be55837923b7",
-        "scheduleType": "standard",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.320413",
-        "updatedAt": "2025-07-31T10:55:24.320413",
-        "doses": [
-          {
-            "id": "ee240570-a762-473b-b5a5-6a7f29015f96",
-            "doseNumber": 1,
-            "minAge": "9 months",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "f35da56c-fab2-4060-ac75-b8c1d3558e91",
-            "doseNumber": 2,
-            "minAge": "15–18 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "c2eb8c55-db3d-47b9-9279-5192aa9d28a5",
-    "name": "Tick-Borne Encephalitis (TBE)",
-    "type": "Inactivated",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.367239",
-    "updatedAt": "2025-07-31T10:55:24.367239",
-    "targetGroups": [
-      "Travelers",
-      "Healthcare workers",
-      "Children",
-      "Adolescents"
-    ],
-    "regions": [
-      "Europe",
-      "Asia (endemic areas)",
-      "Russia"
-    ],
-    "considerations": [
-      "For people living in or traveling to endemic areas",
-      "Recommended for laboratory personnel handling TBE virus"
-    ],
-    "schedules": [
-      {
-        "id": "49fa1a0c-1686-4dc4-9178-b711e69fd6f7",
-        "scheduleType": "booster",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.370869",
-        "updatedAt": "2025-07-31T10:55:24.370869",
-        "doses": [
-          {
-            "id": "55bdb94c-f724-4893-9d1d-c7ba5bab98ec",
-            "doseNumber": 4,
-            "minAge": "3–5 years after dose 3",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "837ff4a6-3f96-4b58-812d-b3a4edd8135c",
-        "scheduleType": "standard",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.368268",
-        "updatedAt": "2025-07-31T10:55:24.368268",
-        "doses": [
-          {
-            "id": "6e24ae0a-ef3c-45a3-a8a1-5fb2a855f452",
-            "doseNumber": 1,
-            "minAge": "1 year",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "93e87b5d-5682-4d72-aa39-e4428a56f7a3",
-            "doseNumber": 2,
-            "minAge": "1–3 months after dose 1",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "4db0fa75-bd85-4936-b5b2-eb7cdfe0a0dc",
-            "doseNumber": 3,
-            "minAge": "5–12 months after dose 2",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "c39c1d76-175c-478e-b806-e6554a81a461",
-    "name": "Varicella",
-    "type": "Live attenuated",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.377122",
-    "updatedAt": "2025-07-31T10:55:24.377122",
-    "targetGroups": [
-      "Susceptible adolescents and adults",
-      "Healthcare workers",
-      "Children"
-    ],
-    "regions": [
-      "Outbreak-prone areas",
-      "High-income countries"
-    ],
-    "considerations": [
-      "Recommended for susceptible HCWs",
-      "Can be combined with MMR",
-      "Contraindicated in pregnancy and immunosuppression"
-    ],
-    "schedules": [
-      {
-        "id": "72ed4a86-fa49-406f-ad5b-1f8fd743f9ef",
-        "scheduleType": "standard",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.378198",
-        "updatedAt": "2025-07-31T10:55:24.378198",
-        "doses": [
-          {
-            "id": "4d6891f8-fbff-4685-a8c7-7f1851568a5b",
-            "doseNumber": 1,
-            "minAge": "12–15 months",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "e327accb-9170-493f-a7fe-24946e3225da",
-            "doseNumber": 2,
-            "minAge": "4–6 years",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "c77d9d8c-fada-4b01-aadc-080a1304c340",
-    "name": "Cholera",
-    "type": "Inactivated oral (Dukoral, Shanchol, Euvchol, mORCVAX)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.342145",
-    "updatedAt": "2025-07-31T10:55:24.342145",
-    "targetGroups": [
-      "HCWs during outbreaks",
-      "Residents in high-risk settings",
-      "Travelers"
-    ],
-    "regions": [
-      "Outbreak-prone areas"
-    ],
-    "considerations": [
-      "Not part of routine childhood immunization",
-      "Protective immunity is short-lived",
-      "Used in mass vaccination during outbreaks"
-    ],
-    "schedules": [
-      {
-        "id": "498423dc-27db-49bd-a7e0-44c700ecbf2f",
-        "scheduleType": "Dukoral",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.344764",
-        "updatedAt": "2025-07-31T10:55:24.344764",
-        "doses": [
-          {
-            "id": "b8e08ace-86bb-4a23-b331-3ed885a5cb2e",
-            "doseNumber": 1,
-            "minAge": "2 years",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "ff93cfa0-0932-4fee-a5ff-3ab82da2d1d2",
-            "doseNumber": 2,
-            "minAge": "1 week after dose 1",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "4223a8ab-16ea-4050-9acb-996e3f95d362",
-        "scheduleType": "Shanchol/Euvchol/mORCVAX",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.34267",
-        "updatedAt": "2025-07-31T10:55:24.34267",
-        "doses": [
-          {
-            "id": "25702bb2-a1e4-40c8-b0d0-499f1ca44eaf",
-            "doseNumber": 1,
-            "minAge": "1 year",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "5ea8d1dd-4a26-40bd-8894-f695774f6c01",
-            "doseNumber": 2,
-            "minAge": "2 weeks after dose 1",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "c8b448be-83c2-40ef-b457-729bf2192be2",
-    "name": "Seasonal Influenza",
-    "type": "Inactivated or Live attenuated (intranasal)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.375049",
-    "updatedAt": "2025-07-31T10:55:24.375049",
-    "targetGroups": [
-      "High-risk individuals",
-      "Pregnant women",
-      "Healthcare workers",
-      "Children",
-      "Older adults"
-    ],
-    "regions": [
-      "Global (especially temperate zones)"
-    ],
-    "considerations": [
-      "Intranasal only for certain age groups",
-      "Annual revaccination recommended",
-      "Different formulations for northern/southern hemispheres"
-    ],
-    "schedules": [
-      {
-        "id": "f5dbde1b-ef0d-4acd-937e-91a44545e282",
-        "scheduleType": "annual",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.375572",
-        "updatedAt": "2025-07-31T10:55:24.375572",
-        "doses": [
-          {
-            "id": "f63a71cd-ad22-4cc2-a2c9-5f9da7fe1cf2",
-            "doseNumber": 1,
-            "minAge": "6 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "e649ad5b-27d6-460d-ae9a-6ddc49f19098",
-    "name": "Hepatitis A",
-    "type": "Inactivated",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.350428",
-    "updatedAt": "2025-07-31T10:55:24.350428",
-    "targetGroups": [
-      "HCWs",
-      "Travelers",
-      "Children in endemic areas"
-    ],
-    "regions": [
-      "Moderate to high endemic areas"
-    ],
-    "considerations": [
-      "HCWs in endemic areas or labs handling HAV",
-      "Used in outbreak response",
-      "Routine use in high endemic areas"
-    ],
-    "schedules": [
-      {
-        "id": "a74bd679-9804-4576-953e-2fc142b4e547",
-        "scheduleType": "standard",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.351429",
-        "updatedAt": "2025-07-31T10:55:24.351429",
-        "doses": [
-          {
-            "id": "ec9f7850-e265-4441-a761-5426c03f9274",
-            "doseNumber": 1,
-            "minAge": "12 months",
-            "isBooster": null,
-            "note": null
-          },
-          {
-            "id": "dec19862-bcd4-4bfc-8935-584a36c43ab5",
-            "doseNumber": 2,
-            "minAge": "6–12 months after dose 1",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "f9dc1748-e6c8-475f-b6e1-92c95be0ff59",
-    "name": "Typhoid",
-    "type": "Inactivated (Typbar-TCV), Vi polysaccharide, Live oral (Ty21a)",
-    "description": null,
-    "whoReferenceUrl": null,
-    "createdBy": null,
-    "updatedBy": null,
-    "createdAt": "2025-07-31T10:55:24.337324",
-    "updatedAt": "2025-07-31T10:55:24.337324",
-    "targetGroups": [
-      "Travelers",
-      "Healthcare workers (HCWs)",
-      "Children in endemic areas"
-    ],
-    "regions": [
-      "Asia",
-      "Africa",
-      "Endemic areas"
-    ],
-    "considerations": [
-      "Revaccination every 2–3 years for Vi/Oral",
-      "TCV preferred for routine use",
-      "Recommended for HCWs in endemic settings"
-    ],
-    "schedules": [
-      {
-        "id": "2071f586-a595-44cc-bffc-66c0ab037d77",
-        "scheduleType": "Vi polysaccharide",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.339027",
-        "updatedAt": "2025-07-31T10:55:24.339027",
-        "doses": [
-          {
-            "id": "8a731792-f337-4d63-ae56-23a8ff054a93",
-            "doseNumber": 1,
-            "minAge": "2 years",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "47379553-7453-420c-84c2-2159e45223c8",
-        "scheduleType": "Ty21a oral",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.340585",
-        "updatedAt": "2025-07-31T10:55:24.340585",
-        "doses": [
-          {
-            "id": "97a529ca-c1c0-4973-8182-76d5784f09f2",
-            "doseNumber": 1,
-            "minAge": "5 years",
-            "isBooster": null,
-            "note": null
-          }
-        ]
-      },
-      {
-        "id": "939fe908-e3e6-4cd0-93b6-6f399be7970b",
-        "scheduleType": "Typbar-TCV (conjugate)",
-        "description": null,
-        "createdBy": null,
-        "updatedBy": null,
-        "createdAt": "2025-07-31T10:55:24.33795",
-        "updatedAt": "2025-07-31T10:55:24.33795",
-        "doses": [
-          {
-            "id": "00db18d8-ac7b-46db-9be3-7c213cd93329",
-            "doseNumber": 1,
-            "minAge": "6 months",
-            "isBooster": null,
-            "note": null
-          }
-        ]
+        "title": "Table 4 – Vaccination of Healthcare Workers",
+        "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-4-december-2024.pdf"
       }
     ]
   }
-]
+}
