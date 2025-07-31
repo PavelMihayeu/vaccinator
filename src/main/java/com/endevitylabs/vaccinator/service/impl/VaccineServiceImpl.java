@@ -2,7 +2,6 @@ package com.endevitylabs.vaccinator.service.impl;
 
 import com.endevitylabs.vaccinator.dto.VaccineDto;
 import com.endevitylabs.vaccinator.mapper.VaccineMapper;
-import com.endevitylabs.vaccinator.model.*;
 import com.endevitylabs.vaccinator.repository.*;
 import com.endevitylabs.vaccinator.service.VaccineService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +27,7 @@ public class VaccineServiceImpl implements VaccineService {
     @Override
     @Transactional(readOnly = true)
     public List<VaccineDto> getAllVaccines() {
-        List<Vaccine> vaccines = vaccineRepository.findAllWithDetails();
-        return vaccines.stream()
+        return vaccineRepository.findAllWithDetails().stream()
                 .map(vaccineMapper::toDto)
                 .toList();
     }
@@ -37,16 +35,15 @@ public class VaccineServiceImpl implements VaccineService {
     @Override
     @Transactional(readOnly = true)
     public VaccineDto getVaccineById(UUID id) {
-        Vaccine vaccine = vaccineRepository.findByIdWithDetails(id)
+        return vaccineRepository.findByIdWithDetails(id)
+                .map(vaccineMapper::toDto)
                 .orElseThrow(() -> new RuntimeException("Vaccine not found with id: " + id));
-        return vaccineMapper.toDto(vaccine);
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<VaccineDto> searchVaccinesByName(String name) {
-        List<Vaccine> vaccines = vaccineRepository.findByNameContainingIgnoreCase(name);
-        return vaccines.stream()
+        return vaccineRepository.findByNameContainingIgnoreCase(name).stream()
                 .map(vaccineMapper::toDto)
                 .toList();
     }

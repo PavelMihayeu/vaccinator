@@ -50,4 +50,13 @@ public class DataManagementController {
     public ResponseEntity<Map<String, Object>> clearAllVaccineData() {
         return ResponseEntity.ok(dataManagementService.clearAllVaccineData());
     }
+
+    @PostMapping("/load-default-who-data")
+    @Operation(
+            summary = "Load default WHO vaccination data",
+            description = "Loads the default WHO vaccination data from the application resources"
+    )
+    public ResponseEntity<Map<String, Object>> loadDefaultWhoData() {
+        return ResponseEntity.ok(dataManagementService.loadDefaultWhoData());
+    }
 } 

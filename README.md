@@ -65,7 +65,7 @@ The application uses a normalized database schema with the following core tables
    ```bash
    curl -X POST http://localhost:8080/api/admin/data/load-vaccines \
      -H "Content-Type: application/json" \
-     -d @test-vaccine-data.json
+     -d @who_vaccination_data_full.json
    ```
 
 5. **Access the application**
@@ -89,7 +89,7 @@ The application uses a normalized database schema with the following core tables
    ```bash
    curl -X POST http://localhost:8080/api/admin/data/load-vaccines \
      -H "Content-Type: application/json" \
-     -d @test-vaccine-data.json
+     -d @who_vaccination_data_full.json
    ```
 
 ## API Endpoints
@@ -151,7 +151,7 @@ The easiest way to populate the database with vaccine data is using the data loa
 # Load vaccine data from JSON file
 curl -X POST http://localhost:8080/api/admin/data/load-vaccines \
   -H "Content-Type: application/json" \
-  -d @test-vaccine-data.json
+  -d @who_vaccination_data_full.json
 ```
 
 Or load data directly:

@@ -1,20 +1,23 @@
 #!/bin/bash
 
-echo "Testing Vaccine Data Loading API..."
+# Test script for Vaccinator API
+# Make sure the application is running on localhost:8080
 
-# Test data status first
-echo "1. Getting current data status..."
-curl -X GET "http://localhost:8080/api/admin/data/status" \
-  -H "Content-Type: application/json" \
-  -w "\nHTTP Status: %{http_code}\n\n"
+echo "Testing Vaccinator API..."
 
-echo "2. Loading vaccine data..."
-curl -X POST "http://localhost:8080/api/admin/data/load-vaccines" \
-  -H "Content-Type: application/json" \
-  -d @test-vaccine-data.json \
-  -w "\nHTTP Status: %{http_code}\n\n"
+# Base URL
+BASE_URL="http://localhost:8080"
 
-echo "3. Getting updated data status..."
-curl -X GET "http://localhost:8080/api/admin/data/status" \
-  -H "Content-Type: application/json" \
-  -w "\nHTTP Status: %{http_code}\n\n" 
+echo "1. Getting data status..."
+curl -X GET "$BASE_URL/api/admin/data/status" | jq .
+
+echo -e "\n2. Loading default WHO vaccination data..."
+curl -X POST "$BASE_URL/api/admin/data/load-default-who-data" | jq .
+
+echo -e "\n3. Getting updated data status..."
+curl -X GET "$BASE_URL/api/admin/data/status" | jq .
+
+echo -e "\n4. Getting all vaccines..."
+curl -X GET "$BASE_URL/api/vaccines" | jq .
+
+echo -e "\nTest completed!" 

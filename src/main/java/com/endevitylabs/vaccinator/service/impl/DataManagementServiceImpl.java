@@ -13,6 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 @Service
 @Slf4j
@@ -83,6 +85,35 @@ public class DataManagementServiceImpl implements DataManagementService {
         } catch (Exception e) {
             log.error("Error loading vaccine data: {}", e.getMessage(), e);
             throw new RuntimeException("Failed to load vaccine data: " + e.getMessage(), e);
+        }
+    }
+
+    @Override
+    @Transactional
+    public Map<String, Object> loadDefaultWhoData() {
+        try {
+            log.info("Loading default WHO vaccination data from resources");
+            
+            // Load the JSON file from resources
+            String jsonContent = new String(getClass().getResourceAsStream("/who_vaccination_data_full.json").readAllBytes());
+            
+            // Parse the JSON content
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.registerModule(new JavaTimeModule());
+            
+            // Parse as LoadVaccineDataRequest
+            LoadVaccineDataRequest request = objectMapper.readValue(jsonContent, LoadVaccineDataRequest.class);
+            
+            // Use the existing loadVaccineData method
+            Map<String, Object> result = loadVaccineData(request);
+            result.put("source", "WHO vaccination data (default)");
+            
+            log.info("Successfully loaded default WHO vaccination data");
+            return result;
+            
+        } catch (Exception e) {
+            log.error("Error loading default WHO vaccination data: {}", e.getMessage(), e);
+            throw new RuntimeException("Failed to load default WHO vaccination data: " + e.getMessage(), e);
         }
     }
 

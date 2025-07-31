@@ -13,6 +13,12 @@ public interface DataManagementService {
     Map<String, Object> loadVaccineData(LoadVaccineDataRequest request);
     
     /**
+     * Loads the default WHO vaccination data from resources
+     * @return Map containing operation results
+     */
+    Map<String, Object> loadDefaultWhoData();
+    
+    /**
      * Gets the current status of data in the database
      * @return Map containing data counts and status
      */

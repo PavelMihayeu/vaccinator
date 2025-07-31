@@ -1,0 +1,400 @@
+[1mdiff --git a/build.gradle b/build.gradle[m
+[1mindex 3dc0291..e768fdc 100644[m
+[1m--- a/build.gradle[m
+[1m+++ b/build.gradle[m
+[36m@@ -29,16 +29,16 @@[m [mdependencies {[m
+ 	implementation 'org.springframework.boot:spring-boot-starter-web'[m
+ 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9'[m
+ 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'[m
+[31m-	implementation("org.springframework.boot:spring-boot-starter-security")[m
+[31m-	implementation("io.jsonwebtoken:jjwt-api:0.11.5")[m
+[32m+[m	[32mimplementation('org.springframework.boot:spring-boot-starter-security')[m
+[32m+[m	[32mimplementation('io.jsonwebtoken:jjwt-api:0.11.5')[m
+ 	implementation 'org.postgresql:postgresql'[m
+ 	implementation 'org.apache.commons:commons-lang3:3.18.0'[m
+ 	implementation 'org.liquibase:liquibase-core'[m
+ 	implementation 'org.mapstruct:mapstruct:1.5.5.Final'[m
+ 	compileOnly 'org.projectlombok:lombok'[m
+ 	developmentOnly 'org.springframework.boot:spring-boot-devtools'[m
+[31m-	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")[m
+[31m-	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")[m
+[32m+[m	[32mruntimeOnly('io.jsonwebtoken:jjwt-impl:0.11.5')[m
+[32m+[m	[32mruntimeOnly('io.jsonwebtoken:jjwt-jackson:0.11.5')[m
+ 	annotationProcessor 'org.projectlombok:lombok'[m
+ 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'[m
+ 	testImplementation 'org.springframework.boot:spring-boot-starter-test'[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/config/JacksonConfig.java b/src/main/java/com/endevitylabs/vaccinator/config/JacksonConfig.java[m
+[1mindex 8be42a5..f4640db 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/config/JacksonConfig.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/config/JacksonConfig.java[m
+[36m@@ -1,6 +1,7 @@[m
+ package com.endevitylabs.vaccinator.config;[m
+ [m
+ import com.fasterxml.jackson.databind.ObjectMapper;[m
+[32m+[m[32mimport com.fasterxml.jackson.databind.SerializationFeature;[m
+ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;[m
+ import org.springframework.context.annotation.Bean;[m
+ import org.springframework.context.annotation.Configuration;[m
+[36m@@ -12,6 +13,7 @@[m [mpublic class JacksonConfig {[m
+     public ObjectMapper objectMapper() {[m
+         ObjectMapper mapper = new ObjectMapper();[m
+         mapper.registerModule(new JavaTimeModule());[m
+[32m+[m[32m        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);[m
+         return mapper;[m
+     }[m
+ } [m
+\ No newline at end of file[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/controller/DataManagementController.java b/src/main/java/com/endevitylabs/vaccinator/controller/DataManagementController.java[m
+[1mindex 3e28242..f391355 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/controller/DataManagementController.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/controller/DataManagementController.java[m
+[36m@@ -5,6 +5,7 @@[m [mimport com.endevitylabs.vaccinator.service.DataManagementService;[m
+ import io.swagger.v3.oas.annotations.Operation;[m
+ import io.swagger.v3.oas.annotations.tags.Tag;[m
+ import lombok.RequiredArgsConstructor;[m
+[32m+[m[32mimport org.springframework.beans.factory.annotation.Autowired;[m
+ import org.springframework.http.ResponseEntity;[m
+ import org.springframework.web.bind.annotation.*;[m
+ [m
+[36m@@ -12,12 +13,16 @@[m [mimport java.util.Map;[m
+ [m
+ @RestController[m
+ @RequestMapping("/api/admin/data")[m
+[31m-@RequiredArgsConstructor[m
+ @Tag(name = "Data Management", description = "Admin endpoints for data management operations")[m
+ public class DataManagementController {[m
+ [m
+     private final DataManagementService dataManagementService;[m
+ [m
+[32m+[m[32m    @Autowired[m
+[32m+[m[32m    public DataManagementController(DataManagementService dataManagementService) {[m
+[32m+[m[32m        this.dataManagementService = dataManagementService;[m
+[32m+[m[32m    }[m
+[32m+[m
+     @PostMapping("/load-vaccines")[m
+     @Operation([m
+             summary = "Load vaccine data from JSON",[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/controller/VaccineController.java b/src/main/java/com/endevitylabs/vaccinator/controller/VaccineController.java[m
+[1mindex bd705d0..8353158 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/controller/VaccineController.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/controller/VaccineController.java[m
+[36m@@ -10,6 +10,7 @@[m [mimport io.swagger.v3.oas.annotations.responses.ApiResponses;[m
+ import io.swagger.v3.oas.annotations.media.Content;[m
+ import io.swagger.v3.oas.annotations.media.Schema;[m
+ import lombok.RequiredArgsConstructor;[m
+[32m+[m[32mimport org.springframework.beans.factory.annotation.Autowired;[m
+ import org.springframework.http.ResponseEntity;[m
+ import org.springframework.web.bind.annotation.*;[m
+ [m
+[36m@@ -22,6 +23,7 @@[m [mpublic class VaccineController {[m
+ [m
+     private final VaccineService vaccineService;[m
+ [m
+[32m+[m[32m    @Autowired[m
+     public VaccineController(VaccineService vaccineService) {[m
+         this.vaccineService = vaccineService;[m
+     }[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/dto/DoseDto.java b/src/main/java/com/endevitylabs/vaccinator/dto/DoseDto.java[m
+[1mindex 1df0d9a..3827aa5 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/dto/DoseDto.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/dto/DoseDto.java[m
+[36m@@ -1,14 +1,10 @@[m
+ package com.endevitylabs.vaccinator.dto;[m
+ [m
+[31m-import lombok.Data;[m
+[31m-[m
+ import java.util.UUID;[m
+ [m
+[31m-@Data[m
+[31m-public class DoseDto {[m
+[31m-    private UUID id;[m
+[31m-    private Integer doseNumber;[m
+[31m-    private String minAge;[m
+[31m-    private Boolean isBooster;[m
+[31m-    private String note;[m
+[32m+[m[32mpublic record DoseDto(UUID id,[m
+[32m+[m[32m                      Integer doseNumber,[m
+[32m+[m[32m                      String minAge,[m
+[32m+[m[32m                      Boolean isBooster,[m
+[32m+[m[32m                      String note) {[m
+ } [m
+\ No newline at end of file[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/dto/ScheduleData.java b/src/main/java/com/endevitylabs/vaccinator/dto/ScheduleData.java[m
+[1mindex 4278333..895a99b 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/dto/ScheduleData.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/dto/ScheduleData.java[m
+[36m@@ -3,11 +3,11 @@[m [mpackage com.endevitylabs.vaccinator.dto;[m
+ import jakarta.validation.constraints.NotNull;[m
+ import org.springframework.validation.annotation.Validated;[m
+ [m
+[31m-import java.util.List;[m
+[32m+[m[32mimport java.util.Set;[m
+ [m
+ @Validated[m
+ public record ScheduleData([m
+         String type,[m
+         String description,[m
+[31m-        @NotNull List<DoseData> doses) {[m
+[32m+[m[32m        @NotNull Set<DoseData> doses) {[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/mapper/VaccineMapper.java b/src/main/java/com/endevitylabs/vaccinator/mapper/VaccineMapper.java[m
+[1mindex ad5fd3f..9723566 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/mapper/VaccineMapper.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/mapper/VaccineMapper.java[m
+[36m@@ -17,10 +17,6 @@[m [mpublic interface VaccineMapper {[m
+     @Mapping(target = "schedules", source = "schedules")[m
+     VaccineDto toDto(Vaccine vaccine);[m
+ [m
+[31m-    @Mapping(target = "schedule", ignore = true)[m
+[31m-    @Mapping(target = "id", ignore = true)[m
+[31m-    Dose toEntity(CreateDoseRequest request);[m
+[31m-[m
+     VaccineScheduleDto toDto(VaccineSchedule schedule);[m
+     DoseDto toDto(Dose dose);[m
+ [m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/model/Dose.java b/src/main/java/com/endevitylabs/vaccinator/model/Dose.java[m
+[1mindex f3e9ee6..7559c15 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/model/Dose.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/model/Dose.java[m
+[36m@@ -82,13 +82,14 @@[m [mpublic class Dose {[m
+ [m
+     @Override[m
+     public boolean equals(Object object) {[m
+[32m+[m[32m        if (this == object) return true;[m
+         if (object == null || getClass() != object.getClass()) return false;[m
+         Dose dose = (Dose) object;[m
+[31m-        return Objects.equals(id, dose.id) && Objects.equals(schedule, dose.schedule) && Objects.equals(doseNumber, dose.doseNumber) && Objects.equals(minAge, dose.minAge) && Objects.equals(isBooster, dose.isBooster) && Objects.equals(note, dose.note);[m
+[32m+[m[32m        return Objects.equals(id, dose.id);[m
+     }[m
+ [m
+     @Override[m
+     public int hashCode() {[m
+[31m-        return Objects.hash(id, schedule, doseNumber, minAge, isBooster, note);[m
+[32m+[m[32m        return Objects.hash(id);[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/model/Vaccine.java b/src/main/java/com/endevitylabs/vaccinator/model/Vaccine.java[m
+[1mindex 1f93e82..99feda6 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/model/Vaccine.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/model/Vaccine.java[m
+[36m@@ -14,6 +14,21 @@[m [mimport java.util.Set;[m
+ import java.util.UUID;[m
+ [m
+ @Entity[m
+[32m+[m[32m@NamedEntityGraph([m
+[32m+[m[32m        name = "Vaccine.full",[m
+[32m+[m[32m        attributeNodes = {[m
+[32m+[m[32m                @NamedAttributeNode("targetGroups"),[m
+[32m+[m[32m                @NamedAttributeNode("regions"),[m
+[32m+[m[32m                @NamedAttributeNode("considerations"),[m
+[32m+[m[32m                @NamedAttributeNode(value = "schedules", subgraph = "schedulesWithDoses")[m
+[32m+[m[32m        },[m
+[32m+[m[32m        subgraphs = {[m
+[32m+[m[32m                @NamedSubgraph([m
+[32m+[m[32m                        name = "schedulesWithDoses",[m
+[32m+[m[32m                        attributeNodes = @NamedAttributeNode("doses")[m
+[32m+[m[32m                )[m
+[32m+[m[32m        }[m
+[32m+[m[32m)[m
+ @Table(name = "vaccine")[m
+ public class Vaccine {[m
+ [m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/model/VaccineSchedule.java b/src/main/java/com/endevitylabs/vaccinator/model/VaccineSchedule.java[m
+[1mindex c1812a8..9bcc7cb 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/model/VaccineSchedule.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/model/VaccineSchedule.java[m
+[36m@@ -1,16 +1,11 @@[m
+ package com.endevitylabs.vaccinator.model;[m
+ [m
+ import jakarta.persistence.*;[m
+[31m-import lombok.Data;[m
+[31m-import lombok.EqualsAndHashCode;[m
+[31m-import lombok.ToString;[m
+ import org.hibernate.annotations.CreationTimestamp;[m
+ import org.hibernate.annotations.UpdateTimestamp;[m
+ [m
+ import java.time.LocalDateTime;[m
+[31m-import java.util.ArrayList;[m
+[31m-import java.util.List;[m
+[31m-import java.util.UUID;[m
+[32m+[m[32mimport java.util.*;[m
+ [m
+ @Entity[m
+ @Table(name = "vaccine_schedule")[m
+[36m@@ -46,7 +41,7 @@[m [mpublic class VaccineSchedule {[m
+ [m
+     @OneToMany(mappedBy = "schedule", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)[m
+     @OrderBy("doseNumber ASC")[m
+[31m-    private List<Dose> doses = new ArrayList<>();[m
+[32m+[m[32m    private Set<Dose> doses = new HashSet<>();[m
+ [m
+     public UUID getId() {[m
+         return id;[m
+[36m@@ -112,11 +107,11 @@[m [mpublic class VaccineSchedule {[m
+         this.updatedAt = updatedAt;[m
+     }[m
+ [m
+[31m-    public List<Dose> getDoses() {[m
+[32m+[m[32m    public Set<Dose> getDoses() {[m
+         return doses;[m
+     }[m
+ [m
+[31m-    public void setDoses(List<Dose> doses) {[m
+[32m+[m[32m    public void setDoses(Set<Dose> doses) {[m
+         this.doses = doses;[m
+     }[m
+ [m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/repository/AgeGroupRepository.java b/src/main/java/com/endevitylabs/vaccinator/repository/AgeGroupRepository.java[m
+[1mindex 72e8c2e..f5f54ef 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/repository/AgeGroupRepository.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/repository/AgeGroupRepository.java[m
+[36m@@ -1,16 +1,14 @@[m
+ package com.endevitylabs.vaccinator.repository;[m
+ [m
+ import com.endevitylabs.vaccinator.model.AgeGroup;[m
+[31m-import io.swagger.v3.oas.annotations.Hidden;[m
+[31m-import org.springframework.data.repository.CrudRepository;[m
+[32m+[m[32mimport org.springframework.data.jpa.repository.JpaRepository;[m
+ import org.springframework.data.repository.query.Param;[m
+ import org.springframework.stereotype.Repository;[m
+ [m
+ import java.util.Optional;[m
+ [m
+[31m-@Hidden[m
+ @Repository[m
+[31m-public interface AgeGroupRepository extends CrudRepository<AgeGroup, Integer> {[m
+[32m+[m[32mpublic interface AgeGroupRepository extends JpaRepository<AgeGroup, Integer> {[m
+ [m
+     Optional<AgeGroup> findByName(@Param("name") String name);[m
+ } [m
+\ No newline at end of file[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/repository/ConsiderationRepository.java b/src/main/java/com/endevitylabs/vaccinator/repository/ConsiderationRepository.java[m
+[1mindex 9ec1f5d..1230cb6 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/repository/ConsiderationRepository.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/repository/ConsiderationRepository.java[m
+[36m@@ -1,16 +1,14 @@[m
+ package com.endevitylabs.vaccinator.repository;[m
+ [m
+ import com.endevitylabs.vaccinator.model.Consideration;[m
+[31m-import io.swagger.v3.oas.annotations.Hidden;[m
+[31m-import org.springframework.data.repository.CrudRepository;[m
+[32m+[m[32mimport org.springframework.data.jpa.repository.JpaRepository;[m
+ import org.springframework.data.repository.query.Param;[m
+ import org.springframework.stereotype.Repository;[m
+ [m
+ import java.util.Optional;[m
+ [m
+[31m-@Hidden[m
+ @Repository[m
+[31m-public interface ConsiderationRepository extends CrudRepository<Consideration, Integer> {[m
+[32m+[m[32mpublic interface ConsiderationRepository extends JpaRepository<Consideration, Integer> {[m
+ [m
+     Optional<Consideration> findByName(@Param("name") String name);[m
+ } [m
+\ No newline at end of file[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/repository/DoseRepository.java b/src/main/java/com/endevitylabs/vaccinator/repository/DoseRepository.java[m
+[1mindex 795a740..039e8e5 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/repository/DoseRepository.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/repository/DoseRepository.java[m
+[36m@@ -7,6 +7,7 @@[m [mimport org.springframework.data.repository.query.Param;[m
+ import org.springframework.stereotype.Repository;[m
+ [m
+ import java.util.List;[m
+[32m+[m[32mimport java.util.Optional;[m
+ import java.util.UUID;[m
+ [m
+ @Repository[m
+[36m@@ -16,4 +17,7 @@[m [mpublic interface DoseRepository extends JpaRepository<Dose, UUID> {[m
+     List<Dose> findByScheduleIdOrderByDoseNumber(@Param("scheduleId") UUID scheduleId);[m
+     [m
+     List<Dose> findByScheduleId(UUID scheduleId);[m
+[32m+[m[41m    [m
+[32m+[m[32m    @Query("SELECT d FROM Dose d WHERE d.schedule.id = :scheduleId AND d.doseNumber = :doseNumber")[m
+[32m+[m[32m    Optional<Dose> findByScheduleAndDoseNumber(@Param("scheduleId") UUID scheduleId, @Param("doseNumber") Integer doseNumber);[m
+ } [m
+\ No newline at end of file[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/repository/RegionRepository.java b/src/main/java/com/endevitylabs/vaccinator/repository/RegionRepository.java[m
+[1mindex 0ab11fd..72e4b33 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/repository/RegionRepository.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/repository/RegionRepository.java[m
+[36m@@ -1,16 +1,14 @@[m
+ package com.endevitylabs.vaccinator.repository;[m
+ [m
+ import com.endevitylabs.vaccinator.model.Region;[m
+[31m-import io.swagger.v3.oas.annotations.Hidden;[m
+[31m-import org.springframework.data.repository.CrudRepository;[m
+[32m+[m[32mimport org.springframework.data.jpa.repository.JpaRepository;[m
+ import org.springframework.data.repository.query.Param;[m
+ import org.springframework.stereotype.Repository;[m
+ [m
+ import java.util.Optional;[m
+ [m
+[31m-@Hidden[m
+ @Repository[m
+[31m-public interface RegionRepository extends CrudRepository<Region, Integer> {[m
+[32m+[m[32mpublic interface RegionRepository extends JpaRepository<Region, Integer> {[m
+ [m
+     Optional<Region> findByName(@Param("name") String name);[m
+ } [m
+\ No newline at end of file[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/repository/VaccineRepository.java b/src/main/java/com/endevitylabs/vaccinator/repository/VaccineRepository.java[m
+[1mindex 82d4546..352b130 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/repository/VaccineRepository.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/repository/VaccineRepository.java[m
+[36m@@ -1,9 +1,9 @@[m
+ package com.endevitylabs.vaccinator.repository;[m
+ [m
+ import com.endevitylabs.vaccinator.model.Vaccine;[m
+[31m-import io.swagger.v3.oas.annotations.Hidden;[m
+[32m+[m[32mimport org.springframework.data.jpa.repository.EntityGraph;[m
+[32m+[m[32mimport org.springframework.data.jpa.repository.JpaRepository;[m
+ import org.springframework.data.jpa.repository.Query;[m
+[31m-import org.springframework.data.repository.CrudRepository;[m
+ import org.springframework.data.repository.query.Param;[m
+ import org.springframework.stereotype.Repository;[m
+ [m
+[36m@@ -11,13 +11,11 @@[m [mimport java.util.List;[m
+ import java.util.Optional;[m
+ import java.util.UUID;[m
+ [m
+[31m-@Hidden[m
+ @Repository[m
+[31m-public interface VaccineRepository extends CrudRepository<Vaccine, UUID> {[m
+[32m+[m[32mpublic interface VaccineRepository extends JpaRepository<Vaccine, UUID> {[m
+ [m
+[31m-    Optional<Vaccine> findByName(@Param("name") String name);[m
+[31m-[m
+[31m-    @Query("SELECT v FROM Vaccine v JOIN FETCH v.targetGroups JOIN FETCH v.regions JOIN FETCH v.considerations JOIN FETCH v.schedules s JOIN FETCH s.doses")[m
+[32m+[m[32m    @EntityGraph(value = "Vaccine.full", type = EntityGraph.EntityGraphType.LOAD)[m
+[32m+[m[32m    @Query("SELECT DISTINCT v FROM Vaccine v")[m
+     List<Vaccine> findAllWithDetails();[m
+ [m
+     @Query("SELECT v FROM Vaccine v JOIN FETCH v.targetGroups JOIN FETCH v.regions JOIN FETCH v.considerations JOIN FETCH v.schedules s JOIN FETCH s.doses WHERE v.id = :id")[m
+[1mdiff --git a/src/main/java/com/endevitylabs/vaccinator/service/impl/DataManagementServiceImpl.java b/src/main/java/com/endevitylabs/vaccinator/service/impl/DataManagementServiceImpl.java[m
+[1mindex 5c57a00..012d7e0 100644[m
+[1m--- a/src/main/java/com/endevitylabs/vaccinator/service/impl/DataManagementServiceImpl.java[m
+[1m+++ b/src/main/java/com/endevitylabs/vaccinator/service/impl/DataManagementServiceImpl.java[m
+[36m@@ -6,6 +6,7 @@[m [mimport com.endevitylabs.vaccinator.repository.*;[m
+ import com.endevitylabs.vaccinator.service.DataManagementService;[m
+ import lombok.RequiredArgsConstructor;[m
+ import lombok.extern.slf4j.Slf4j;[m
+[32m+[m[32mimport org.springframework.beans.factory.annotation.Autowired;[m
+ import org.springframework.stereotype.Service;[m
+ import org.springframework.transaction.annotation.Transactional;[m
+ [m
+[36m@@ -14,7 +15,6 @@[m [mimport java.util.*;[m
+ import java.util.stream.Collectors;[m
+ [m
+ @Service[m
+[31m-@RequiredArgsConstructor[m
+ @Slf4j[m
+ public class DataManagementServiceImpl implements DataManagementService {[m
+ [m
+[36m@@ -25,6 +25,16 @@[m [mpublic class DataManagementServiceImpl implements DataManagementService {[m
+     private final VaccineScheduleRepository vaccineScheduleRepository;[m
+     private final DoseRepository doseRepository;[m
+ [m
+[32m+[m[32m    @Autowired[m
+[32m+[m[32m    public DataManagementServiceImp
