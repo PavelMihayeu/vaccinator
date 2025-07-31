@@ -5,25 +5,25 @@ import com.endevitylabs.vaccinator.mapper.VaccineMapper;
 import com.endevitylabs.vaccinator.model.*;
 import com.endevitylabs.vaccinator.repository.*;
 import com.endevitylabs.vaccinator.service.VaccineService;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 @Transactional
 public class VaccineServiceImpl implements VaccineService {
 
     private final VaccineRepository vaccineRepository;
-    private final AgeGroupRepository ageGroupRepository;
-    private final RegionRepository regionRepository;
-    private final ConsiderationRepository considerationRepository;
     private final VaccineMapper vaccineMapper;
+
+    @Autowired
+    public VaccineServiceImpl(VaccineRepository vaccineRepository, VaccineMapper vaccineMapper) {
+        this.vaccineRepository = vaccineRepository;
+        this.vaccineMapper = vaccineMapper;
+    }
 
     @Override
     @Transactional(readOnly = true)

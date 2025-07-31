@@ -1,16 +1,11 @@
 package com.endevitylabs.vaccinator.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Entity
 @Table(name = "vaccine_schedule")
@@ -46,7 +41,7 @@ public class VaccineSchedule {
 
     @OneToMany(mappedBy = "schedule", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     @OrderBy("doseNumber ASC")
-    private List<Dose> doses = new ArrayList<>();
+    private Set<Dose> doses = new HashSet<>();
 
     public UUID getId() {
         return id;
@@ -112,11 +107,11 @@ public class VaccineSchedule {
         this.updatedAt = updatedAt;
     }
 
-    public List<Dose> getDoses() {
+    public Set<Dose> getDoses() {
         return doses;
     }
 
-    public void setDoses(List<Dose> doses) {
+    public void setDoses(Set<Dose> doses) {
         this.doses = doses;
     }
 

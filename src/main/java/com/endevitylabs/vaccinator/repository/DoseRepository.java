@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
@@ -16,4 +17,7 @@ public interface DoseRepository extends JpaRepository<Dose, UUID> {
     List<Dose> findByScheduleIdOrderByDoseNumber(@Param("scheduleId") UUID scheduleId);
     
     List<Dose> findByScheduleId(UUID scheduleId);
+    
+    @Query("SELECT d FROM Dose d WHERE d.schedule.id = :scheduleId AND d.doseNumber = :doseNumber")
+    Optional<Dose> findByScheduleAndDoseNumber(@Param("scheduleId") UUID scheduleId, @Param("doseNumber") Integer doseNumber);
 } 

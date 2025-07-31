@@ -14,6 +14,21 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
+@NamedEntityGraph(
+        name = "Vaccine.full",
+        attributeNodes = {
+                @NamedAttributeNode("targetGroups"),
+                @NamedAttributeNode("regions"),
+                @NamedAttributeNode("considerations"),
+                @NamedAttributeNode(value = "schedules", subgraph = "schedulesWithDoses")
+        },
+        subgraphs = {
+                @NamedSubgraph(
+                        name = "schedulesWithDoses",
+                        attributeNodes = @NamedAttributeNode("doses")
+                )
+        }
+)
 @Table(name = "vaccine")
 public class Vaccine {
 

@@ -1,16 +1,14 @@
 package com.endevitylabs.vaccinator.repository;
 
 import com.endevitylabs.vaccinator.model.AgeGroup;
-import io.swagger.v3.oas.annotations.Hidden;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-@Hidden
 @Repository
-public interface AgeGroupRepository extends CrudRepository<AgeGroup, Integer> {
+public interface AgeGroupRepository extends JpaRepository<AgeGroup, Integer> {
 
     Optional<AgeGroup> findByName(@Param("name") String name);
 } 

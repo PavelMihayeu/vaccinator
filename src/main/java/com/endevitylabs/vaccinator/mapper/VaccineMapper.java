@@ -17,10 +17,6 @@ public interface VaccineMapper {
     @Mapping(target = "schedules", source = "schedules")
     VaccineDto toDto(Vaccine vaccine);
 
-    @Mapping(target = "schedule", ignore = true)
-    @Mapping(target = "id", ignore = true)
-    Dose toEntity(CreateDoseRequest request);
-
     VaccineScheduleDto toDto(VaccineSchedule schedule);
     DoseDto toDto(Dose dose);
 

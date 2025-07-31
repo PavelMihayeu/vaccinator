@@ -82,13 +82,14 @@ public class Dose {
 
     @Override
     public boolean equals(Object object) {
+        if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
         Dose dose = (Dose) object;
-        return Objects.equals(id, dose.id) && Objects.equals(schedule, dose.schedule) && Objects.equals(doseNumber, dose.doseNumber) && Objects.equals(minAge, dose.minAge) && Objects.equals(isBooster, dose.isBooster) && Objects.equals(note, dose.note);
+        return Objects.equals(id, dose.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, schedule, doseNumber, minAge, isBooster, note);
+        return Objects.hash(id);
     }
 }

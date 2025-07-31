@@ -6,6 +6,7 @@ import com.endevitylabs.vaccinator.repository.*;
 import com.endevitylabs.vaccinator.service.DataManagementService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,7 +15,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
 @Slf4j
 public class DataManagementServiceImpl implements DataManagementService {
 
@@ -25,6 +25,16 @@ public class DataManagementServiceImpl implements DataManagementService {
     private final VaccineScheduleRepository vaccineScheduleRepository;
     private final DoseRepository doseRepository;
 
+    @Autowired
+    public DataManagementServiceImpl(VaccineRepository vaccineRepository, AgeGroupRepository ageGroupRepository, RegionRepository regionRepository, ConsiderationRepository considerationRepository, VaccineScheduleRepository vaccineScheduleRepository, DoseRepository doseRepository) {
+        this.vaccineRepository = vaccineRepository;
+        this.ageGroupRepository = ageGroupRepository;
+        this.regionRepository = regionRepository;
+        this.considerationRepository = considerationRepository;
+        this.vaccineScheduleRepository = vaccineScheduleRepository;
+        this.doseRepository = doseRepository;
+    }
+
     @Override
     @Transactional
     public Map<String, Object> loadVaccineData(LoadVaccineDataRequest request) {
@@ -33,22 +43,8 @@ public class DataManagementServiceImpl implements DataManagementService {
 
             List<VaccineData> vaccines = request.vaccines();
 
-            if (vaccines == null || vaccines.isEmpty()) {
-                throw new IllegalArgumentException("No vaccines found in request data");
-            }
-
-            // Clear existing vaccine data first
-            log.info("Clearing existing vaccine data before loading new data");
-            long dosesDeleted = doseRepository.count();
-            doseRepository.deleteAll();
-
-            long schedulesDeleted = vaccineScheduleRepository.count();
-            vaccineScheduleRepository.deleteAll();
-
-            long vaccinesDeleted = vaccineRepository.count();
-            vaccineRepository.deleteAll();
-
-            log.info("Cleared {} vaccines, {} schedules, {} doses", vaccinesDeleted, schedulesDeleted, dosesDeleted);
+            // Clear existing vaccine data first (delete in reverse order due to foreign key constraints)
+            long previousDataCleared = clearVaccines();
 
             // Load lookup data first
             Map<String, AgeGroup> ageGroups = loadAgeGroups(vaccines);
@@ -79,7 +75,7 @@ public class DataManagementServiceImpl implements DataManagementService {
             result.put("ageGroupsLoaded", ageGroups.size());
             result.put("regionsLoaded", regions.size());
             result.put("considerationsLoaded", considerations.size());
-            result.put("previousDataCleared", vaccinesDeleted + schedulesDeleted + dosesDeleted);
+            result.put("previousDataCleared", previousDataCleared);
 
             log.info("Successfully loaded {} vaccines, failed to load {} vaccines", savedVaccines.size(), failedVaccines.size());
             return result;
@@ -88,6 +84,22 @@ public class DataManagementServiceImpl implements DataManagementService {
             log.error("Error loading vaccine data: {}", e.getMessage(), e);
             throw new RuntimeException("Failed to load vaccine data: " + e.getMessage(), e);
         }
+    }
+
+    private long clearVaccines() {
+
+        log.info("Clearing existing vaccine data before loading new data");
+
+        long vaccinesDeleted = vaccineRepository.count();
+        vaccineRepository.deleteAll();
+
+        // Schedules and doses will be automatically deleted due to cascade
+        long schedulesDeleted = vaccineScheduleRepository.count();
+        long dosesDeleted = doseRepository.count();
+
+        log.info("Cleared {} vaccines, {} schedules, {} doses", vaccinesDeleted, schedulesDeleted, dosesDeleted);
+
+        return vaccinesDeleted + schedulesDeleted + dosesDeleted;
     }
 
     @Override
@@ -109,14 +121,12 @@ public class DataManagementServiceImpl implements DataManagementService {
         try {
             log.info("Clearing all vaccine data from database");
 
-            long dosesDeleted = doseRepository.count();
-            doseRepository.deleteAll();
-
-            long schedulesDeleted = vaccineScheduleRepository.count();
-            vaccineScheduleRepository.deleteAll();
-
             long vaccinesDeleted = vaccineRepository.count();
             vaccineRepository.deleteAll();
+            
+            // Schedules and doses will be automatically deleted due to cascade
+            long schedulesDeleted = vaccineScheduleRepository.count();
+            long dosesDeleted = doseRepository.count();
 
             Map<String, Object> result = new HashMap<>();
             result.put("message", "All vaccine data cleared successfully");
@@ -267,6 +277,14 @@ public class DataManagementServiceImpl implements DataManagementService {
 
     private void loadDose(VaccineSchedule schedule, DoseData doseData) {
         try {
+            // Check if a dose with the same number already exists for this schedule
+            Optional<Dose> existingDose = doseRepository.findByScheduleAndDoseNumber(schedule.getId(), doseData.doseNumber());
+            if (existingDose.isPresent()) {
+                log.warn("Dose with number {} already exists for schedule {}. Skipping duplicate.", 
+                        doseData.doseNumber(), schedule.getScheduleType());
+                return;
+            }
+            
             Dose dose = new Dose();
             dose.setSchedule(schedule);
             dose.setDoseNumber(doseData.doseNumber());
@@ -274,7 +292,14 @@ public class DataManagementServiceImpl implements DataManagementService {
             dose.setBooster(doseData.isBooster());
             dose.setNote(doseData.note());
 
-            doseRepository.save(dose);
+            Dose savedDose = doseRepository.save(dose);
+            
+            // Ensure the dose is added to the schedule's doses collection
+            if (schedule.getDoses() == null) {
+                schedule.setDoses(new HashSet<>());
+            }
+            schedule.getDoses().add(savedDose);
+            
         } catch (Exception e) {
             log.error("Failed to load dose with number {} for schedule {}: {}",
                     doseData.doseNumber(), schedule.getScheduleType(), e.getMessage(), e);
