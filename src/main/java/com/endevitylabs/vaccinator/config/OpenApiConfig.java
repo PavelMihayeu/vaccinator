@@ -1,8 +1,8 @@
 package com.endevitylabs.vaccinator.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
 import org.springframework.context.annotation.Bean;
@@ -18,37 +18,35 @@ public class OpenApiConfig {
         return new OpenAPI()
                 .info(new Info()
                         .title("Vaccinator API")
+                        .version("1.0")
                         .description("""
-                                API for managing WHO vaccination guidelines and recommendations.
+                                Vaccine management API with MongoDB storage:
                                 
-                                ## API Versions
-                                - **v1**: Current stable version with basic vaccine data endpoints
-                                - **v2**: Enhanced version with improved response format and metadata
+                                ## Key Features:
+                                - **Flexible JSON Storage**: Stores vaccine data as flexible JSON documents
+                                - **Prequalified Vaccines**: Support for WHO prequalified vaccine information
+                                - **NaN Handling**: Robust handling of NaN values in JSON data
+                                - **ISO DateTime Format**: Proper datetime serialization
                                 
-                                ## Endpoints
-                                - `/api/v1/vaccines` - Public vaccine data endpoints
-                                - `/api/v1/admin/data` - Admin data management endpoints
-                                - `/api/v2/vaccines` - Enhanced vaccine endpoints (V2)
-                                
-                                ## Authentication
-                                - Public endpoints: No authentication required
-                                - Admin endpoints: API key authentication (currently disabled in dev)
+                                ## API Features:
+                                - **Flexible Schema**: No rigid structure constraints
+                                - **Bulk Loading**: Load large datasets with NaN handling
+                                - **CRUD Operations**: Full create, read, update, delete support
                                 """)
-                        .version("1.0.0")
                         .contact(new Contact()
-                                .name("Vaccinator Team")
-                                .email("support@vaccinator.com")
-                                .url("https://vaccinator.com"))
+                                .name("Endevity Labs")
+                                .email("support@endevitylabs.com")
+                                .url("https://endevitylabs.com"))
                         .license(new License()
                                 .name("MIT License")
                                 .url("https://opensource.org/licenses/MIT")))
                 .servers(List.of(
                         new Server()
                                 .url("http://localhost:8080")
-                                .description("Local Development Server"),
+                                .description("Development server"),
                         new Server()
                                 .url("https://api.vaccinator.com")
-                                .description("Production Server")
+                                .description("Production server")
                 ));
     }
 } 

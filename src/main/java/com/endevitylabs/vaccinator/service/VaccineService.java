@@ -1,15 +1,24 @@
 package com.endevitylabs.vaccinator.service;
 
-import com.endevitylabs.vaccinator.dto.VaccineDto;
-
-import java.util.List;
-import java.util.UUID;
+import com.endevitylabs.vaccinator.dto.BulkLoadVaccineRequest;
+import com.endevitylabs.vaccinator.dto.BulkLoadVaccineResponse;
+import com.endevitylabs.vaccinator.dto.GetAllVaccinesResponse;
+import com.endevitylabs.vaccinator.model.VaccineDocument;
 
 public interface VaccineService {
 
-    List<VaccineDto> getAllVaccines();
-    
-    VaccineDto getVaccineById(UUID id);
-    
-    List<VaccineDto> searchVaccinesByName(String name);
+    /**
+     * Get all vaccines from MongoDB
+     */
+    GetAllVaccinesResponse getAllVaccines();
+
+    /**
+     * Get a specific vaccine by ID
+     */
+    VaccineDocument getVaccineById(String id);
+
+    /**
+     * Bulk load vaccines from JSON data
+     */
+    BulkLoadVaccineResponse bulkLoadVaccines(BulkLoadVaccineRequest request);
 }

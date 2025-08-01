@@ -1,46 +1,37 @@
 package com.endevitylabs.vaccinator.mapper;
 
-import com.endevitylabs.vaccinator.dto.*;
-import com.endevitylabs.vaccinator.model.*;
-import org.mapstruct.*;
+import com.endevitylabs.vaccinator.dto.VaccineDataDto;
+import com.endevitylabs.vaccinator.dto.PrequalifiedVaccineDto;
+import com.endevitylabs.vaccinator.model.VaccineDocument;
+import com.endevitylabs.vaccinator.model.PreQualifiedVaccine;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
-@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Mapper(componentModel = "spring")
 public interface VaccineMapper {
 
-    @Mapping(target = "targetGroups", source = "targetGroups", qualifiedByName = "ageGroupsToStrings")
-    @Mapping(target = "regions", source = "regions", qualifiedByName = "regionsToStrings")
-    @Mapping(target = "considerations", source = "considerations", qualifiedByName = "considerationsToStrings")
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "createdAt", expression = "java(java.time.LocalDateTime.now())")
+    @Mapping(target = "updatedAt", expression = "java(java.time.LocalDateTime.now())")
     @Mapping(target = "schedules", source = "schedules")
-    VaccineDto toDto(Vaccine vaccine);
+    @Mapping(target = "prequalifiedVaccines", source = "prequalifiedVaccines")
+    VaccineDocument toDocument(VaccineDataDto vaccineDataDto);
 
-    VaccineScheduleDto toDto(VaccineSchedule schedule);
-    DoseDto toDto(Dose dose);
+    @Mapping(target = "schedules", source = "schedules")
+    @Mapping(target = "prequalifiedVaccines", source = "prequalifiedVaccines")
+    VaccineDataDto toDto(VaccineDocument vaccineDocument);
 
-    @Named("ageGroupsToStrings")
-    default Set<String> ageGroupsToStrings(Set<AgeGroup> ageGroups) {
-        if (ageGroups == null) return null;
-        return ageGroups.stream()
-                .map(AgeGroup::getName)
-                .collect(Collectors.toSet());
-    }
+    List<VaccineDataDto> toDto(List<VaccineDocument> vaccineDocumentList);
 
-    @Named("regionsToStrings")
-    default Set<String> regionsToStrings(Set<Region> regions) {
-        if (regions == null) return null;
-        return regions.stream()
-                .map(Region::getName)
-                .collect(Collectors.toSet());
-    }
-
-    @Named("considerationsToStrings")
-    default Set<String> considerationsToStrings(Set<Consideration> considerations) {
-        if (considerations == null) return null;
-        return considerations.stream()
-                .map(Consideration::getName)
-                .collect(Collectors.toSet());
-    }
+    // Map PrequalifiedVaccineDto to PreQualifiedVaccine
+    PreQualifiedVaccine prequalifiedVaccineDtoToPreQualifiedVaccine(PrequalifiedVaccineDto prequalifiedVaccineDto);
+    
+    // Map PreQualifiedVaccine to PrequalifiedVaccineDto
+    PrequalifiedVaccineDto toDto(PreQualifiedVaccine preQualifiedVaccine);
+    
+    List<PreQualifiedVaccine> prequalifiedVaccineDtoListToPreQualifiedVaccineList(List<PrequalifiedVaccineDto> prequalifiedVaccineDtoList);
+    
+    List<PrequalifiedVaccineDto> preQualifiedVaccineListToPrequalifiedVaccineDtoList(List<PreQualifiedVaccine> preQualifiedVaccineList);
 } 

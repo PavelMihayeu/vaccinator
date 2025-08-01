@@ -1,0 +1,1736 @@
+{
+  "data": {
+    "vaccines": [
+      {
+        "name": "BCG",
+        "type": "Live attenuated",
+        "targetGroups": [
+          "Children",
+          "Adolescents (if unvaccinated)",
+          "Adults (if high TB risk)"
+        ],
+        "regions": [
+          "Global",
+          "High TB prevalence"
+        ],
+        "schedules": [
+          {
+            "type": "standard",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "Birth",
+                "isBooster": false,
+                "note": "As soon as possible after birth"
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Universal vs selective vaccination",
+          "Not recommended during pregnancy",
+          "Recommended in HIV+ children if immunologically stable"
+        ],
+        "description": "BCG vaccine protects against tuberculosis, especially severe forms in children.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+        "prequalifiedVaccines": [
+          {
+            "dateOfPreQualification": "1987-01-01",
+            "vaccineType": "BCG",
+            "commercialName": "BCG Freeze Dried Glutamate vaccine",
+            "presentation": "Ampoule",
+            "numberOfDoses": 10,
+            "manufacturer": "Japan BCG Laboratory",
+            "responsibleNRA": "Pharmaceutical and Medical Devices Agency"
+          },
+          {
+            "dateOfPreQualification": "1987-01-01",
+            "vaccineType": "BCG",
+            "commercialName": "BCG Freeze Dried Glutamate vaccine",
+            "presentation": "Ampoule",
+            "numberOfDoses": 20,
+            "manufacturer": "Japan BCG Laboratory",
+            "responsibleNRA": "Pharmaceutical and Medical Devices Agency"
+          },
+          {
+            "dateOfPreQualification": "2003-05-29",
+            "vaccineType": "BCG",
+            "commercialName": "BCG Vaccine",
+            "presentation": "Vial",
+            "numberOfDoses": 20,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2024-12-03",
+            "vaccineType": "BCG",
+            "commercialName": "BCG Vaccine",
+            "presentation": "Vial + Ampoule",
+            "numberOfDoses": 20,
+            "manufacturer": "GreenSignal Bio Pharma Pvt Limited",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "1991-02-01",
+            "vaccineType": "BCG",
+            "commercialName": "BCG Vaccine",
+            "presentation": "Ampoule",
+            "numberOfDoses": 10,
+            "manufacturer": "BB- NCIPD EAD (Bul Bio-National Center of Infectious and Parasitic Diseases EAD)",
+            "responsibleNRA": "Bulgarian Drug Agency"
+          },
+          {
+            "dateOfPreQualification": "1991-02-01",
+            "vaccineType": "BCG",
+            "commercialName": "BCG Vaccine",
+            "presentation": "Ampoule",
+            "numberOfDoses": 20,
+            "manufacturer": "BB- NCIPD EAD (Bul Bio-National Center of Infectious and Parasitic Diseases EAD)",
+            "responsibleNRA": "Bulgarian Drug Agency"
+          },
+          {
+            "dateOfPreQualification": "1994-09-27",
+            "vaccineType": "BCG",
+            "commercialName": "BCG Vaccine AJV",
+            "presentation": "Two vial set (active + excipient)",
+            "numberOfDoses": 10,
+            "manufacturer": "AJ Vaccines A/S",
+            "responsibleNRA": "Danish Medicines Agency"
+          }
+        ]
+      },
+      {
+        "name": "Hepatitis B",
+        "type": "Inactivated",
+        "targetGroups": [
+          "Children",
+          "High-risk adults"
+        ],
+        "regions": [
+          "Global"
+        ],
+        "schedules": [
+          {
+            "type": "3-dose (standard)",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "Birth",
+                "isBooster": false,
+                "note": "Monovalent birth dose"
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": "Co-administered with DTP1"
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "10-14 weeks",
+                "isBooster": false,
+                "note": "Final dose"
+              }
+            ]
+          },
+          {
+            "type": "4-dose (optional)",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "Birth",
+                "isBooster": false,
+                "note": "Monovalent birth dose"
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": "Combined vaccine"
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "10 weeks",
+                "isBooster": false,
+                "note": "Combined vaccine"
+              },
+              {
+                "doseNumber": 4,
+                "minAge": "14 weeks",
+                "isBooster": false,
+                "note": "Final dose"
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Essential to prevent perinatal HBV transmission",
+          "Recommended in HIV, liver disease, dialysis patients, and health care workers"
+        ],
+        "description": "Hepatitis B vaccine prevents liver infection and chronic complications caused by hepatitis B virus.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+        "prequalifiedVaccines": [
+          {
+            "dateOfPreQualification": "2025-01-16",
+            "vaccineType": "Hepatitis B (Paediatric)",
+            "commercialName": "BEVAC®",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Biological E. Limited",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2025-01-20",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "BEVAC®",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Biological E. Limited",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2025-01-16",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "BEVAC®",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "Biological E. Limited",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2025-01-16",
+            "vaccineType": "Hepatitis B (Paediatric)",
+            "commercialName": "BEVAC®",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "Biological E. Limited",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "1987-01-01",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Engerix",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "GlaxoSmithKline Biologicals SA",
+            "responsibleNRA": "Federal Agency for Medicines and Health Products"
+          },
+          {
+            "dateOfPreQualification": "1987-01-01",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Engerix",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "GlaxoSmithKline Biologicals SA",
+            "responsibleNRA": "Federal Agency for Medicines and Health Products"
+          },
+          {
+            "dateOfPreQualification": "1987-01-01",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Engerix",
+            "presentation": "Vial",
+            "numberOfDoses": 20,
+            "manufacturer": "GlaxoSmithKline Biologicals SA",
+            "responsibleNRA": "Federal Agency for Medicines and Health Products"
+          },
+          {
+            "dateOfPreQualification": "2020-01-21",
+            "vaccineType": "Hepatitis B (Paediatric)",
+            "commercialName": "Euvax B",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "LG Chem Ltd",
+            "responsibleNRA": "Ministry of Food and Drug Safety"
+          },
+          {
+            "dateOfPreQualification": "1996-11-22",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Euvax B",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "LG Chem Ltd",
+            "responsibleNRA": "Ministry of Food and Drug Safety"
+          },
+          {
+            "dateOfPreQualification": "1996-11-22",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Euvax B",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "LG Chem Ltd",
+            "responsibleNRA": "Ministry of Food and Drug Safety"
+          },
+          {
+            "dateOfPreQualification": "2001-12-11",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Heberbiovac HB",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Centro de Ingenieria Genetica y Biotecnologia",
+            "responsibleNRA": "Centro para el Control Estatal de la Calidad de los Medicamentos"
+          },
+          {
+            "dateOfPreQualification": "2001-12-11",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Heberbiovac HB",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "Centro de Ingenieria Genetica y Biotecnologia",
+            "responsibleNRA": "Centro para el Control Estatal de la Calidad de los Medicamentos"
+          },
+          {
+            "dateOfPreQualification": "2004-11-12",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Hepatitis B Vaccine (rDNA) (Adult)",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2004-11-12",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Hepatitis B Vaccine (rDNA) (Adult)",
+            "presentation": "Ampoule or Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2004-11-12",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Hepatitis B Vaccine (rDNA) (Paediatric)",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2004-11-12",
+            "vaccineType": "Hepatitis B",
+            "commercialName": "Hepatitis B Vaccine (rDNA) (Paedriatic)",
+            "presentation": "Ampoule or Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          }
+        ]
+      },
+      {
+        "name": "Polio (bOPV + IPV)",
+        "type": "Oral (bOPV) + Inactivated (IPV)",
+        "targetGroups": [
+          "Children"
+        ],
+        "regions": [
+          "Global",
+          "Polio-endemic regions"
+        ],
+        "schedules": [
+          {
+            "type": "standard (bOPV + IPV)",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": "bOPV"
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "10 weeks",
+                "isBooster": false,
+                "note": "bOPV"
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "14 weeks",
+                "isBooster": false,
+                "note": "bOPV + IPV"
+              },
+              {
+                "doseNumber": 4,
+                "minAge": "9 months",
+                "isBooster": false,
+                "note": "IPV booster (optional)"
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Use of fractional vs full dose IPV",
+          "Zero dose (bOPV) at birth in high-risk areas",
+          "Important for global polio eradication"
+        ],
+        "description": "Polio vaccines protect against poliomyelitis, a disease that can cause paralysis.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/poliomyelitis",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "DTP-containing vaccine (DTPCV)",
+        "type": "Inactivated (combination)",
+        "targetGroups": [
+          "Children",
+          "Adolescents",
+          "Adults (maternal immunization)"
+        ],
+        "regions": [
+          "Global"
+        ],
+        "schedules": [
+          {
+            "type": "standard",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "10 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "14 weeks",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "boosters",
+            "doses": [
+              {
+                "doseNumber": 4,
+                "minAge": "12-23 months",
+                "isBooster": true,
+                "note": null
+              },
+              {
+                "doseNumber": 5,
+                "minAge": "4-7 years",
+                "isBooster": true,
+                "note": null
+              },
+              {
+                "doseNumber": 6,
+                "minAge": "9-15 years",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Maternal immunization during pregnancy",
+          "Delayed/interrupted schedules acceptable",
+          "Can be part of combination vaccine"
+        ],
+        "description": "Combination vaccine protects against diphtheria, tetanus, and pertussis (whooping cough).",
+        "whoReferenceUrl": "https://www.who.int/groups/global-advisory-committee-on-vaccine-safety/topics/diphtheria-tetanus-and-pertussis-vaccines",
+        "prequalifiedVaccines": [
+          {
+            "dateOfPreQualification": "2017-05-08",
+            "vaccineType": "Diphtheria-Tetanus-Pertussis (acellular)",
+            "commercialName": "Adacel",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Sanofi Pasteur Limited",
+            "responsibleNRA": "Health Canada - Santé Canada"
+          },
+          {
+            "dateOfPreQualification": "2013-07-09",
+            "vaccineType": "Diphtheria-Tetanus-Pertussis (acellular)",
+            "commercialName": "Boostrix",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "GlaxoSmithKline Biologicals SA",
+            "responsibleNRA": "Federal Agency for Medicines and Health Products"
+          },
+          {
+            "dateOfPreQualification": "1995-04-04",
+            "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+            "commercialName": "Diphtheria-Tetanus-Pertussis Vaccine Adsorbed",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "1995-04-04",
+            "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+            "commercialName": "Diphtheria-Tetanus-Pertussis Vaccine Adsorbed",
+            "presentation": "Vial",
+            "numberOfDoses": 20,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "1995-04-04",
+            "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+            "commercialName": "Diphtheria-Tetanus-Pertussis Vaccine Adsorbed",
+            "presentation": "Ampoule",
+            "numberOfDoses": 1,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2001-04-06",
+            "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+            "commercialName": "DTP Vaccine",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "PT Bio Farma (Persero)",
+            "responsibleNRA": "National Agency of Drug and Food Control Indonesia"
+          },
+          {
+            "dateOfPreQualification": "2014-07-31",
+            "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+            "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  TRIPVAC",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Biological E. Limited",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2014-07-31",
+            "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+            "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  TRIPVAC",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "Biological E. Limited",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          }
+        ]
+      },
+      {
+        "name": "Haemophilus influenzae type b (Hib)",
+        "type": "Conjugate",
+        "targetGroups": [
+          "Children"
+        ],
+        "regions": [
+          "Global"
+        ],
+        "schedules": [
+          {
+            "type": "3-dose option",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "10 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "14 weeks",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "2-dose + booster",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "10 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "9-18 months",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Not recommended after age 5 unless immunocompromised",
+          "Booster required for 2-dose schedules"
+        ],
+        "description": "Hib vaccine prevents infections like meningitis and pneumonia caused by Hib bacteria.",
+        "whoReferenceUrl": "https://www.who.int/europe/news-room/fact-sheets/item/haemophilus-influenzae-type-b-(hib)",
+        "prequalifiedVaccines": [
+          {
+            "dateOfPreQualification": "1998-04-01",
+            "vaccineType": "Haemophilus influenzae type b",
+            "commercialName": "Act-HIB",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Sanofi Winthrop Industrie",
+            "responsibleNRA": "Agence nationale de sécurité du médicament et des produits de santé"
+          },
+          {
+            "dateOfPreQualification": "2008-11-17",
+            "vaccineType": "Haemophilus influenzae type b",
+            "commercialName": "Haemophilus influenzae type b Conjugate Vaccine",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2010-04-26",
+            "vaccineType": "Haemophilus influenzae type b",
+            "commercialName": "Quimi-Hib",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Centro de Ingenieria Genetica y Biotecnologia",
+            "responsibleNRA": "Centro para el Control Estatal de la Calidad de los Medicamentos"
+          }
+        ]
+      },
+      {
+        "name": "Pneumococcal (Conjugate)",
+        "type": "Conjugate",
+        "targetGroups": [
+          "Children",
+          "Older adults"
+        ],
+        "regions": [
+          "Global"
+        ],
+        "schedules": [
+          {
+            "type": "3p+0",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "10 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "14 weeks",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "2p+1",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "10 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "9-18 months",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "2p+1 preferred in high burden settings",
+          "Booster important for HIV+ and preterm infants"
+        ],
+        "description": "Pneumococcal conjugate vaccine (PCV) protects against pneumonia, meningitis, and sepsis.",
+        "whoReferenceUrl": "https://www.who.int/teams/immunization-vaccines-and-biologicals/diseases/pneumonia",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Rotavirus",
+        "type": "Live oral",
+        "targetGroups": [
+          "Children"
+        ],
+        "regions": [
+          "Global"
+        ],
+        "schedules": [
+          {
+            "type": "standard (2-dose)",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "10 weeks",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "standard (3-dose)",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "10 weeks",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "14 weeks",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Not recommended after 24 months of age",
+          "Product-specific schedule differences"
+        ],
+        "description": "Rotavirus vaccine prevents diarrheal disease caused by rotavirus in young children.",
+        "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/norms-and-standards/vaccines-quality/rotavirus",
+        "prequalifiedVaccines": [
+          {
+            "dateOfPreQualification": "2009-03-12",
+            "vaccineType": "Rotavirus",
+            "commercialName": "Rotarix",
+            "presentation": "Plastic Tube",
+            "numberOfDoses": 1,
+            "manufacturer": "GlaxoSmithKline Biologicals SA",
+            "responsibleNRA": "Federal Agency for Medicines and Health Products"
+          },
+          {
+            "dateOfPreQualification": "2019-02-14",
+            "vaccineType": "Rotavirus",
+            "commercialName": "Rotarix",
+            "presentation": "Plastic Tube",
+            "numberOfDoses": 5,
+            "manufacturer": "GlaxoSmithKline Biologicals SA",
+            "responsibleNRA": "Federal Agency for Medicines and Health Products"
+          },
+          {
+            "dateOfPreQualification": "2009-03-12",
+            "vaccineType": "Rotavirus",
+            "commercialName": "Rotarix",
+            "presentation": "Applicator",
+            "numberOfDoses": 1,
+            "manufacturer": "GlaxoSmithKline Biologicals SA",
+            "responsibleNRA": "Federal Agency for Medicines and Health Products"
+          },
+          {
+            "dateOfPreQualification": "2008-10-07",
+            "vaccineType": "Rotavirus",
+            "commercialName": "Rotateq",
+            "presentation": "Plastic Tube",
+            "numberOfDoses": 1,
+            "manufacturer": "Merck Sharp & Dohme LLC",
+            "responsibleNRA": "CBER/FDA"
+          }
+        ]
+      },
+      {
+        "name": "Measles",
+        "type": "Live attenuated",
+        "targetGroups": [
+          "Children",
+          "Adolescents (if unvaccinated)"
+        ],
+        "regions": [
+          "Global"
+        ],
+        "schedules": [
+          {
+            "type": "standard",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "9 months",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "15–18 months",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Co-administration with rubella and mumps",
+          "Earlier dose at 6 months in outbreak settings",
+          "Safe in HIV-infected infants if not severely immunocompromised"
+        ],
+        "description": "Measles vaccine protects against a highly contagious viral disease that can be fatal.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/measles",
+        "prequalifiedVaccines": [
+          {
+            "dateOfPreQualification": "2006-09-04",
+            "vaccineType": "Measles",
+            "commercialName": "Measles vaccine",
+            "presentation": "Vial",
+            "numberOfDoses": 20,
+            "manufacturer": "PT Bio Farma (Persero)",
+            "responsibleNRA": "National Agency of Drug and Food Control Indonesia"
+          },
+          {
+            "dateOfPreQualification": "1997-04-09",
+            "vaccineType": "Measles",
+            "commercialName": "Measles vaccine",
+            "presentation": "Vial + Ampoule",
+            "numberOfDoses": 10,
+            "manufacturer": "PT Bio Farma (Persero)",
+            "responsibleNRA": "National Agency of Drug and Food Control Indonesia"
+          },
+          {
+            "dateOfPreQualification": "1993-02-15",
+            "vaccineType": "Measles",
+            "commercialName": "Measles Vaccine, Live, Attenuated",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "1993-02-15",
+            "vaccineType": "Measles",
+            "commercialName": "Measles Vaccine, Live, Attenuated",
+            "presentation": "Vial",
+            "numberOfDoses": 2,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "1993-02-15",
+            "vaccineType": "Measles",
+            "commercialName": "Measles Vaccine, Live, Attenuated",
+            "presentation": "Vial",
+            "numberOfDoses": 5,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "1993-02-15",
+            "vaccineType": "Measles",
+            "commercialName": "Measles Vaccine, Live, Attenuated",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          }
+        ]
+      },
+      {
+        "name": "Rubella",
+        "type": "Live attenuated",
+        "targetGroups": [
+          "Children",
+          "Adolescent girls",
+          "Women of reproductive age"
+        ],
+        "regions": [
+          "Global"
+        ],
+        "schedules": [
+          {
+            "type": "standard",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "9–12 months",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Given with measles-containing vaccine",
+          "Pregnancy should be avoided for 1 month after vaccination"
+        ],
+        "description": "Rubella vaccine prevents German measles, especially important for preventing congenital rubella syndrome.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rubella",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "HPV",
+        "type": "Virus-like particle (non-infectious)",
+        "targetGroups": [
+          "Girls aged 9–14",
+          "Immunocompromised individuals"
+        ],
+        "regions": [
+          "Global"
+        ],
+        "schedules": [
+          {
+            "type": "1-dose (preferred)",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "9 years",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "2-dose",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "9 years",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "6–12 months after first dose",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Off-label single-dose use permitted by WHO",
+          "Vaccinate before sexual debut",
+          "Special schedule for HIV+ individuals"
+        ],
+        "description": "HPV vaccine protects against human papillomavirus infections that cause cervical cancer.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/human-papillomavirus-(hpv)-and-cervical-cancer",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Japanese Encephalitis (JE)",
+        "type": "Varies by product (inactivated, live attenuated, recombinant)",
+        "targetGroups": [
+          "Children",
+          "Travelers to endemic areas"
+        ],
+        "regions": [
+          "Asia-Pacific"
+        ],
+        "schedules": [
+          {
+            "type": "inactivated",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 months",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "7 months",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "live attenuated",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "8 months",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "recombinant",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "9 months",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Vaccine choice based on availability and national policy",
+          "Avoid during pregnancy"
+        ],
+        "description": "JE vaccine protects against Japanese encephalitis, a mosquito-borne viral brain infection.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/japanese-encephalitis",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Yellow Fever",
+        "type": "Live attenuated",
+        "targetGroups": [
+          "Children",
+          "Travelers to endemic countries"
+        ],
+        "regions": [
+          "Africa",
+          "South America"
+        ],
+        "schedules": [
+          {
+            "type": "standard",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "9–12 months",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Single dose provides lifelong protection",
+          "Avoid during pregnancy unless high risk",
+          "Co-administer with measles vaccine if needed"
+        ],
+        "description": "Yellow fever vaccine protects against a mosquito-borne viral hemorrhagic disease.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/yellow-fever",
+        "prequalifiedVaccines": [
+          {
+            "dateOfPreQualification": "2009-03-26",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "n/a",
+            "presentation": "Ampoule",
+            "numberOfDoses": 2,
+            "manufacturer": "Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences",
+            "responsibleNRA": "Federal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation"
+          },
+          {
+            "dateOfPreQualification": "2009-03-26",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "n/a",
+            "presentation": "Ampoule",
+            "numberOfDoses": 5,
+            "manufacturer": "Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences",
+            "responsibleNRA": "Federal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation"
+          },
+          {
+            "dateOfPreQualification": "2009-03-26",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "n/a",
+            "presentation": "Ampoule",
+            "numberOfDoses": 10,
+            "manufacturer": "Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences",
+            "responsibleNRA": "Federal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation"
+          },
+          {
+            "dateOfPreQualification": "2022-10-14",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "SinSaVac™",
+            "presentation": "Vial",
+            "numberOfDoses": 10,
+            "manufacturer": "Federal State Autonomous Scientific Institution «Chumakov Federal Scientific Center for Research & Development of Immune-And Biological Products», Russian Academy of Sciences",
+            "responsibleNRA": "Federal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation"
+          },
+          {
+            "dateOfPreQualification": "2001-03-20",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "Stabilized Yellow Fever Vaccine",
+            "presentation": "Ampoule",
+            "numberOfDoses": 5,
+            "manufacturer": "Institut Pasteur de Dakar",
+            "responsibleNRA": "Ministère de la Santé publique"
+          },
+          {
+            "dateOfPreQualification": "2001-03-20",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "Stabilized Yellow Fever Vaccine",
+            "presentation": "Ampoule",
+            "numberOfDoses": 10,
+            "manufacturer": "Institut Pasteur de Dakar",
+            "responsibleNRA": "Ministère de la Santé publique"
+          },
+          {
+            "dateOfPreQualification": "2001-03-20",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "Stabilized Yellow Fever Vaccine",
+            "presentation": "Ampoule",
+            "numberOfDoses": 20,
+            "manufacturer": "Institut Pasteur de Dakar",
+            "responsibleNRA": "Ministère de la Santé publique"
+          },
+          {
+            "dateOfPreQualification": "1987-01-01",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "STAMARIL",
+            "presentation": "Vial + Ampoule",
+            "numberOfDoses": 10,
+            "manufacturer": "Sanofi Winthrop Industrie",
+            "responsibleNRA": "Agence nationale de sécurité du médicament et des produits de santé"
+          },
+          {
+            "dateOfPreQualification": "2001-10-17",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "Yellow Fever",
+            "presentation": "Two vial set (active + excipient)",
+            "numberOfDoses": 5,
+            "manufacturer": "Bio-Manguinhos/Fiocruz",
+            "responsibleNRA": "Agencia Nacional da Vigilancia Sanitaria"
+          },
+          {
+            "dateOfPreQualification": "2007-12-10",
+            "vaccineType": "Yellow Fever",
+            "commercialName": "Yellow Fever",
+            "presentation": "Two vial set (active + excipient)",
+            "numberOfDoses": 10,
+            "manufacturer": "Bio-Manguinhos/Fiocruz",
+            "responsibleNRA": "Agencia Nacional da Vigilancia Sanitaria"
+          }
+        ]
+      },
+      {
+        "name": "Typhoid",
+        "type": "Inactivated (Typbar-TCV), Vi polysaccharide, Live oral (Ty21a)",
+        "targetGroups": [
+          "Children in endemic areas",
+          "Travelers",
+          "Healthcare workers (HCWs)"
+        ],
+        "regions": [
+          "Asia",
+          "Africa",
+          "Endemic areas"
+        ],
+        "schedules": [
+          {
+            "type": "Typbar-TCV (conjugate)",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 months",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "Vi polysaccharide",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "2 years",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "Ty21a oral",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "5 years",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "TCV preferred for routine use",
+          "Revaccination every 2–3 years for Vi/Oral",
+          "Recommended for HCWs in endemic settings"
+        ],
+        "description": "Typhoid vaccines protect against Salmonella Typhi infection, a cause of severe fever and complications.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Cholera",
+        "type": "Inactivated oral (Dukoral, Shanchol, Euvchol, mORCVAX)",
+        "targetGroups": [
+          "Travelers",
+          "Residents in high-risk settings",
+          "HCWs during outbreaks"
+        ],
+        "regions": [
+          "Outbreak-prone areas"
+        ],
+        "schedules": [
+          {
+            "type": "Shanchol/Euvchol/mORCVAX",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "1 year",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "2 weeks after dose 1",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "Dukoral",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "2 years",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "1 week after dose 1",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Used in mass vaccination during outbreaks",
+          "Not part of routine childhood immunization",
+          "Protective immunity is short-lived"
+        ],
+        "description": "Oral cholera vaccines are used to prevent cholera outbreaks in high-risk areas.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/cholera",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Meningococcal",
+        "type": "Conjugate or Polysaccharide (MenA, MenC, MenACWY)",
+        "targetGroups": [
+          "Children",
+          "Adolescents",
+          "Travelers to endemic areas",
+          "HCWs"
+        ],
+        "regions": [
+          "Sub-Saharan Africa",
+          "Hajj pilgrims",
+          "Military recruits"
+        ],
+        "schedules": [
+          {
+            "type": "MenA (routine in belt countries)",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "9 months",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "MenACWY",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "9–12 months",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Outbreak response and preventive campaigns",
+          "Travel-related requirements (e.g. Hajj)",
+          "Recommended for HCWs during outbreaks"
+        ],
+        "description": "Meningococcal vaccines protect against meningitis caused by Neisseria meningitidis.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/meningococcal-meningitis",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Hepatitis A",
+        "type": "Inactivated",
+        "targetGroups": [
+          "Children in endemic areas",
+          "Travelers",
+          "HCWs"
+        ],
+        "regions": [
+          "Moderate to high endemic areas"
+        ],
+        "schedules": [
+          {
+            "type": "standard",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "12 months",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "6–12 months after dose 1",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Routine use in high endemic areas",
+          "Used in outbreak response",
+          "HCWs in endemic areas or labs handling HAV"
+        ],
+        "description": "Hepatitis A vaccine prevents liver infection caused by the hepatitis A virus.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-a",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Rabies",
+        "type": "Inactivated (cell culture-derived)",
+        "targetGroups": [
+          "High-risk professionals",
+          "Travelers",
+          "Children in endemic areas",
+          "HCWs (post-exposure)"
+        ],
+        "regions": [
+          "Asia",
+          "Africa",
+          "Latin America"
+        ],
+        "schedules": [
+          {
+            "type": "pre-exposure",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "Any age",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "7 days later",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "21–28 days after first dose",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "post-exposure (with immunoglobulin)",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "Day 0",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "Day 3",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "Day 7",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 4,
+                "minAge": "Day 14",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Essential post-exposure prophylaxis",
+          "Pre-exposure for vets, animal handlers, lab workers"
+        ],
+        "description": "Rabies vaccine is used both before and after exposure to prevent rabies infection.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rabies",
+        "prequalifiedVaccines": [
+          {
+            "dateOfPreQualification": "2018-12-20",
+            "vaccineType": "Rabies",
+            "commercialName": "Rabies Vaccine Inactivated (Freeze Dried)(RABIVAX-S)",
+            "presentation": "Vial + Ampoule",
+            "numberOfDoses": 1,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2019-02-06",
+            "vaccineType": "Rabies",
+            "commercialName": "VaxiRab N",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Zydus Lifesciences Limited",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2005-06-22",
+            "vaccineType": "Rabies",
+            "commercialName": "VERORAB",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Sanofi Winthrop Industrie",
+            "responsibleNRA": "Agence nationale de sécurité du médicament et des produits de santé"
+          }
+        ]
+      },
+      {
+        "name": "Dengue",
+        "type": "Live attenuated (TAK-003)",
+        "targetGroups": [
+          "Children in high transmission areas"
+        ],
+        "regions": [
+          "Asia",
+          "Latin America"
+        ],
+        "schedules": [
+          {
+            "type": "standard",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "4 years",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "3 months later",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Only for seropositive individuals (TAK-003 safer)",
+          "Not for travelers or HCWs unless in endemic zones"
+        ],
+        "description": "Dengue vaccine helps reduce severe disease and hospitalization in seropositive individuals.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Malaria",
+        "type": "RTS,S/AS01, R21/Matrix-M (recombinant protein)",
+        "targetGroups": [
+          "Children in high transmission settings"
+        ],
+        "regions": [
+          "Africa"
+        ],
+        "schedules": [
+          {
+            "type": "RTS,S/AS01",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "5 months",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "6 months",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "7 months",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 4,
+                "minAge": "20–24 months",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "WHO-recommended in high burden areas",
+          "R21 vaccine also prequalified in 2023"
+        ],
+        "description": "Malaria vaccines are used to prevent severe malaria in children in high-transmission areas.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+        "prequalifiedVaccines": [
+          {
+            "dateOfPreQualification": "2023-12-19",
+            "vaccineType": "Malaria",
+            "commercialName": "CYVAC",
+            "presentation": "Vial",
+            "numberOfDoses": 2,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          },
+          {
+            "dateOfPreQualification": "2022-07-15",
+            "vaccineType": "Malaria",
+            "commercialName": "Mosquirix",
+            "presentation": "Two vial set (active + active)",
+            "numberOfDoses": 2,
+            "manufacturer": "GlaxoSmithKline Biologicals SA",
+            "responsibleNRA": "European Medicines Agency"
+          },
+          {
+            "dateOfPreQualification": "2023-12-19",
+            "vaccineType": "Malaria",
+            "commercialName": "CYVAC",
+            "presentation": "Vial",
+            "numberOfDoses": 1,
+            "manufacturer": "Serum Institute of India Pvt. Ltd.",
+            "responsibleNRA": "Central Drugs Standard Control Organization"
+          }
+        ]
+      },
+      {
+        "name": "Tick-Borne Encephalitis (TBE)",
+        "type": "Inactivated",
+        "targetGroups": [
+          "Children",
+          "Adolescents",
+          "Travelers",
+          "Healthcare workers"
+        ],
+        "regions": [
+          "Europe",
+          "Russia",
+          "Asia (endemic areas)"
+        ],
+        "schedules": [
+          {
+            "type": "standard",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "1 year",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "1–3 months after dose 1",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 3,
+                "minAge": "5–12 months after dose 2",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          },
+          {
+            "type": "booster",
+            "doses": [
+              {
+                "doseNumber": 4,
+                "minAge": "3–5 years after dose 3",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "For people living in or traveling to endemic areas",
+          "Recommended for laboratory personnel handling TBE virus"
+        ],
+        "description": "TBE vaccine prevents viral brain infection spread by ticks in endemic areas.",
+        "whoReferenceUrl": "https://www.who.int/health-topics/tick-borne-encephalitis",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Mumps",
+        "type": "Live attenuated",
+        "targetGroups": [
+          "Children",
+          "Adolescents"
+        ],
+        "regions": [
+          "Global (where included in MMR)"
+        ],
+        "schedules": [
+          {
+            "type": "combined MMR",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "9–12 months",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "15–18 months",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Usually part of MMR combination vaccine",
+          "Avoid during pregnancy",
+          "Booster recommended in outbreak settings"
+        ],
+        "description": "Mumps vaccine, usually given as part of MMR, prevents viral infection of salivary glands.",
+        "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/norms-and-standards/vaccine-standardization/mumps",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Seasonal Influenza",
+        "type": "Inactivated or Live attenuated (intranasal)",
+        "targetGroups": [
+          "Children",
+          "Older adults",
+          "Pregnant women",
+          "Healthcare workers",
+          "High-risk individuals"
+        ],
+        "regions": [
+          "Global (especially temperate zones)"
+        ],
+        "schedules": [
+          {
+            "type": "annual",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "6 months",
+                "isBooster": true,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Annual revaccination recommended",
+          "Different formulations for northern/southern hemispheres",
+          "Intranasal only for certain age groups"
+        ],
+        "description": "Flu vaccines protect against seasonal influenza viruses and reduce complications in high-risk groups.",
+        "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)",
+        "prequalifiedVaccines": null
+      },
+      {
+        "name": "Varicella",
+        "type": "Live attenuated",
+        "targetGroups": [
+          "Children",
+          "Susceptible adolescents and adults",
+          "Healthcare workers"
+        ],
+        "regions": [
+          "High-income countries",
+          "Outbreak-prone areas"
+        ],
+        "schedules": [
+          {
+            "type": "standard",
+            "doses": [
+              {
+                "doseNumber": 1,
+                "minAge": "12–15 months",
+                "isBooster": false,
+                "note": null
+              },
+              {
+                "doseNumber": 2,
+                "minAge": "4–6 years",
+                "isBooster": false,
+                "note": null
+              }
+            ]
+          }
+        ],
+        "considerations": [
+          "Contraindicated in pregnancy and immunosuppression",
+          "Recommended for susceptible HCWs",
+          "Can be combined with MMR"
+        ],
+        "description": "Varicella vaccine prevents chickenpox, a common and contagious childhood disease.",
+        "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/norms-and-standards/vaccine-standardization/varicella",
+        "prequalifiedVaccines": null
+      }
+    ],
+    "whoGuidelineSummary": {
+      "title": "WHO Recommendations for Routine Immunization – A User’s Guide to the Summary Tables",
+      "url": "https://www.who.int/publications/m/item/who-recommendations-for-routine-immunization--a-user-s-guide-to-the-summary-tables",
+      "tables": [
+        {
+          "title": "Table 1 – Recommended Routine Immunization for Children",
+          "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-1-january-2025.pdf"
+        },
+        {
+          "title": "Table 2 – Recommended Immunization for Adolescents and Adults",
+          "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-2-january-2025.pdf"
+        },
+        {
+          "title": "Table 3 – Vaccines Recommended in Special Situations or for High-Risk Groups",
+          "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-3-december-2024.pdf"
+        },
+        {
+          "title": "Table 4 – Vaccination of Healthcare Workers",
+          "url": "https://cdn.who.int/media/docs/default-source/immunization/immunization_schedules/immunization-schedule-table-4-december-2024.pdf"
+        }
+      ]
+    }
+  },
+  "version": "1.0",
+  "totalCount": 23,
+  "timestamp": "2025-08-01T17:58:31.624925"
+}

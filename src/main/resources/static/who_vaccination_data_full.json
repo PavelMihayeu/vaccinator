@@ -31,7 +31,72 @@
         "Recommended in HIV+ children if immunologically stable"
       ],
       "description": "BCG vaccine protects against tuberculosis, especially severe forms in children.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis"
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
+      "prequalifiedVaccines": [
+        {
+          "dateOfPreQualification": "1987-01-01",
+          "vaccineType": "BCG",
+          "commercialName": "BCG Freeze Dried Glutamate vaccine",
+          "presentation": "Ampoule",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Japan BCG Laboratory",
+          "responsibleNRA": "Pharmaceutical and Medical Devices Agency"
+        },
+        {
+          "dateOfPreQualification": "1987-01-01",
+          "vaccineType": "BCG",
+          "commercialName": "BCG Freeze Dried Glutamate vaccine",
+          "presentation": "Ampoule",
+          "numberOfDoses": 20.0,
+          "manufacturer": "Japan BCG Laboratory",
+          "responsibleNRA": "Pharmaceutical and Medical Devices Agency"
+        },
+        {
+          "dateOfPreQualification": "2003-05-29",
+          "vaccineType": "BCG",
+          "commercialName": "BCG Vaccine",
+          "presentation": "Vial",
+          "numberOfDoses": 20.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2024-12-03",
+          "vaccineType": "BCG",
+          "commercialName": "BCG Vaccine",
+          "presentation": "Vial + Ampoule",
+          "numberOfDoses": 20.0,
+          "manufacturer": "GreenSignal Bio Pharma Pvt Limited",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "1991-02-01",
+          "vaccineType": "BCG",
+          "commercialName": "BCG Vaccine",
+          "presentation": "Ampoule",
+          "numberOfDoses": 10.0,
+          "manufacturer": "BB- NCIPD EAD (Bul Bio-National Center of Infectious and Parasitic Diseases EAD)",
+          "responsibleNRA": "Bulgarian Drug Agency"
+        },
+        {
+          "dateOfPreQualification": "1991-02-01",
+          "vaccineType": "BCG",
+          "commercialName": "BCG Vaccine",
+          "presentation": "Ampoule",
+          "numberOfDoses": 20.0,
+          "manufacturer": "BB- NCIPD EAD (Bul Bio-National Center of Infectious and Parasitic Diseases EAD)",
+          "responsibleNRA": "Bulgarian Drug Agency"
+        },
+        {
+          "dateOfPreQualification": "1994-09-27",
+          "vaccineType": "BCG",
+          "commercialName": "BCG Vaccine AJV",
+          "presentation": "Two vial set (active + excipient)",
+          "numberOfDoses": 10.0,
+          "manufacturer": "AJ Vaccines A/S",
+          "responsibleNRA": "Danish Medicines Agency"
+        }
+      ]
     },
     {
       "name": "Hepatitis B",
@@ -102,7 +167,153 @@
         "Recommended in HIV, liver disease, dialysis patients, and health care workers"
       ],
       "description": "Hepatitis B vaccine prevents liver infection and chronic complications caused by hepatitis B virus.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b"
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+      "prequalifiedVaccines": [
+        {
+          "dateOfPreQualification": "2025-01-16",
+          "vaccineType": "Hepatitis B (Paediatric)",
+          "commercialName": "BEVAC\u00ae",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Biological E. Limited",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2025-01-20",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "BEVAC\u00ae",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Biological E. Limited",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2025-01-16",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "BEVAC\u00ae",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Biological E. Limited",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2025-01-16",
+          "vaccineType": "Hepatitis B (Paediatric)",
+          "commercialName": "BEVAC\u00ae",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Biological E. Limited",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "1987-01-01",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Engerix",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "GlaxoSmithKline Biologicals SA",
+          "responsibleNRA": "Federal Agency for Medicines and Health Products"
+        },
+        {
+          "dateOfPreQualification": "1987-01-01",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Engerix",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "GlaxoSmithKline Biologicals SA",
+          "responsibleNRA": "Federal Agency for Medicines and Health Products"
+        },
+        {
+          "dateOfPreQualification": "1987-01-01",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Engerix",
+          "presentation": "Vial",
+          "numberOfDoses": 20.0,
+          "manufacturer": "GlaxoSmithKline Biologicals SA",
+          "responsibleNRA": "Federal Agency for Medicines and Health Products"
+        },
+        {
+          "dateOfPreQualification": "2020-01-21",
+          "vaccineType": "Hepatitis B (Paediatric)",
+          "commercialName": "Euvax B",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "LG Chem Ltd",
+          "responsibleNRA": "Ministry of Food and Drug Safety"
+        },
+        {
+          "dateOfPreQualification": "1996-11-22",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Euvax B",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "LG Chem Ltd",
+          "responsibleNRA": "Ministry of Food and Drug Safety"
+        },
+        {
+          "dateOfPreQualification": "1996-11-22",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Euvax B",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "LG Chem Ltd",
+          "responsibleNRA": "Ministry of Food and Drug Safety"
+        },
+        {
+          "dateOfPreQualification": "2001-12-11",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Heberbiovac HB",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Centro de Ingenieria Genetica y Biotecnologia",
+          "responsibleNRA": "Centro para el Control Estatal de la Calidad de los Medicamentos"
+        },
+        {
+          "dateOfPreQualification": "2001-12-11",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Heberbiovac HB",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Centro de Ingenieria Genetica y Biotecnologia",
+          "responsibleNRA": "Centro para el Control Estatal de la Calidad de los Medicamentos"
+        },
+        {
+          "dateOfPreQualification": "2004-11-12",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Hepatitis B Vaccine (rDNA) (Adult)",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2004-11-12",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Hepatitis B Vaccine (rDNA) (Adult)",
+          "presentation": "Ampoule or Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2004-11-12",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Hepatitis B Vaccine (rDNA) (Paediatric)",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2004-11-12",
+          "vaccineType": "Hepatitis B",
+          "commercialName": "Hepatitis B Vaccine (rDNA) (Paedriatic)",
+          "presentation": "Ampoule or Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        }
+      ]
     },
     {
       "name": "Polio (bOPV + IPV)",
@@ -151,7 +362,7 @@
         "Important for global polio eradication"
       ],
       "description": "Polio vaccines protect against poliomyelitis, a disease that can cause paralysis.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/polio"
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/poliomyelitis"
     },
     {
       "name": "DTP-containing vaccine (DTPCV)",
@@ -212,7 +423,81 @@
         "Can be part of combination vaccine"
       ],
       "description": "Combination vaccine protects against diphtheria, tetanus, and pertussis (whooping cough).",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage"
+      "whoReferenceUrl": "https://www.who.int/groups/global-advisory-committee-on-vaccine-safety/topics/diphtheria-tetanus-and-pertussis-vaccines",
+      "prequalifiedVaccines": [
+        {
+          "dateOfPreQualification": "2017-05-08",
+          "vaccineType": "Diphtheria-Tetanus-Pertussis (acellular)",
+          "commercialName": "Adacel",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Sanofi Pasteur Limited",
+          "responsibleNRA": "Health Canada - Sant\u00e9 Canada"
+        },
+        {
+          "dateOfPreQualification": "2013-07-09",
+          "vaccineType": "Diphtheria-Tetanus-Pertussis (acellular)",
+          "commercialName": "Boostrix",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "GlaxoSmithKline Biologicals SA",
+          "responsibleNRA": "Federal Agency for Medicines and Health Products"
+        },
+        {
+          "dateOfPreQualification": "1995-04-04",
+          "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+          "commercialName": "Diphtheria-Tetanus-Pertussis Vaccine Adsorbed",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "1995-04-04",
+          "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+          "commercialName": "Diphtheria-Tetanus-Pertussis Vaccine Adsorbed",
+          "presentation": "Vial",
+          "numberOfDoses": 20.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "1995-04-04",
+          "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+          "commercialName": "Diphtheria-Tetanus-Pertussis Vaccine Adsorbed",
+          "presentation": "Ampoule",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2001-04-06",
+          "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+          "commercialName": "DTP Vaccine",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "PT Bio Farma (Persero)",
+          "responsibleNRA": "National Agency of Drug and Food Control Indonesia"
+        },
+        {
+          "dateOfPreQualification": "2014-07-31",
+          "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+          "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  TRIPVAC",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Biological E. Limited",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2014-07-31",
+          "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)",
+          "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  TRIPVAC",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Biological E. Limited",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        }
+      ]
     },
     {
       "name": "Haemophilus influenzae type b (Hib)",
@@ -270,7 +555,36 @@
         "Booster required for 2-dose schedules"
       ],
       "description": "Hib vaccine prevents infections like meningitis and pneumonia caused by Hib bacteria.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/haemophilus-influenzae-type-b-(hib)"
+      "whoReferenceUrl": "https://www.who.int/europe/news-room/fact-sheets/item/haemophilus-influenzae-type-b-(hib)",
+      "prequalifiedVaccines": [
+        {
+          "dateOfPreQualification": "1998-04-01",
+          "vaccineType": "Haemophilus influenzae type b",
+          "commercialName": "Act-HIB",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Sanofi Winthrop Industrie",
+          "responsibleNRA": "Agence nationale de s\u00e9curit\u00e9 du m\u00e9dicament et des produits de sant\u00e9"
+        },
+        {
+          "dateOfPreQualification": "2008-11-17",
+          "vaccineType": "Haemophilus influenzae type b",
+          "commercialName": "Haemophilus influenzae type b Conjugate Vaccine",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2010-04-26",
+          "vaccineType": "Haemophilus influenzae type b",
+          "commercialName": "Quimi-Hib",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Centro de Ingenieria Genetica y Biotecnologia",
+          "responsibleNRA": "Centro para el Control Estatal de la Calidad de los Medicamentos"
+        }
+      ]
     },
     {
       "name": "Pneumococcal (Conjugate)",
@@ -329,7 +643,7 @@
         "Booster important for HIV+ and preterm infants"
       ],
       "description": "Pneumococcal conjugate vaccine (PCV) protects against pneumonia, meningitis, and sepsis.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/pneumococcal-disease"
+      "whoReferenceUrl": "https://www.who.int/teams/immunization-vaccines-and-biologicals/diseases/pneumonia"
     },
     {
       "name": "Rotavirus",
@@ -382,7 +696,45 @@
         "Product-specific schedule differences"
       ],
       "description": "Rotavirus vaccine prevents diarrheal disease caused by rotavirus in young children.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rotavirus"
+      "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/norms-and-standards/vaccines-quality/rotavirus",
+      "prequalifiedVaccines": [
+        {
+          "dateOfPreQualification": "2009-03-12",
+          "vaccineType": "Rotavirus",
+          "commercialName": "Rotarix",
+          "presentation": "Plastic Tube",
+          "numberOfDoses": 1.0,
+          "manufacturer": "GlaxoSmithKline Biologicals SA",
+          "responsibleNRA": "Federal Agency for Medicines and Health Products"
+        },
+        {
+          "dateOfPreQualification": "2019-02-14",
+          "vaccineType": "Rotavirus",
+          "commercialName": "Rotarix",
+          "presentation": "Plastic Tube",
+          "numberOfDoses": 5.0,
+          "manufacturer": "GlaxoSmithKline Biologicals SA",
+          "responsibleNRA": "Federal Agency for Medicines and Health Products"
+        },
+        {
+          "dateOfPreQualification": "2009-03-12",
+          "vaccineType": "Rotavirus",
+          "commercialName": "Rotarix",
+          "presentation": "Applicator",
+          "numberOfDoses": 1.0,
+          "manufacturer": "GlaxoSmithKline Biologicals SA",
+          "responsibleNRA": "Federal Agency for Medicines and Health Products"
+        },
+        {
+          "dateOfPreQualification": "2008-10-07",
+          "vaccineType": "Rotavirus",
+          "commercialName": "Rotateq",
+          "presentation": "Plastic Tube",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Merck Sharp & Dohme LLC",
+          "responsibleNRA": "CBER/FDA"
+        }
+      ]
     },
     {
       "name": "Measles",
@@ -417,7 +769,63 @@
         "Safe in HIV-infected infants if not severely immunocompromised"
       ],
       "description": "Measles vaccine protects against a highly contagious viral disease that can be fatal.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/measles"
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/measles",
+      "prequalifiedVaccines": [
+        {
+          "dateOfPreQualification": "2006-09-04",
+          "vaccineType": "Measles",
+          "commercialName": "Measles vaccine",
+          "presentation": "Vial",
+          "numberOfDoses": 20.0,
+          "manufacturer": "PT Bio Farma (Persero)",
+          "responsibleNRA": "National Agency of Drug and Food Control Indonesia"
+        },
+        {
+          "dateOfPreQualification": "1997-04-09",
+          "vaccineType": "Measles",
+          "commercialName": "Measles vaccine",
+          "presentation": "Vial + Ampoule",
+          "numberOfDoses": 10.0,
+          "manufacturer": "PT Bio Farma (Persero)",
+          "responsibleNRA": "National Agency of Drug and Food Control Indonesia"
+        },
+        {
+          "dateOfPreQualification": "1993-02-15",
+          "vaccineType": "Measles",
+          "commercialName": "Measles Vaccine, Live, Attenuated",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "1993-02-15",
+          "vaccineType": "Measles",
+          "commercialName": "Measles Vaccine, Live, Attenuated",
+          "presentation": "Vial",
+          "numberOfDoses": 2.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "1993-02-15",
+          "vaccineType": "Measles",
+          "commercialName": "Measles Vaccine, Live, Attenuated",
+          "presentation": "Vial",
+          "numberOfDoses": 5.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "1993-02-15",
+          "vaccineType": "Measles",
+          "commercialName": "Measles Vaccine, Live, Attenuated",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        }
+      ]
     },
     {
       "name": "Rubella",
@@ -577,7 +985,99 @@
         "Co-administer with measles vaccine if needed"
       ],
       "description": "Yellow fever vaccine protects against a mosquito-borne viral hemorrhagic disease.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/yellow-fever"
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/yellow-fever",
+      "prequalifiedVaccines": [
+        {
+          "dateOfPreQualification": "2009-03-26",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "n/a",
+          "presentation": "Ampoule",
+          "numberOfDoses": 2.0,
+          "manufacturer": "Federal State Autonomous Scientific Institution \u00abChumakov Federal Scientific Center for Research & Development of Immune-And Biological Products\u00bb, Russian Academy of Sciences",
+          "responsibleNRA": "Federal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation"
+        },
+        {
+          "dateOfPreQualification": "2009-03-26",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "n/a",
+          "presentation": "Ampoule",
+          "numberOfDoses": 5.0,
+          "manufacturer": "Federal State Autonomous Scientific Institution \u00abChumakov Federal Scientific Center for Research & Development of Immune-And Biological Products\u00bb, Russian Academy of Sciences",
+          "responsibleNRA": "Federal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation"
+        },
+        {
+          "dateOfPreQualification": "2009-03-26",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "n/a",
+          "presentation": "Ampoule",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Federal State Autonomous Scientific Institution \u00abChumakov Federal Scientific Center for Research & Development of Immune-And Biological Products\u00bb, Russian Academy of Sciences",
+          "responsibleNRA": "Federal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation"
+        },
+        {
+          "dateOfPreQualification": "2022-10-14",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "SinSaVac\u2122",
+          "presentation": "Vial",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Federal State Autonomous Scientific Institution \u00abChumakov Federal Scientific Center for Research & Development of Immune-And Biological Products\u00bb, Russian Academy of Sciences",
+          "responsibleNRA": "Federal Service on Surveillance in Healthcare (ROSZDRAVNADZOR) of the Russian Federation"
+        },
+        {
+          "dateOfPreQualification": "2001-03-20",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "Stabilized Yellow Fever Vaccine",
+          "presentation": "Ampoule",
+          "numberOfDoses": 5.0,
+          "manufacturer": "Institut Pasteur de Dakar",
+          "responsibleNRA": "Minist\u00e8re de la Sant\u00e9 publique"
+        },
+        {
+          "dateOfPreQualification": "2001-03-20",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "Stabilized Yellow Fever Vaccine",
+          "presentation": "Ampoule",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Institut Pasteur de Dakar",
+          "responsibleNRA": "Minist\u00e8re de la Sant\u00e9 publique"
+        },
+        {
+          "dateOfPreQualification": "2001-03-20",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "Stabilized Yellow Fever Vaccine",
+          "presentation": "Ampoule",
+          "numberOfDoses": 20.0,
+          "manufacturer": "Institut Pasteur de Dakar",
+          "responsibleNRA": "Minist\u00e8re de la Sant\u00e9 publique"
+        },
+        {
+          "dateOfPreQualification": "1987-01-01",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "STAMARIL",
+          "presentation": "Vial + Ampoule",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Sanofi Winthrop Industrie",
+          "responsibleNRA": "Agence nationale de s\u00e9curit\u00e9 du m\u00e9dicament et des produits de sant\u00e9"
+        },
+        {
+          "dateOfPreQualification": "2001-10-17",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "Yellow Fever",
+          "presentation": "Two vial set (active + excipient)",
+          "numberOfDoses": 5.0,
+          "manufacturer": "Bio-Manguinhos/Fiocruz",
+          "responsibleNRA": "Agencia Nacional da Vigilancia Sanitaria"
+        },
+        {
+          "dateOfPreQualification": "2007-12-10",
+          "vaccineType": "Yellow Fever",
+          "commercialName": "Yellow Fever",
+          "presentation": "Two vial set (active + excipient)",
+          "numberOfDoses": 10.0,
+          "manufacturer": "Bio-Manguinhos/Fiocruz",
+          "responsibleNRA": "Agencia Nacional da Vigilancia Sanitaria"
+        }
+      ]
     },
     {
       "name": "Typhoid",
@@ -829,7 +1329,36 @@
         "Pre-exposure for vets, animal handlers, lab workers"
       ],
       "description": "Rabies vaccine is used both before and after exposure to prevent rabies infection.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rabies"
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/rabies",
+      "prequalifiedVaccines": [
+        {
+          "dateOfPreQualification": "2018-12-20",
+          "vaccineType": "Rabies",
+          "commercialName": "Rabies Vaccine Inactivated (Freeze Dried)(RABIVAX-S)",
+          "presentation": "Vial + Ampoule",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2019-02-06",
+          "vaccineType": "Rabies",
+          "commercialName": "VaxiRab N",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Zydus Lifesciences Limited",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2005-06-22",
+          "vaccineType": "Rabies",
+          "commercialName": "VERORAB",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Sanofi Winthrop Industrie",
+          "responsibleNRA": "Agence nationale de s\u00e9curit\u00e9 du m\u00e9dicament et des produits de sant\u00e9"
+        }
+      ]
     },
     {
       "name": "Dengue",
@@ -906,7 +1435,36 @@
         "R21 vaccine also prequalified in 2023"
       ],
       "description": "Malaria vaccines are used to prevent severe malaria in children in high-transmission areas.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/malaria"
+      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+      "prequalifiedVaccines": [
+        {
+          "dateOfPreQualification": "2023-12-19",
+          "vaccineType": "Malaria",
+          "commercialName": "CYVAC",
+          "presentation": "Vial",
+          "numberOfDoses": 2.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        },
+        {
+          "dateOfPreQualification": "2022-07-15",
+          "vaccineType": "Malaria",
+          "commercialName": "Mosquirix",
+          "presentation": "Two vial set (active + active)",
+          "numberOfDoses": 2.0,
+          "manufacturer": "GlaxoSmithKline Biologicals SA",
+          "responsibleNRA": "European Medicines Agency"
+        },
+        {
+          "dateOfPreQualification": "2023-12-19",
+          "vaccineType": "Malaria",
+          "commercialName": "CYVAC",
+          "presentation": "Vial",
+          "numberOfDoses": 1.0,
+          "manufacturer": "Serum Institute of India Pvt. Ltd.",
+          "responsibleNRA": "Central Drugs Standard Control Organization"
+        }
+      ]
     },
     {
       "name": "Tick-Borne Encephalitis (TBE)",
@@ -959,7 +1517,7 @@
         "Recommended for laboratory personnel handling TBE virus"
       ],
       "description": "TBE vaccine prevents viral brain infection spread by ticks in endemic areas.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/tick-borne-encephalitis"
+      "whoReferenceUrl": "https://www.who.int/health-topics/tick-borne-encephalitis"
     },
     {
       "name": "Mumps",
@@ -994,7 +1552,7 @@
         "Booster recommended in outbreak settings"
       ],
       "description": "Mumps vaccine, usually given as part of MMR, prevents viral infection of salivary glands.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/mumps"
+      "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/norms-and-standards/vaccine-standardization/mumps"
     },
     {
       "name": "Seasonal Influenza",
@@ -1064,7 +1622,7 @@
         "Can be combined with MMR"
       ],
       "description": "Varicella vaccine prevents chickenpox, a common and contagious childhood disease.",
-      "whoReferenceUrl": "https://www.who.int/news-room/fact-sheets/detail/varicella"
+      "whoReferenceUrl": "https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/norms-and-standards/vaccine-standardization/varicella"
     }
   ],
   "whoGuidelineSummary": {

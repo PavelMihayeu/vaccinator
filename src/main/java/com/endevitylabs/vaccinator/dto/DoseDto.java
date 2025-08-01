@@ -1,12 +1,13 @@
 package com.endevitylabs.vaccinator.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Null;
 
-import java.util.UUID;
-
-public record DoseDto(UUID id,
-                      Integer doseNumber,
-                      String minAge,
-                      @JsonProperty("is_booster") Boolean booster,
-                      String note) {
+public record DoseDto(
+        @NotNull Integer doseNumber,
+        String minAge,
+        @JsonProperty("isBooster") Boolean booster,
+        @Null String note
+) {
 } 
