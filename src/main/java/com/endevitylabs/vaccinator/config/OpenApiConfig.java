@@ -45,6 +45,9 @@ public class OpenApiConfig {
                                 .url("http://localhost:8080")
                                 .description("Development server"),
                         new Server()
+                                .url("http://3.74.63.99")
+                                .description("Stage server"),
+                        new Server()
                                 .url("https://api.vaccinator.com")
                                 .description("Production server")
                 ));

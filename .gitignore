@@ -37,3 +37,7 @@ out/
 .vscode/
 
 .env
+/docker-run.ps1
+/docker-run.sh
+/ubuntu@ec2-3-74-63-99.eu-central-1.compute.amazonaws.com
+/ubuntu@ec2-63-178-41-189.eu-central-1.compute.amazonaws.com

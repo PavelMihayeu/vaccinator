@@ -58,9 +58,9 @@ public class VaccineServiceImpl implements VaccineService {
     }
 
     @Override
-    public VaccineDocument getVaccineById(String id) {
-        return vaccineMongoRepository.findById(id)
-                .orElseThrow(() -> new DataNotFoundException("Vaccine not found with id: " + id));
+    public VaccineDocument getVaccineByName(String name) {
+        return vaccineMongoRepository.findByName(name)
+                .orElseThrow(() -> new DataNotFoundException("Vaccine not found with name: " + name));
     }
 
     @Override

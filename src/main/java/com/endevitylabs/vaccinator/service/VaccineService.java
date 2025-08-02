@@ -13,9 +13,9 @@ public interface VaccineService {
     GetAllVaccinesResponse getAllVaccines();
 
     /**
-     * Get a specific vaccine by ID
+     * Get a specific vaccine by name
      */
-    VaccineDocument getVaccineById(String id);
+    VaccineDocument getVaccineByName(String name);
 
     /**
      * Bulk load vaccines from JSON data

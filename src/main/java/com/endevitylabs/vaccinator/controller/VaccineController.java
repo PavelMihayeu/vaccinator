@@ -46,10 +46,10 @@ public class VaccineController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{name}")
     @Operation(
-            summary = "Get vaccine by ID (V1)",
-            description = "Retrieves a specific vaccine by its MongoDB ID"
+            summary = "Get vaccine by name",
+            description = "Retrieves a specific vaccine by its name"
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved vaccine",
@@ -57,8 +57,8 @@ public class VaccineController {
             @ApiResponse(responseCode = "404", description = "Vaccine not found"),
             @ApiResponse(responseCode = "500", description = "Internal server error")
     })
-    public ResponseEntity<VaccineDocument> getVaccineById(@PathVariable String id) {
-        VaccineDocument vaccine = vaccineService.getVaccineById(id);
+    public ResponseEntity<VaccineDocument> getVaccineById(@PathVariable String name) {
+        VaccineDocument vaccine = vaccineService.getVaccineByName(name);
         return ResponseEntity.ok(vaccine);
     }
 
