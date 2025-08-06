@@ -1,0 +1,335 @@
+[
+  {
+    "dateOfPreQualification": "2025-01-16",
+    "vaccineType": "Hepatitis B (Paediatric)",
+    "commercialName": "BEVAC®",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2025-01-20",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "BEVAC®",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2025-01-16",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "BEVAC®",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2025-01-16",
+    "vaccineType": "Hepatitis B (Paediatric)",
+    "commercialName": "BEVAC®",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2010-05-26",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Diphtheria, Tetanus, Pertussis, Hepatitis B and Haemophilus influenzae type b Conjugate Vaccine",
+    "presentation": "Vial + Ampoule",
+    "numberOfDoses": 1,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2010-05-26",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Diphtheria, Tetanus, Pertussis, Hepatitis B and Haemophilus influenzae type b Conjugate Vaccine",
+    "presentation": "Vial + Ampoule",
+    "numberOfDoses": 2,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2010-05-26",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Diphtheria, Tetanus, Pertussis, Hepatitis B and Haemophilus influenzae type b Conjugate Vaccine",
+    "presentation": "Vial + Ampoule",
+    "numberOfDoses": 10,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2010-09-22",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Diphtheria, Tetanus, Pertussis, Hepatitis B and Haemophilus influenzae type b Conjugate Vaccine Adsorbed",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2010-09-22",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Diphtheria, Tetanus, Pertussis, Hepatitis B and Haemophilus influenzae type b Conjugate Vaccine Adsorbed",
+    "presentation": "Vial",
+    "numberOfDoses": 2,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2010-09-22",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Diphtheria, Tetanus, Pertussis, Hepatitis B and Haemophilus influenzae type b Conjugate Vaccine Adsorbed",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2013-10-02",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Easyfive-TT",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Panacea Biotec Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2013-10-02",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Easyfive-TT",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "Panacea Biotec Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "1987-01-01",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Engerix",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "GlaxoSmithKline Biologicals SA",
+    "responsibleNRA": "Federal Agency for Medicines and Health Products"
+  },
+  {
+    "dateOfPreQualification": "1987-01-01",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Engerix",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "GlaxoSmithKline Biologicals SA",
+    "responsibleNRA": "Federal Agency for Medicines and Health Products"
+  },
+  {
+    "dateOfPreQualification": "1987-01-01",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Engerix",
+    "presentation": "Vial",
+    "numberOfDoses": 20,
+    "manufacturer": "GlaxoSmithKline Biologicals SA",
+    "responsibleNRA": "Federal Agency for Medicines and Health Products"
+  },
+  {
+    "dateOfPreQualification": "2016-02-10",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Eupenta",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "LG Chem Ltd",
+    "responsibleNRA": "Ministry of Food and Drug Safety"
+  },
+  {
+    "dateOfPreQualification": "2016-02-10",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Eupenta",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "LG Chem Ltd",
+    "responsibleNRA": "Ministry of Food and Drug Safety"
+  },
+  {
+    "dateOfPreQualification": "2020-01-21",
+    "vaccineType": "Hepatitis B (Paediatric)",
+    "commercialName": "Euvax B",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "LG Chem Ltd",
+    "responsibleNRA": "Ministry of Food and Drug Safety"
+  },
+  {
+    "dateOfPreQualification": "1996-11-22",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Euvax B",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "LG Chem Ltd",
+    "responsibleNRA": "Ministry of Food and Drug Safety"
+  },
+  {
+    "dateOfPreQualification": "1996-11-22",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Euvax B",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "LG Chem Ltd",
+    "responsibleNRA": "Ministry of Food and Drug Safety"
+  },
+  {
+    "dateOfPreQualification": "2001-12-11",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Heberbiovac HB",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Centro de Ingenieria Genetica y Biotecnologia",
+    "responsibleNRA": "Centro para el Control Estatal de la Calidad de los Medicamentos"
+  },
+  {
+    "dateOfPreQualification": "2001-12-11",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Heberbiovac HB",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "Centro de Ingenieria Genetica y Biotecnologia",
+    "responsibleNRA": "Centro para el Control Estatal de la Calidad de los Medicamentos"
+  },
+  {
+    "dateOfPreQualification": "2004-11-12",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Hepatitis B Vaccine (rDNA) (Adult)",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2004-11-12",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Hepatitis B Vaccine (rDNA) (Adult)",
+    "presentation": "Ampoule or Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2004-11-12",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Hepatitis B Vaccine (rDNA) (Paediatric)",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2004-11-12",
+    "vaccineType": "Hepatitis B",
+    "commercialName": "Hepatitis B Vaccine (rDNA) (Paedriatic)",
+    "presentation": "Ampoule or Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2024-03-21",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated)",
+    "commercialName": "HEXASIIL",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2024-03-21",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated)",
+    "commercialName": "HEXASIIL",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "Serum Institute of India Pvt. Ltd.",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2014-12-19",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (acellular)-Hepatitis B-Haemophilus influenzae type b-Polio (Inactivated)",
+    "commercialName": "Hexaxim",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Sanofi Winthrop Industrie",
+    "responsibleNRA": "European Medicines Agency"
+  },
+  {
+    "dateOfPreQualification": "2012-05-18",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  ComBE Five (Liquid).",
+    "presentation": "Vial",
+    "numberOfDoses": 1,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2014-11-27",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  ComBE Five (Liquid).",
+    "presentation": "Vial",
+    "numberOfDoses": 2,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2014-11-27",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  ComBE Five (Liquid).",
+    "presentation": "Vial",
+    "numberOfDoses": 5,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2012-05-18",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  ComBE Five (Liquid).",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2011-09-01",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  ComBE Five (Reconstituted).",
+    "presentation": "Two vial set (active + active)",
+    "numberOfDoses": 1,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2011-09-01",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "None used on labelling for supply through UN agencies.     Also marketed with labelled commercial name  ComBE Five (Reconstituted).",
+    "presentation": "Two vial set (active + active)",
+    "numberOfDoses": 10,
+    "manufacturer": "Biological E. Limited",
+    "responsibleNRA": "Central Drugs Standard Control Organization"
+  },
+  {
+    "dateOfPreQualification": "2014-12-19",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Pentabio",
+    "presentation": "Vial",
+    "numberOfDoses": 5,
+    "manufacturer": "PT Bio Farma (Persero)",
+    "responsibleNRA": "National Agency of Drug and Food Control Indonesia"
+  },
+  {
+    "dateOfPreQualification": "2014-12-19",
+    "vaccineType": "Diphtheria-Tetanus-Pertussis (whole cell)-Hepatitis B-Haemophilus influenzae type b",
+    "commercialName": "Pentabio",
+    "presentation": "Vial",
+    "numberOfDoses": 10,
+    "manufacturer": "PT Bio Farma (Persero)",
+    "responsibleNRA": "National Agency of Drug and Food Control Indonesia"
+  }
+]

@@ -1,0 +1,28 @@
+package com.endevitylabs.vaccinator.security;
+
+import org.springframework.security.authentication.AbstractAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
+
+import java.util.Collection;
+
+public class ApiKeyAuthenticationToken extends AbstractAuthenticationToken {
+
+    private final String apiKey;
+    private final Object principal;
+
+    public ApiKeyAuthenticationToken(String apiKey, Collection<? extends GrantedAuthority> authorities) {
+        super(authorities);
+        this.apiKey = apiKey;
+        this.principal = "API_USER";
+    }
+
+    @Override
+    public Object getCredentials() {
+        return apiKey;
+    }
+
+    @Override
+    public Object getPrincipal() {
+        return principal;
+    }
+} 
