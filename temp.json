@@ -1,0 +1,465 @@
+{
+  "recommendations": [
+    {
+      "vaccine": "Hepatitis B",
+      "abbr": "HepB",
+      "why": "Prevents chronic liver infection, cirrhosis, and liver cancer.",
+      "label": "Catch-up children/adolescents",
+      "series": "3-dose (0, 1–2, 6 months) or age-specific 2-dose Recombivax (11–15y)",
+      "doses": [
+        {
+          "dose": 1,
+          "minAgeMonths": null,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 0,
+          "minIntervalWeeksFromPrev": null,
+          "notes": null,
+          "rules": null,
+          "status": "unknown"
+        },
+        {
+          "dose": 2,
+          "minAgeMonths": null,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "unknown"
+        },
+        {
+          "dose": 3,
+          "minAgeMonths": null,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 8,
+          "notes": null,
+          "rules": null,
+          "status": "unknown"
+        }
+      ],
+      "notes": null,
+      "rules": null,
+      "annual": null,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥0.0 and ≤18.0 years)",
+      "citations": [
+        "file:child-schedule: HepB catch-up & 2-dose option 11–15y"
+      ]
+    },
+    {
+      "vaccine": "DTaP",
+      "abbr": "DTaP",
+      "why": "Prevents diphtheria, tetanus, and pertussis; pertussis is severe in infants.",
+      "label": "Routine 5-dose childhood series",
+      "series": "5-dose (2, 4, 6, 15–18 months, 4–6 years)",
+      "doses": [
+        {
+          "dose": 1,
+          "minAgeMonths": 2,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 2,
+          "minIntervalWeeksFromPrev": null,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 2,
+          "minAgeMonths": 4,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 4,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 3,
+          "minAgeMonths": 6,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 6,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 4,
+          "minAgeMonths": 15,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 24,
+          "notes": null,
+          "rules": [
+            "Prospective: may give at 12 months if ≥24 weeks since dose 3."
+          ],
+          "status": "due"
+        },
+        {
+          "dose": 5,
+          "minAgeMonths": 48,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 24,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        }
+      ],
+      "notes": null,
+      "rules": [
+        "Dose 5 not needed if dose 4 given at ≥48 months AND ≥24 weeks after dose 3."
+      ],
+      "annual": null,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥0.0 and ≤7.0 years)",
+      "citations": [
+        "file:child-schedule: DTaP routine series and dose-5 rule"
+      ]
+    },
+    {
+      "vaccine": "Haemophilus influenzae type b",
+      "abbr": "Hib",
+      "why": "Prevents invasive Hib disease (meningitis, pneumonia).",
+      "label": "Routine infant/toddler series + booster",
+      "series": null,
+      "doses": [
+        {
+          "dose": 1,
+          "minAgeMonths": 2,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 2,
+          "minIntervalWeeksFromPrev": null,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 2,
+          "minAgeMonths": 4,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 4,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 3,
+          "minAgeMonths": 6,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 6,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 4,
+          "minAgeMonths": 12,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 8,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        }
+      ],
+      "notes": null,
+      "rules": null,
+      "annual": null,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥0.0 and ≤5.0 years)",
+      "citations": [
+        "file:child-schedule: Hib product-specific series and booster"
+      ]
+    },
+    {
+      "vaccine": "Pneumococcal conjugate",
+      "abbr": "PCV15/PCV20",
+      "why": "Prevents pneumococcal pneumonia, meningitis, and bacteremia.",
+      "label": "Routine infant series",
+      "series": "4-dose (2, 4, 6, 12–15 months)",
+      "doses": [
+        {
+          "dose": 1,
+          "minAgeMonths": 2,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 2,
+          "minIntervalWeeksFromPrev": null,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 2,
+          "minAgeMonths": 4,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 4,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 3,
+          "minAgeMonths": 6,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 6,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 4,
+          "minAgeMonths": 12,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 8,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        }
+      ],
+      "notes": null,
+      "rules": null,
+      "annual": null,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥0.0 and ≤5.0 years)",
+      "citations": [
+        "file:child-schedule: PCV routine series"
+      ]
+    },
+    {
+      "vaccine": "Inactivated Poliovirus",
+      "abbr": "IPV",
+      "why": "Prevents paralytic polio.",
+      "label": "Routine childhood series",
+      "series": "4-dose (2, 4, 6–18 months, 4–6 years)",
+      "doses": [
+        {
+          "dose": 1,
+          "minAgeMonths": 2,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 2,
+          "minIntervalWeeksFromPrev": null,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 2,
+          "minAgeMonths": 4,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 4,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 3,
+          "minAgeMonths": 6,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 4,
+          "minAgeMonths": 48,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 24,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        }
+      ],
+      "notes": null,
+      "rules": [
+        "Final dose at ≥48 months AND ≥24 weeks after previous dose."
+      ],
+      "annual": null,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥0.0 and ≤7.0 years)",
+      "citations": [
+        "file:child-schedule: IPV routine series and final-dose rule"
+      ]
+    },
+    {
+      "vaccine": "COVID-19",
+      "abbr": "COVID-19",
+      "why": "Reduces risk of severe disease and hospitalization; schedules vary by manufacturer, age, and immune status.",
+      "label": "Ages 6 months–17 years (not immunocompromised) — SCDM",
+      "series": "Product- and age-specific per current season",
+      "doses": [],
+      "notes": null,
+      "rules": [
+        "Ages 6 months–4 years: use same manufacturer for all doses within the series.",
+        "Follow current CDC COVID-19 schedule website for exact intervals and dose counts."
+      ],
+      "annual": null,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥0.5 and ≤17.0 years)",
+      "citations": [
+        "file:child-schedule: COVID-19 SCDM note and covidschedule reference"
+      ]
+    },
+    {
+      "vaccine": "Influenza",
+      "abbr": "IIV3/ccIIV3/LAIV3",
+      "why": "Annual vaccination reduces hospitalization and protects vulnerable contacts.",
+      "label": "Annual vaccination (seasonal)",
+      "series": null,
+      "doses": [],
+      "notes": null,
+      "rules": [
+        "Age 6 months–8 years: give 2 doses in a season if <2 lifetime prior doses before July 1, 2024; otherwise 1 dose.",
+        "Age ≥9 years: 1 dose.",
+        "LAIV not for close contacts of persons requiring a protected environment; if given, avoid contact/care for 7 days."
+      ],
+      "annual": true,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥0.5 and ≤18.0 years)",
+      "citations": [
+        "file:child-schedule: Influenza annual rules incl. 2-dose algorithm and LAIV caveat"
+      ]
+    },
+    {
+      "vaccine": "Measles, Mumps, Rubella",
+      "abbr": "MMR",
+      "why": "Measles is highly contagious; mumps and rubella have serious complications.",
+      "label": "Routine 2-dose",
+      "series": "2-dose (12–15 months, 4–6 years)",
+      "doses": [
+        {
+          "dose": 1,
+          "minAgeMonths": 12,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": null,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 2,
+          "minAgeMonths": 48,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 4,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        }
+      ],
+      "notes": null,
+      "rules": [
+        "If MMRV used, minimum interval between doses is 12 weeks (3 months).",
+        "For infants 6–11 months traveling internationally: 1 early dose; then revaccinate with 2-dose series after 12 months."
+      ],
+      "annual": null,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥1.0 and ≤7.0 years)",
+      "citations": [
+        "file:child-schedule: MMR routine + travel + MMRV interval"
+      ]
+    },
+    {
+      "vaccine": "Varicella",
+      "abbr": "VAR",
+      "why": "Prevents chickenpox and complications (pneumonia, encephalitis).",
+      "label": "Routine 2-dose",
+      "series": "2-dose (12–15 months, 4–6 years)",
+      "doses": [
+        {
+          "dose": 1,
+          "minAgeMonths": 12,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": null,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        },
+        {
+          "dose": 2,
+          "minAgeMonths": 48,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 12,
+          "notes": null,
+          "rules": null,
+          "status": "due"
+        }
+      ],
+      "notes": null,
+      "rules": [
+        "In catch-up, dose 2 valid if ≥4 weeks after dose 1 (≥13 years)."
+      ],
+      "annual": null,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥1.0 and ≤7.0 years)",
+      "citations": [
+        "file:child-schedule: Varicella routine and catch-up interval"
+      ]
+    },
+    {
+      "vaccine": "Hepatitis A",
+      "abbr": "HepA",
+      "why": "Prevents liver infection spread via contaminated food/water or close contact.",
+      "label": "Catch-up through 18 years",
+      "series": "2-dose",
+      "doses": [
+        {
+          "dose": 1,
+          "minAgeMonths": null,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": 0,
+          "minIntervalWeeksFromPrev": null,
+          "notes": null,
+          "rules": null,
+          "status": "unknown"
+        },
+        {
+          "dose": 2,
+          "minAgeMonths": null,
+          "maxAgeMonths": null,
+          "fixedMonthsFromStart": null,
+          "minIntervalWeeksFromPrev": 24,
+          "notes": null,
+          "rules": null,
+          "status": "unknown"
+        }
+      ],
+      "notes": null,
+      "rules": null,
+      "annual": null,
+      "singleDose": null,
+      "applicabilityReason": "Matches criteria: age=4.0 years (range: ≥1.0 and ≤18.0 years)",
+      "citations": [
+        "file:child-schedule: HepA catch-up through 18y"
+      ]
+    }
+  ],
+  "query": {
+    "ageYears": 4,
+    "lifeStage": null,
+    "sex": null,
+    "pregnancyStatus": null,
+    "riskFactors": null,
+    "specialConditions": null,
+    "immunocompromised": null,
+    "product": null,
+    "needRapidProtection": null
+  },
+  "schemaVersion": "1.4",
+  "source": "CDC Child & Adolescent Immunization Schedule (United States), 2025 — Revised 2025-08-07",
+  "timestamp": "2025-08-14T17:25:46.774502",
+  "apiVersion": "1.0"
+}

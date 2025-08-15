@@ -1,0 +1,30 @@
+Category,Immunizing agent,Abbreviation(s),Trade name(s)
+Monoclonal antibody,Respiratory syncytial virus monoclonal antibody (Nirsevimab),RSV-mAb,Beyfortus
+Vaccine,COVID-19 vaccine,1vCOV-mRNA; 1vCOV-aPS,Comirnaty/Pfizer-BioNTech; Spikevax/Moderna; Novavax COVID-19 Vaccine
+Vaccine,Dengue vaccine,DEN4CYD,Dengvaxia
+Vaccine,"Diphtheria, tetanus, and acellular pertussis vaccine",DTaP,Daptacel; Infanrix
+Vaccine,Haemophilus influenzae type b vaccine,Hib (PRP-T); Hib (PRP-OMP),ActHIB; Hiberix; PedvaxHIB
+Vaccine,Hepatitis A vaccine,HepA,Havrix; Vaqta
+Vaccine,Hepatitis B vaccine,HepB,Engerix-B; Recombivax HB
+Vaccine,Human papillomavirus vaccine,HPV,Gardasil 9
+Vaccine,Influenza vaccine (inactivated: egg-based),IIV3,Multiple
+Vaccine,Influenza vaccine (inactivated: cell-culture),ccIIV3,Flucelvax
+Vaccine,"Influenza vaccine (live, attenuated)",LAIV3,FluMist
+Vaccine,"Measles, mumps, and rubella vaccine",MMR,M-M-R II; Priorix
+Vaccine,"Meningococcal serogroups A, C, W, Y vaccine",MenACWY-CRM; MenACWY-TT,Menveo; MenQuadfi
+Vaccine,Meningococcal serogroup B vaccine,MenB-4C; MenB-FHbp,Bexsero; Trumenba
+Vaccine,"Meningococcal serogroup A, B, C, W, Y vaccine",MenACWY-TT / MenB-FHbp,Penbraya
+Vaccine,Mpox vaccine,Mpox,Jynneos
+Vaccine,Pneumococcal conjugate vaccine,PCV15; PCV20,Vaxneuvance; Prevnar 20
+Vaccine,Pneumococcal polysaccharide vaccine,PPSV23,Pneumovax 23
+Vaccine,Poliovirus vaccine (inactivated),IPV,Ipol
+Vaccine,Respiratory syncytial virus vaccine,RSV,Abrysvo
+Vaccine,Rotavirus vaccine,RV1; RV5,Rotarix; RotaTeq
+Vaccine,"Tetanus, diphtheria, and acellular pertussis vaccine",Tdap,Adacel; Boostrix
+Vaccine,Tetanus and diphtheria vaccine,Td,Tenivac; Tdvax
+Vaccine,Varicella vaccine,VAR,Varivax
+Combination vaccine,"DTaP, hepatitis B, and inactivated poliovirus vaccine",DTaP-HepB-IPV,Pediarix
+Combination vaccine,"DTaP, inactivated poliovirus, and Haemophilus influenzae type b vaccine",DTaP-IPV/Hib,Pentacel
+Combination vaccine,DTaP and inactivated poliovirus vaccine,DTaP-IPV,Kinrix; Quadracel
+Combination vaccine,"DTaP, inactivated poliovirus, Haemophilus influenzae type b, and hepatitis B vaccine",DTaP-IPV-HibHepB,Vaxelis
+Combination vaccine,"Measles, mumps, rubella, and varicella vaccine",MMRV,ProQuad

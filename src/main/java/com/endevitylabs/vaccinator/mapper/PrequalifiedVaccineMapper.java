@@ -19,5 +19,6 @@ public interface PrequalifiedVaccineMapper {
     /**
      * Convert DTO to entity (id will be null for new entities)
      */
+    @Mapping(target = "id", ignore = true)
     PrequalifiedVaccineEntity toEntity(PrequalifiedVaccineDto dto);
 } 

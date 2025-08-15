@@ -40,7 +40,7 @@ services:
     restart: unless-stopped
 
   app:
-    image: migaeff/vaccinator-api:latest
+    build: .
     container_name: vaccinator-app
     environment:
       SPRING_PROFILES_ACTIVE: docker

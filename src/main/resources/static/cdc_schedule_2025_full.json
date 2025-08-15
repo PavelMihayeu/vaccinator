@@ -1,0 +1,1530 @@
+{
+  "schemaVersion": "1.4",
+  "generatedAtUtc": "2025-08-14T13:44:54Z",
+  "sourcePdf": "CDC Child & Adolescent Immunization Schedule (United States), 2025 — Revised 2025-08-07",
+  "sourceNote": "Everything below models Table 1 (routine), Table 2 (catch-up minimum ages/intervals/limits), Table 3 (medical indications), and Notes sections from the PDF.",
+  "units": {
+    "age": "months for schedule constraints; years allowed in 'who' filters",
+    "intervals": "weeks for min intervals; fixed offsets in months from series start"
+  },
+  "vaccines": [
+    {
+      "abbr": "RSV-mAb",
+      "immunizingAgent": "Respiratory syncytial virus monoclonal antibody (Nirsevimab)",
+      "category": "Monoclonal antibody",
+      "why": "Provides passive protection against severe RSV in infants and certain toddlers.",
+      "recommendations": [
+        {
+          "label": "Infant — first RSV season (depends on maternal vaccination)",
+          "who": {
+            "age": {
+              "minYears": 0,
+              "maxYears": 1.6
+            },
+            "lifeStage": "infant/toddler",
+            "sex": "any",
+            "pregnancyStatus": "any",
+            "riskFactors": [],
+            "specialConditions": [
+              "timing_by_season",
+              "maternal_RSV_status_affects_need"
+            ]
+          },
+          "schedule": {
+            "singleDose": true,
+            "rules": [
+              "Administer shortly before start of RSV season (Oct–Mar in most of continental U.S.)",
+              "If maternal RSV vaccine given ≥14 days before delivery, infant dose generally not needed; may consider in rare circumstances."
+            ]
+          },
+          "limits": {},
+          "citations": [
+            "file:child-schedule: RSV nirsevimab first-season timing and maternal status"
+          ]
+        },
+        {
+          "label": "Second RSV season — high-risk or AI/AN",
+          "who": {
+            "age": {
+              "minYears": 0.67,
+              "maxYears": 1.6
+            },
+            "lifeStage": "toddler",
+            "sex": "any",
+            "pregnancyStatus": "any",
+            "riskFactors": [
+              "chronic_lung_disease_prematurity_with_support",
+              "severe_immunocompromise",
+              "cystic_fibrosis_with_severe_manifestations",
+              "american_indian_or_alaska_native"
+            ],
+            "specialConditions": [
+              "timing_by_season"
+            ]
+          },
+          "schedule": {
+            "singleDose": true,
+            "rules": [
+              "Administer shortly before second RSV season.",
+              "If undergoing cardiopulmonary bypass for cardiac surgery, give an additional dose post-op."
+            ]
+          },
+          "limits": {},
+          "citations": [
+            "file:child-schedule: RSV second-season indications & timing"
+          ]
+        }
+      ]
+    },
+    {
+      "abbr": "HepB",
+      "immunizingAgent": "Hepatitis B vaccine",
+      "category": "vaccine",
+      "why": "Prevents chronic liver infection, cirrhosis, and liver cancer.",
+      "recommendations": [
+        {
+          "label": "Routine infant series",
+          "who": {
+            "age": {
+              "minYears": 0,
+              "maxYears": 1.5
+            },
+            "lifeStage": "infant",
+            "sex": "any",
+            "riskFactors": []
+          },
+          "schedule": {
+            "series": "Product-based series (see branches)",
+            "branches": [
+              {
+                "appliesWhen": {
+                  "products": ["HepB"],
+                  "presentation": "monovalent"
+                },
+                "series": "3-dose (0, 1–2, 6–18 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "minAgeMonths": 0,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minAgeMonths": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "minAgeMonths": 6,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ],
+                "finalDoseMinAgeMonths": 24,
+                "rules": [
+                  "Use monovalent HepB for doses before 6 weeks of age."
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["HepB"],
+                  "presentation": "combination"
+                },
+                "series": "4-dose (birth monovalent, then combination vaccine at 2, 4, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "minAgeMonths": 0,
+                    "fixedMonthsFromStart": 0,
+                    "product": "HepB",
+                    "presentation": "monovalent"
+                  },
+                  {
+                    "dose": 2,
+                    "minAgeMonths": 2,
+                    "fixedMonthsFromStart": 2,
+                    "product": "HepB",
+                    "presentation": "combination"
+                  },
+                  {
+                    "dose": 3,
+                    "minAgeMonths": 4,
+                    "fixedMonthsFromStart": 4,
+                    "product": "HepB",
+                    "presentation": "combination"
+                  },
+                  {
+                    "dose": 4,
+                    "minAgeMonths": 6,
+                    "fixedMonthsFromStart": 6,
+                    "product": "HepB",
+                    "presentation": "combination"
+                  }
+                ],
+                "finalDoseMinAgeMonths": 24,
+                "rules": [
+                  "Combination HepB-containing vaccines are not used before 6 weeks of age."
+                ]
+              }
+            ]
+          },
+          "limits": {},
+          "citations": [
+            "file:child-schedule: HepB birth dose + 3-dose series; final dose ≥24 weeks"
+          ]
+        },
+        {
+          "label": "Catch-up children/adolescents",
+          "who": {
+            "age": {
+              "minYears": 0,
+              "maxYears": 18
+            },
+            "lifeStage": "child/adolescent",
+            "sex": "any",
+            "riskFactors": []
+          },
+          "schedule": {
+            "series": "3-dose (0, 1–2, 6 months) or age-specific 2-dose Recombivax (11–15y)",
+            "branches": [
+              {
+                "appliesWhen": {
+                  "ageYearsMin": 11,
+                  "ageYearsMax": 15,
+                  "products": ["RECOMBIVAX HB"],
+                  "presentation": "adult formulation"
+                },
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minIntervalWeeksFromPrev": 16
+                  }
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "ageYearsMin": 0,
+                  "ageYearsMax": 18
+                },
+                "doses": [
+                  {
+                    "dose": 1,
+                    "minAgeMonths": 0,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minAgeMonths": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "minAgeMonths": 6,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ],
+                "finalDoseMinAgeMonths": 216
+              }
+            ]
+          },
+          "limits": {},
+          "citations": [
+            "file:child-schedule: HepB catch-up & 2-dose option 11–15y"
+          ]
+        },
+        {
+          "label": "Universal adults 19–59 years",
+          "who": {
+            "age": {
+              "minYears": 19,
+              "maxYears": 59
+            },
+            "lifeStage": "adult",
+            "sex": "any",
+            "riskFactors": []
+          },
+          "limits": {},
+          "schedule": {
+            "series": "Product-based series (see branches)",
+            "branches": [
+              {
+                "appliesWhen": {
+                  "products": ["Heplisav-B"]
+                },
+                "series": "2-dose (0, 1 month)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedMonthsFromStart": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  }
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["ENGERIX-B"]
+                },
+                "series": "3-dose (0, 1, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedMonthsFromStart": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "fixedMonthsFromStart": 6,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ],
+                "rules": [
+                  "Ensure ≥16 weeks between dose 1 and 3."
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["RECOMBIVAX HB"],
+                  "presentation": "Adult Formulation"
+                },
+                "series": "3-dose (0, 1, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedMonthsFromStart": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "fixedMonthsFromStart": 6,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ],
+                "rules": [
+                  "Ensure ≥16 weeks between dose 1 and 3."
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["TWINRIX"],
+                  "presentation": "Standard Dosing"
+                },
+                "series": "Twinrix 3-dose (0, 1, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedMonthsFromStart": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "fixedMonthsFromStart": 6,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["TWINRIX"],
+                  "presentation": "Accelerated Dosing"
+                },
+                "series": "Twinrix accelerated (0, 7, 21–30 days + 12-month booster)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedDaysFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedDaysFromStart": 7,
+                    "minIntervalWeeksFromPrev": 1
+                  },
+                  {
+                    "dose": 3,
+                    "fixedDaysFromStart": 21,
+                    "minIntervalWeeksFromPrev": 2
+                  },
+                  {
+                    "dose": 4,
+                    "fixedMonthsFromStart": 12
+                  }
+                ]
+              }
+            ]
+          },
+          "citations": [
+            "CDC adult easy-read Hepatitis B row"
+          ]
+        },
+        {
+          "label": "Adults ≥60 years (with risk factors or on request)",
+          "who": {
+            "age": {
+              "minYears": 60,
+              "maxYears": 999
+            },
+            "lifeStage": "older_adult",
+            "sex": "any",
+            "riskFactors": [
+              "diabetes",
+              "chronic_liver_kidney_disease",
+              "HIV",
+              "MSM",
+              "injection_drug_use",
+              "occupational_exposure",
+              "household_contact_HBsAg_positive"
+            ]
+          },
+          "limits": {},
+          "schedule": {
+            "series": "Product-based series (see branches)",
+            "branches": [
+              {
+                "appliesWhen": {
+                  "products": ["HEPLISAV-B"]
+                },
+                "series": "2-dose (0, 1 month)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedMonthsFromStart": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  }
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["ENGERIX-B"]
+                },
+                "series": "3-dose (0, 1, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedMonthsFromStart": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "fixedMonthsFromStart": 6,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ],
+                "rules": [
+                  "Ensure ≥16 weeks between dose 1 and 3."
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["RECOMBIVAX HB"],
+                  "presentation": "Adult Formulation"
+                },
+                "series": "3-dose (0, 1, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedMonthsFromStart": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "fixedMonthsFromStart": 6,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ],
+                "rules": [
+                  "Ensure ≥16 weeks between dose 1 and 3."
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["TWINRIX"],
+                  "presentation": "Standard Dosing"
+                },
+                "series": "Twinrix 3-dose (0, 1, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedMonthsFromStart": 1,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "fixedMonthsFromStart": 6,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["TWINRIX"],
+                  "presentation": "Accelerated Dosing"
+                },
+                "series": "Twinrix accelerated (0, 7, 21–30 days + 12-month booster)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedDaysFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "fixedDaysFromStart": 7,
+                    "minIntervalWeeksFromPrev": 1
+                  },
+                  {
+                    "dose": 3,
+                    "fixedDaysFromStart": 21,
+                    "minIntervalWeeksFromPrev": 2
+                  },
+                  {
+                    "dose": 4,
+                    "fixedMonthsFromStart": 12
+                  }
+                ]
+              }
+            ]
+          },
+          "citations": [
+            "CDC adult easy-read Hepatitis B row (≥60 with risks; may receive on request)"
+          ]
+        }
+      ]
+    },
+    {
+      "abbr": "RV",
+      "immunizingAgent": "Rotavirus vaccine",
+      "category": "vaccine",
+      "why": "Prevents severe diarrhea, dehydration, and hospitalization in infants.",
+      "recommendations": [
+        {
+          "label": "Routine infant oral series",
+          "who": {
+            "age": {
+              "minYears": 0,
+              "maxYears": 0.67
+            },
+            "lifeStage": "infant",
+            "sex": "any"
+          },
+          "schedule": {
+            "branches": [
+              {
+                "appliesWhen": {
+                  "products": ["RV1"]
+                },
+                "series": "2-dose (2, 4 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "minAgeMonths": 1.5,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minAgeMonths": 4,
+                    "fixedMonthsFromStart": 2,
+                    "minIntervalWeeksFromPrev": 4
+                  }
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["RV5"]
+                },
+                "series": "3-dose (2, 4, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "minAgeMonths": 1.5,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minAgeMonths": 4,
+                    "fixedMonthsFromStart": 2,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "minAgeMonths": 6,
+                    "fixedMonthsFromStart": 4,
+                    "minIntervalWeeksFromPrev": 4
+                  }
+                ]
+              }
+            ],
+            "limits": {
+              "maxAgeForFirstDoseMonths": 3.47,
+              "maxAgeForFinalDoseMonths": 8.0
+            }
+          },
+          "citations": [
+            "file:child-schedule: RV products, max age first dose 14w6d; final dose by 8m0d"
+          ]
+        }
+      ]
+    },
+    {
+      "abbr": "DTaP",
+      "immunizingAgent": "Diphtheria, tetanus, and acellular pertussis vaccine",
+      "category": "vaccine",
+      "why": "Prevents diphtheria, tetanus, and pertussis; pertussis is severe in infants.",
+      "recommendations": [
+        {
+          "label": "Routine 5-dose childhood series",
+          "who": {
+            "age": {
+              "minYears": 0,
+              "maxYears": 7
+            },
+            "lifeStage": "infant/child",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "5-dose (2, 4, 6, 15–18 months, 4–6 years)",
+            "doses": [
+              {
+                "dose": 1,
+                "minAgeMonths": 2,
+                "fixedMonthsFromStart": 2
+              },
+              {
+                "dose": 2,
+                "minAgeMonths": 4,
+                "fixedMonthsFromStart": 4,
+                "minIntervalWeeksFromPrev": 4
+              },
+              {
+                "dose": 3,
+                "minAgeMonths": 6,
+                "fixedMonthsFromStart": 6,
+                "minIntervalWeeksFromPrev": 4
+              },
+              {
+                "dose": 4,
+                "minAgeMonths": 15,
+                "minIntervalWeeksFromPrev": 24,
+                "rules": [
+                  "Prospective: may give at 12 months if ≥24 weeks since dose 3."
+                ]
+              },
+              {
+                "dose": 5,
+                "minAgeMonths": 48,
+                "minIntervalWeeksFromPrev": 24
+              }
+            ],
+            "rules": [
+              "Dose 5 not needed if dose 4 given at ≥48 months AND ≥24 weeks after dose 3."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: DTaP routine series and dose-5 rule"
+          ]
+        }
+      ]
+    },
+    {
+      "abbr": "Hib",
+      "immunizingAgent": "Haemophilus influenzae type b vaccine",
+      "category": "vaccine",
+      "why": "Prevents invasive Hib disease (meningitis, pneumonia).",
+      "recommendations": [
+        {
+          "label": "Routine infant/toddler series + booster",
+          "who": {
+            "age": {
+              "minYears": 0,
+              "maxYears": 5
+            },
+            "lifeStage": "infant/child",
+            "sex": "any"
+          },
+          "schedule": {
+            "branches": [
+              {
+                "appliesWhen": {
+                  "products": ["ActHIB", "Hiberix", "Pentacel", "Vaxelis"]
+                },
+                "series": "3+1 (2, 4, 6, 12–15 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "minAgeMonths": 2,
+                    "fixedMonthsFromStart": 2
+                  },
+                  {
+                    "dose": 2,
+                    "minAgeMonths": 4,
+                    "fixedMonthsFromStart": 4,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "minAgeMonths": 6,
+                    "fixedMonthsFromStart": 6,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 4,
+                    "minAgeMonths": 12,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ],
+                "rules": [
+                  "Vaxelis is not recommended for the booster dose."
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "products": ["PedvaxHIB"]
+                },
+                "series": "2+1 (2, 4, 12–15 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "minAgeMonths": 2,
+                    "fixedMonthsFromStart": 2
+                  },
+                  {
+                    "dose": 2,
+                    "minAgeMonths": 4,
+                    "fixedMonthsFromStart": 4,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "minAgeMonths": 12,
+                    "minIntervalWeeksFromPrev": 8
+                  }
+                ]
+              }
+            ]
+          },
+          "citations": [
+            "file:child-schedule: Hib product-specific series and booster"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Pneumococcal conjugate",
+      "abbr": "PCV15/PCV20",
+      "category": "vaccine",
+      "why": "Prevents pneumococcal pneumonia, meningitis, and bacteremia.",
+      "recommendations": [
+        {
+          "label": "Routine infant series",
+          "who": {
+            "age": {
+              "minYears": 0,
+              "maxYears": 5
+            },
+            "lifeStage": "infant/child",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "4-dose (2, 4, 6, 12–15 months)",
+            "doses": [
+              {
+                "dose": 1,
+                "minAgeMonths": 2,
+                "fixedMonthsFromStart": 2
+              },
+              {
+                "dose": 2,
+                "minAgeMonths": 4,
+                "fixedMonthsFromStart": 4,
+                "minIntervalWeeksFromPrev": 4
+              },
+              {
+                "dose": 3,
+                "minAgeMonths": 6,
+                "fixedMonthsFromStart": 6,
+                "minIntervalWeeksFromPrev": 4
+              },
+              {
+                "dose": 4,
+                "minAgeMonths": 12,
+                "minIntervalWeeksFromPrev": 8
+              }
+            ]
+          },
+          "citations": [
+            "file:child-schedule: PCV routine series"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Inactivated Poliovirus",
+      "abbr": "IPV",
+      "category": "vaccine",
+      "why": "Prevents paralytic polio.",
+      "recommendations": [
+        {
+          "label": "Routine childhood series",
+          "who": {
+            "age": {
+              "minYears": 0,
+              "maxYears": 7
+            },
+            "lifeStage": "infant/child",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "4-dose (2, 4, 6–18 months, 4–6 years)",
+            "doses": [
+              {
+                "dose": 1,
+                "minAgeMonths": 2,
+                "fixedMonthsFromStart": 2
+              },
+              {
+                "dose": 2,
+                "minAgeMonths": 4,
+                "fixedMonthsFromStart": 4,
+                "minIntervalWeeksFromPrev": 4
+              },
+              {
+                "dose": 3,
+                "minAgeMonths": 6,
+                "minIntervalWeeksFromPrev": 4
+              },
+              {
+                "dose": 4,
+                "minAgeMonths": 48,
+                "minIntervalWeeksFromPrev": 24
+              }
+            ],
+            "rules": [
+              "Final dose at ≥48 months AND ≥24 weeks after previous dose."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: IPV routine series and final-dose rule"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "COVID-19",
+      "abbr": "COVID-19",
+      "category": "vaccine",
+      "why": "Reduces risk of severe disease and hospitalization; schedules vary by manufacturer, age, and immune status.",
+      "recommendations": [
+        {
+          "label": "Ages 6 months–17 years (not immunocompromised) — SCDM",
+          "who": {
+            "age": {
+              "minYears": 0.5,
+              "maxYears": 17
+            },
+            "lifeStage": "any",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "Product- and age-specific per current season",
+            "rules": [
+              "Ages 6 months–4 years: use same manufacturer for all doses within the series.",
+              "Follow current CDC COVID-19 schedule website for exact intervals and dose counts."
+            ],
+            "externalScheduleRef": "https://www.cdc.gov/covidschedule"
+          },
+          "citations": [
+            "file:child-schedule: COVID-19 SCDM note and covidschedule reference"
+          ]
+        },
+        {
+          "label": "Immunocompromised 6 months–18 years",
+          "who": {
+            "age": {
+              "minYears": 0.5,
+              "maxYears": 18
+            },
+            "lifeStage": "any",
+            "sex": "any",
+            "riskFactors": [
+              "immunocompromised"
+            ]
+          },
+          "schedule": {
+            "series": "Initial multi-dose series + additional dose at ~6 months; may need further doses per CDC clinical considerations",
+            "rules": [
+              "Keep same manufacturer for initial series when required.",
+              "Consult clinical considerations for additional dosing."
+            ],
+            "externalConsiderationsRef": "https://www.cdc.gov/covid/hcp/vaccine-considerations/index.html"
+          },
+          "citations": [
+            "file:child-schedule: COVID-19 immunocompromised considerations"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Influenza",
+      "abbr": "IIV3/ccIIV3/LAIV3",
+      "category": "vaccine",
+      "why": "Annual vaccination reduces hospitalization and protects vulnerable contacts.",
+      "recommendations": [
+        {
+          "label": "Annual vaccination (seasonal)",
+          "who": {
+            "age": {
+              "minYears": 0.5,
+              "maxYears": 18
+            },
+            "lifeStage": "any",
+            "sex": "any"
+          },
+          "schedule": {
+            "annual": true,
+            "rules": [
+              "Age 6 months–8 years: give 2 doses in a season if <2 lifetime prior doses before July 1, 2024; otherwise 1 dose.",
+              "Age ≥9 years: 1 dose.",
+              "LAIV not for close contacts of persons requiring a protected environment; if given, avoid contact/care for 7 days."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: Influenza annual rules incl. 2-dose algorithm and LAIV caveat"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Measles, Mumps, Rubella",
+      "abbr": "MMR",
+      "category": "vaccine",
+      "why": "Measles is highly contagious; mumps and rubella have serious complications.",
+      "recommendations": [
+        {
+          "label": "Routine 2-dose",
+          "who": {
+            "age": {
+              "minYears": 1,
+              "maxYears": 7
+            },
+            "lifeStage": "child",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "2-dose (12–15 months, 4–6 years)",
+            "doses": [
+              {
+                "dose": 1,
+                "minAgeMonths": 12
+              },
+              {
+                "dose": 2,
+                "minAgeMonths": 48,
+                "minIntervalWeeksFromPrev": 4
+              }
+            ],
+            "rules": [
+              "If MMRV used, minimum interval between doses is 12 weeks (3 months).",
+              "For infants 6–11 months traveling internationally: 1 early dose; then revaccinate with 2-dose series after 12 months."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: MMR routine + travel + MMRV interval"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Varicella",
+      "abbr": "VAR",
+      "category": "vaccine",
+      "why": "Prevents chickenpox and complications (pneumonia, encephalitis).",
+      "recommendations": [
+        {
+          "label": "Routine 2-dose",
+          "who": {
+            "age": {
+              "minYears": 1,
+              "maxYears": 7
+            },
+            "lifeStage": "child",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "2-dose (12–15 months, 4–6 years)",
+            "doses": [
+              {
+                "dose": 1,
+                "minAgeMonths": 12
+              },
+              {
+                "dose": 2,
+                "minAgeMonths": 48,
+                "minIntervalWeeksFromPrev": 12
+              }
+            ],
+            "rules": [
+              "In catch-up, dose 2 valid if ≥4 weeks after dose 1 (≥13 years)."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: Varicella routine and catch-up interval"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Hepatitis A",
+      "abbr": "HepA",
+      "category": "vaccine",
+      "why": "Prevents liver infection spread via contaminated food/water or close contact.",
+      "recommendations": [
+        {
+          "label": "Routine 2-dose toddler",
+          "who": {
+            "age": {
+              "minYears": 1,
+              "maxYears": 2
+            },
+            "lifeStage": "toddler",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "2-dose (12–23 months)",
+            "doses": [
+              {
+                "dose": 1,
+                "minAgeMonths": 12
+              },
+              {
+                "dose": 2,
+                "minAgeMonths": 18,
+                "minIntervalWeeksFromPrev": 24
+              }
+            ]
+          },
+          "citations": [
+            "file:child-schedule: HepA 12–23 months 2-dose ≥6 months apart"
+          ]
+        },
+        {
+          "label": "Catch-up through 18 years",
+          "who": {
+            "age": {
+              "minYears": 1,
+              "maxYears": 18
+            },
+            "lifeStage": "child/adolescent",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "2-dose",
+            "doses": [
+              {
+                "dose": 1,
+                "fixedMonthsFromStart": 0
+              },
+              {
+                "dose": 2,
+                "minIntervalWeeksFromPrev": 24
+              }
+            ]
+          },
+          "citations": [
+            "file:child-schedule: HepA catch-up through 18y"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Tdap (≥7 years)",
+      "abbr": "Tdap",
+      "category": "vaccine",
+      "why": "Protects against tetanus, diphtheria, and pertussis; adolescent booster reduces spread.",
+      "recommendations": [
+        {
+          "label": "Adolescent booster",
+          "who": {
+            "age": {
+              "minYears": 11,
+              "maxYears": 12
+            },
+            "lifeStage": "adolescent",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "1 dose",
+            "doses": [
+              {
+                "dose": 1,
+                "minAgeMonths": 132
+              }
+            ]
+          },
+          "citations": [
+            "file:child-schedule: Tdap 11–12y booster"
+          ]
+        },
+        {
+          "label": "Catch-up 7–18 years",
+          "who": {
+            "age": {
+              "minYears": 7,
+              "maxYears": 18
+            },
+            "lifeStage": "child/adolescent",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "Use Tdap for first dose, then Td/Tdap per need",
+            "rules": [
+              "If Tdap given at age 10y, adolescent booster at 11–12y is not needed.",
+              "If Tdap given at 7–9y, still give adolescent Tdap at 11–12y."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: Tdap catch-up and interval notes"
+          ]
+        },
+        {
+          "label": "Pregnancy",
+          "who": {
+            "age": {
+              "minYears": 10,
+              "maxYears": 64
+            },
+            "lifeStage": "adult",
+            "sex": "female",
+            "pregnancyStatus": "pregnant"
+          },
+          "schedule": {
+            "singleDose": true,
+            "rules": [
+              "Give 1 dose during each pregnancy, preferably weeks 27–36."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: Tdap each pregnancy 27–36w"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Human papillomavirus",
+      "abbr": "HPV",
+      "category": "vaccine",
+      "why": "Prevents HPV-related cancers; greatest benefit before exposure.",
+      "recommendations": [
+        {
+          "label": "Routine/catch-up through 18 years",
+          "who": {
+            "age": {
+              "minYears": 9,
+              "maxYears": 18
+            },
+            "lifeStage": "child/adolescent",
+            "sex": "any"
+          },
+          "schedule": {
+            "branches": [
+              {
+                "appliesWhen": {
+                  "ageAtSeriesStartYearsLt": 15,
+                  "immunocompromised": false
+                },
+                "series": "2-dose (0, 6–12 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minIntervalWeeksFromPrev": 24
+                  }
+                ],
+                "rules": [
+                  "If doses <5 months apart, give a 3rd dose ≥6 months after dose 1."
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "ageAtSeriesStartYearsGe": 15
+                },
+                "series": "3-dose (0, 1–2, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "minIntervalWeeksFromPrev": 12
+                  }
+                ],
+                "rules": [
+                  "Also ensure 5 months between dose 1 and 3."
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "immunocompromised": true
+                },
+                "series": "3-dose (0, 1–2, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "minIntervalWeeksFromPrev": 12
+                  }
+                ]
+              }
+            ]
+          },
+          "citations": [
+            "file:child-schedule: HPV 2-dose vs 3-dose and immunocompromised"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Meningococcal ACWY",
+      "abbr": "MenACWY",
+      "category": "vaccine",
+      "why": "Prevents rapidly progressive meningitis and bloodstream infection.",
+      "recommendations": [
+        {
+          "label": "Routine adolescent series",
+          "who": {
+            "age": {
+              "minYears": 11,
+              "maxYears": 18
+            },
+            "lifeStage": "adolescent",
+            "sex": "any"
+          },
+          "schedule": {
+            "series": "2-dose (11–12 years, booster at 16)",
+            "doses": [
+              {
+                "dose": 1,
+                "minAgeMonths": 132
+              },
+              {
+                "dose": 2,
+                "minAgeMonths": 192,
+                "minIntervalWeeksFromPrev": 8
+              }
+            ]
+          },
+          "citations": [
+            "file:child-schedule: MenACWY routine 11–12 + 16 booster"
+          ]
+        },
+        {
+          "label": "Catch-up 13–18 years",
+          "who": {
+            "age": {
+              "minYears": 13,
+              "maxYears": 18
+            },
+            "lifeStage": "adolescent",
+            "sex": "any"
+          },
+          "schedule": {
+            "rules": [
+              "Age 13–15: 1 dose now + booster at 16–18 (≥8 weeks).",
+              "Age 16–18: 1 dose."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: MenACWY catch-up rules"
+          ]
+        },
+        {
+          "label": "High-risk indications (asplenia, HIV, complement deficiency/inhibitor use, travel to endemic areas)",
+          "who": {
+            "age": {
+              "minYears": 0.167,
+              "maxYears": 18
+            },
+            "lifeStage": "any",
+            "sex": "any",
+            "riskFactors": [
+              "asplenia",
+              "HIV",
+              "complement_component_deficiency",
+              "complement_inhibitor_use",
+              "travel_to_meningitis_belt_or_Hajj"
+            ]
+          },
+          "schedule": {
+            "series": "Age- and product-specific",
+            "rules": [
+              "Menveo: 2–23 months schedules vary by starting age (2,4,6,12; or 3–6 months schedules; or 7–23 months 2-dose).",
+              "At ≥24 months: Menveo or MenQuadfi 2 doses ≥8 weeks apart.",
+              "Boosters per ongoing risk."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: MenACWY special situations + travel + product minimum ages"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Meningococcal B",
+      "abbr": "MenB",
+      "category": "vaccine",
+      "why": "Prevents serogroup B disease; shared clinical decision-making for healthy adolescents.",
+      "recommendations": [
+        {
+          "label": "SCDM (healthy 16–23 years)",
+          "who": {
+            "age": {
+              "minYears": 16,
+              "maxYears": 23
+            },
+            "lifeStage": "adolescent/young_adult",
+            "sex": "any",
+            "specialConditions": [
+              "shared_clinical_decision_making"
+            ]
+          },
+          "schedule": {
+            "branches": [
+              {
+                "appliesWhen": {
+                  "needRapidProtection": false
+                },
+                "series": "2-dose (brand-specific) ≥6 months apart",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minIntervalWeeksFromPrev": 24
+                  }
+                ]
+              },
+              {
+                "appliesWhen": {
+                  "needRapidProtection": true
+                },
+                "series": "3-dose (0, 1–2, 6 months)",
+                "doses": [
+                  {
+                    "dose": 1,
+                    "fixedMonthsFromStart": 0
+                  },
+                  {
+                    "dose": 2,
+                    "minIntervalWeeksFromPrev": 4
+                  },
+                  {
+                    "dose": 3,
+                    "minIntervalWeeksFromPrev": 16
+                  }
+                ]
+              }
+            ],
+            "rules": [
+              "Use same brand for all doses. Penbraya option when co-admin with MenACWY same day (age ≥10y)."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: MenB SCDM dosing, rapid option, Penbraya"
+          ]
+        },
+        {
+          "label": "High-risk (asplenia, complement deficiency/inhibitor use) age ≥10 years",
+          "who": {
+            "age": {
+              "minYears": 10,
+              "maxYears": 18
+            },
+            "lifeStage": "child/adolescent",
+            "sex": "any",
+            "riskFactors": [
+              "asplenia",
+              "complement_component_deficiency",
+              "complement_inhibitor_use"
+            ]
+          },
+          "schedule": {
+            "series": "3-dose (0, 1–2, 6 months) with brand consistency; boosters per risk",
+            "rules": [
+              "If dose 2 ≥6 months after dose 1, dose 3 not needed.",
+              "If dose 3 <4 months after dose 2, add a 4th dose ≥4 months later."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: MenB special situations and booster logic"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Maternal RSV (Abrysvo)",
+      "abbr": "RSV (Abrysvo)",
+      "category": "vaccine",
+      "why": "Maternal vaccination during pregnancy protects newborns via transplacental antibodies.",
+      "recommendations": [
+        {
+          "label": "Seasonal administration in pregnancy",
+          "who": {
+            "age": {
+              "minYears": 18,
+              "maxYears": 999
+            },
+            "lifeStage": "adult",
+            "sex": "female",
+            "pregnancyStatus": "pregnant"
+          },
+          "schedule": {
+            "singleDose": true,
+            "rules": [
+              "Administer during 32w0d–36w6d gestation in season (Sep–Jan in most of continental U.S.).",
+              "Do not repeat in subsequent pregnancies; use infant nirsevimab instead."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: Maternal RSV timing and subsequent-pregnancy rule"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Dengue (DEN4CYD)",
+      "abbr": "DEN4CYD",
+      "category": "vaccine",
+      "why": "Prevents dengue in seropositive children living in endemic U.S. territories.",
+      "recommendations": [
+        {
+          "label": "Residents in endemic areas with prior dengue infection",
+          "who": {
+            "age": {
+              "minYears": 9,
+              "maxYears": 16
+            },
+            "lifeStage": "child/adolescent",
+            "sex": "any",
+            "riskFactors": [
+              "lab_confirmed_prior_infection",
+              "lives_in_endemic_area"
+            ]
+          },
+          "schedule": {
+            "series": "3-dose (0, 6, 12 months)",
+            "doses": [
+              {
+                "dose": 1,
+                "fixedMonthsFromStart": 0
+              },
+              {
+                "dose": 2,
+                "minIntervalWeeksFromPrev": 24
+              },
+              {
+                "dose": 3,
+                "minIntervalWeeksFromPrev": 24
+              }
+            ],
+            "rules": [
+              "Not for travelers; residents only in endemic areas listed by CDC."
+            ]
+          },
+          "citations": [
+            "file:child-schedule: Dengue indications, endemic areas, 3-dose schedule"
+          ]
+        }
+      ]
+    },
+    {
+      "immunizingAgent": "Mpox (Jynneos)",
+      "abbr": "Mpox",
+      "category": "vaccine",
+      "why": "Reduces mpox risk in persons with defined sexual exposure risks.",
+      "recommendations": [
+        {
+          "label": "Risk-based (≥18 years)",
+          "who": {
+            "age": {
+              "minYears": 18,
+              "maxYears": null
+            },
+            "lifeStage": "adult",
+            "sex": "any",
+            "riskFactors": [
+              "MSM_or_partner",
+              "multiple_partners",
+              "recent_STI",
+              "sex_in_high_transmission_context"
+            ]
+          },
+          "schedule": {
+            "series": "2-dose (0, 4 weeks)",
+            "doses": [
+              {
+                "dose": 1,
+                "fixedMonthsFromStart": 0
+              },
+              {
+                "dose": 2,
+                "minIntervalWeeksFromPrev": 4
+              }
+            ]
+          },
+          "citations": [
+            "file:child-schedule: Mpox age ≥18 and risk criteria; 2-dose schedule"
+          ]
+        }
+      ]
+    }
+  ],
+  "adultSource": "CDC Adult Easy-to-Read Schedule, United States, 2025 (published 2025-07-01)"
+}
