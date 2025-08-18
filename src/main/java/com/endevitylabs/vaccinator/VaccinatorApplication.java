@@ -12,7 +12,9 @@ import org.springframework.validation.annotation.Validated;
 
 @SpringBootApplication(exclude = {
     SecurityAutoConfiguration.class, 
-    UserDetailsServiceAutoConfiguration.class
+    UserDetailsServiceAutoConfiguration.class,
+    DataSourceAutoConfiguration.class,
+    HibernateJpaAutoConfiguration.class
 })
 @Validated
 public class VaccinatorApplication {

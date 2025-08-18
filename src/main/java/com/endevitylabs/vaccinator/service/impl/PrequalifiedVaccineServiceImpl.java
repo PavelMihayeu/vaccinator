@@ -4,8 +4,8 @@ import com.endevitylabs.vaccinator.dto.prequalified.BulkLoadPrequalifiedVaccines
 import com.endevitylabs.vaccinator.dto.prequalified.BulkLoadPrequalifiedVaccinesResponse;
 import com.endevitylabs.vaccinator.dto.prequalified.PrequalifiedVaccineDto;
 import com.endevitylabs.vaccinator.mapper.PrequalifiedVaccineMapper;
-import com.endevitylabs.vaccinator.model.PrequalifiedVaccineEntity;
-import com.endevitylabs.vaccinator.repository.PrequalifiedVaccineRepository;
+import com.endevitylabs.vaccinator.model.PrequalifiedVaccineDocument;
+import com.endevitylabs.vaccinator.repository.PrequalifiedVaccineMongoRepository;
 import com.endevitylabs.vaccinator.service.PrequalifiedVaccineService;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
@@ -13,7 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -31,29 +31,28 @@ public class PrequalifiedVaccineServiceImpl implements PrequalifiedVaccineServic
     private static final String CSV_FILE_PATH = "static/WHO_prequalified_vaccines.csv";
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    private final PrequalifiedVaccineRepository repository;
+    private final PrequalifiedVaccineMongoRepository repository;
     private final PrequalifiedVaccineMapper mapper;
 
-    public PrequalifiedVaccineServiceImpl(PrequalifiedVaccineRepository repository, PrequalifiedVaccineMapper mapper) {
+    public PrequalifiedVaccineServiceImpl(PrequalifiedVaccineMongoRepository repository, PrequalifiedVaccineMapper mapper) {
         this.repository = repository;
         this.mapper = mapper;
     }
 
     @Override
-    @Transactional
     public BulkLoadPrequalifiedVaccinesResponse bulkLoadFromCsv(BulkLoadPrequalifiedVaccinesRequest request) {
         logger.info("Starting bulk load of prequalified vaccines from CSV");
         
         List<String> errors = new ArrayList<>();
-        List<PrequalifiedVaccineEntity> loadedVaccines = new ArrayList<>();
+        List<PrequalifiedVaccineDocument> loadedVaccines = new ArrayList<>();
         int vaccinesReplaced = 0;
 
         try {
             // Delete existing vaccines if replaceExisting is true
             if (request.replaceExisting()) {
                 logger.info("Deleting existing prequalified vaccines");
-                repository.deleteAllPrequalifiedVaccines();
-                vaccinesReplaced = (int) repository.countAllPrequalifiedVaccines();
+                repository.deleteAll();
+                vaccinesReplaced = (int) repository.count();
             }
 
             // Load vaccines from CSV
@@ -80,8 +79,8 @@ public class PrequalifiedVaccineServiceImpl implements PrequalifiedVaccineServic
         );
     }
 
-    private List<PrequalifiedVaccineEntity> loadVaccinesFromCsv(List<String> errors) throws IOException {
-        List<PrequalifiedVaccineEntity> vaccines = new ArrayList<>();
+    private List<PrequalifiedVaccineDocument> loadVaccinesFromCsv(List<String> errors) throws IOException {
+        List<PrequalifiedVaccineDocument> vaccines = new ArrayList<>();
         
         try (CSVReader reader = new CSVReader(new InputStreamReader(new ClassPathResource(CSV_FILE_PATH).getInputStream()))) {
             // Skip header row
@@ -93,7 +92,7 @@ public class PrequalifiedVaccineServiceImpl implements PrequalifiedVaccineServic
             while ((line = reader.readNext()) != null) {
                 lineNumber++;
                 try {
-                    PrequalifiedVaccineEntity vaccine = parseCsvLine(line, lineNumber);
+                    PrequalifiedVaccineDocument vaccine = parseCsvLine(line, lineNumber);
                     vaccines.add(vaccine);
                 } catch (Exception e) {
                     String error = String.format("Line %d: %s", lineNumber, e.getMessage());
@@ -108,7 +107,7 @@ public class PrequalifiedVaccineServiceImpl implements PrequalifiedVaccineServic
         return vaccines;
     }
 
-    private PrequalifiedVaccineEntity parseCsvLine(String[] line, int lineNumber) {
+    private PrequalifiedVaccineDocument parseCsvLine(String[] line, int lineNumber) {
         if (line.length < 7) {
             throw new IllegalArgumentException("Invalid number of columns. Expected 7, got " + line.length);
         }
@@ -126,7 +125,7 @@ public class PrequalifiedVaccineServiceImpl implements PrequalifiedVaccineServic
             }
         }
 
-        return new PrequalifiedVaccineEntity(
+        return new PrequalifiedVaccineDocument(
             dateOfPrequalification,
             line[1].trim(),
             line[2].trim(),
@@ -158,7 +157,7 @@ public class PrequalifiedVaccineServiceImpl implements PrequalifiedVaccineServic
 
     @Override
     public List<PrequalifiedVaccineDto> getByVaccineType(String vaccineType) {
-        return repository.findByVaccineType(vaccineType).stream()
+        return repository.findByVaccineTypeContainingIgnoreCase(vaccineType).stream()
             .map(mapper::toDto)
             .collect(Collectors.toList());
     }
@@ -179,6 +178,6 @@ public class PrequalifiedVaccineServiceImpl implements PrequalifiedVaccineServic
 
     @Override
     public long getTotalCount() {
-        return repository.countAllPrequalifiedVaccines();
+        return repository.count();
     }
 } 

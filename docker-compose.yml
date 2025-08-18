@@ -19,52 +19,26 @@ services:
       retries: 3
     restart: unless-stopped
 
-  postgres:
-    image: postgres:15
-    container_name: vaccinator-postgres
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_DB: vaccinator_db
-      POSTGRES_USER: vaccinator_user
-      POSTGRES_PASSWORD: vaccinator_password
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    networks:
-      - vaccinator-net
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U vaccinator_user -d vaccinator_db"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    restart: unless-stopped
-
   app:
-    build: .
+    image: migaeff/vaccinator-api:latest
     container_name: vaccinator-app
     environment:
       SPRING_PROFILES_ACTIVE: docker
       SPRING_DATA_MONGODB_HOST: mongodb
       SPRING_DATA_MONGODB_PORT: 27017
       SPRING_DATA_MONGODB_DATABASE: vaccinator_db
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/vaccinator_db
-      SPRING_DATASOURCE_USERNAME: vaccinator_user
-      SPRING_DATASOURCE_PASSWORD: vaccinator_password
       API_KEY_SECRET: your-secret-key-here
     depends_on:
       mongodb:
         condition: service_healthy
-      postgres:
-        condition: service_healthy
     ports:
-      - "80:8080"
+      - "8080:8080"
     networks:
       - vaccinator-net
     restart: unless-stopped
 
 volumes:
   mongo_data:
-  postgres_data:
 
 networks:
   vaccinator-net:

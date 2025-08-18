@@ -87,33 +87,24 @@ The API reads from `src/main/resources/static/WHO_prequalified_vaccines.csv` wit
 ## Configuration
 
 ### Dependencies Added
-- `spring-boot-starter-data-jpa`: JPA support
-- `org.postgresql:postgresql`: PostgreSQL driver
+- `spring-boot-starter-data-mongodb`: MongoDB support
 - `com.opencsv:opencsv:5.9`: CSV parsing
 
 ### Database Configuration
 ```properties
-# PostgreSQL Configuration
-spring.datasource.url=jdbc:postgresql://localhost:5432/vaccinator_db
-spring.datasource.username=vaccinator_user
-spring.datasource.password=vaccinator_password
-spring.datasource.driver-class-name=org.postgresql.Driver
-
-# JPA Configuration
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=false
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+# MongoDB Configuration
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=vaccinator_db
 ```
 
 ### Docker Configuration
-The `docker-compose.yml` includes a PostgreSQL service:
+The `docker-compose.yml` includes a MongoDB service:
 ```yaml
-postgres:
-  image: postgres:15
+mongodb:
+  image: mongo:7.0
   environment:
-    POSTGRES_DB: vaccinator_db
-    POSTGRES_USER: vaccinator_user
-    POSTGRES_PASSWORD: vaccinator_password
+    MONGO_INITDB_DATABASE: vaccinator_db
 ```
 
 ## Usage Examples

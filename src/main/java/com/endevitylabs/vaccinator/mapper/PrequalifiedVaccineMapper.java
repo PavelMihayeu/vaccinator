@@ -1,24 +1,26 @@
 package com.endevitylabs.vaccinator.mapper;
 
 import com.endevitylabs.vaccinator.dto.prequalified.PrequalifiedVaccineDto;
-import com.endevitylabs.vaccinator.model.PrequalifiedVaccineEntity;
+import com.endevitylabs.vaccinator.model.PrequalifiedVaccineDocument;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * MapStruct mapper for PrequalifiedVaccineEntity and PrequalifiedVaccineDto
+ * MapStruct mapper for PrequalifiedVaccineDocument and PrequalifiedVaccineDto
  */
 @Mapper(componentModel = "spring")
 public interface PrequalifiedVaccineMapper {
 
     /**
-     * Convert entity to DTO (excluding id)
+     * Convert document to DTO (excluding id)
      */
-    PrequalifiedVaccineDto toDto(PrequalifiedVaccineEntity entity);
+    PrequalifiedVaccineDto toDto(PrequalifiedVaccineDocument document);
 
     /**
-     * Convert DTO to entity (id will be null for new entities)
+     * Convert DTO to document (id will be null for new documents)
      */
     @Mapping(target = "id", ignore = true)
-    PrequalifiedVaccineEntity toEntity(PrequalifiedVaccineDto dto);
+    @Mapping(target = "createdAt", ignore = true)
+    @Mapping(target = "updatedAt", ignore = true)
+    PrequalifiedVaccineDocument toDocument(PrequalifiedVaccineDto dto);
 } 

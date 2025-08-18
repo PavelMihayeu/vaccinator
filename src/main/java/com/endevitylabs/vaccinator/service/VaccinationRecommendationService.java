@@ -39,3 +39,4 @@ public interface VaccinationRecommendationService {
     RecommendationsResponse getRecommendationMetadata();
 }
 
+

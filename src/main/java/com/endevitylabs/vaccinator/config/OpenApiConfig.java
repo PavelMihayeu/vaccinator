@@ -46,17 +46,14 @@ public class OpenApiConfig {
                                 .url("https://opensource.org/licenses/MIT")))
                 .servers(List.of(
                         new Server()
-                                .url("http://localhost:8080")
+                                .url("https://vaccinator.org")
+                                .description("Production server"),
+                        new Server()
+                                .url("http://localhost:80")
                                 .description("Local Development server"),
                         new Server()
-                                .url("http://192.168.1.42:8080")
-                                .description("Development server"),
-                        new Server()
-                                .url("http://3.74.63.99")
-                                .description("Stage server"),
-                        new Server()
-                                .url("https://vaccinator.org")
-                                .description("Production server")
+                                .url("http://localhost:8080")
+                                .description("Local Development server")
                 ));
     }
 } 

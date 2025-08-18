@@ -1,5 +1,5 @@
 # Docker Hub configuration
-$DOCKER_USERNAME = "your-username"  # Replace with your Docker Hub username
+$DOCKER_USERNAME = "YOUR_DOCKERHUB_USERNAME"  # Replace with your Docker Hub username
 $REPOSITORY_NAME = "vaccinator-api"
 $VERSION = "1.0.0"
 

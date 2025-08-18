@@ -12,7 +12,7 @@
       "abbr": "RSV-mAb",
       "immunizingAgent": "Respiratory syncytial virus monoclonal antibody (Nirsevimab)",
       "category": "Monoclonal antibody",
-      "why": "Provides passive protection against severe RSV in infants and certain toddlers.",
+      "why": "Provides passive protection against severe RSV in infants and certain toddlers. RSV causes respiratory infections that can lead to bronchiolitis, pneumonia, and hospitalization, especially dangerous for premature infants and those with underlying health conditions.",
       "recommendations": [
         {
           "label": "Infant — first RSV season (depends on maternal vaccination)",
@@ -80,7 +80,7 @@
       "abbr": "HepB",
       "immunizingAgent": "Hepatitis B vaccine",
       "category": "vaccine",
-      "why": "Prevents chronic liver infection, cirrhosis, and liver cancer.",
+      "why": "Prevents chronic liver infection, cirrhosis, and liver cancer. Hepatitis B is a serious liver disease that can cause lifelong infection, leading to liver failure, liver cancer, and death. The virus spreads through blood and body fluids, making it a significant public health concern.",
       "recommendations": [
         {
           "label": "Routine infant series",
@@ -527,7 +527,7 @@
       "abbr": "RV",
       "immunizingAgent": "Rotavirus vaccine",
       "category": "vaccine",
-      "why": "Prevents severe diarrhea, dehydration, and hospitalization in infants.",
+      "why": "Prevents severe diarrhea, dehydration, and hospitalization in infants. Rotavirus is the leading cause of severe diarrhea in young children worldwide, causing millions of hospitalizations and deaths annually. The vaccine significantly reduces the risk of severe gastroenteritis and its complications.",
       "recommendations": [
         {
           "label": "Routine infant oral series",
@@ -601,7 +601,7 @@
       "abbr": "DTaP",
       "immunizingAgent": "Diphtheria, tetanus, and acellular pertussis vaccine",
       "category": "vaccine",
-      "why": "Prevents diphtheria, tetanus, and pertussis; pertussis is severe in infants.",
+      "why": "Prevents diphtheria, tetanus, and pertussis; pertussis is severe in infants. Diphtheria causes severe throat infections and heart damage, tetanus leads to painful muscle spasms and death, while pertussis (whooping cough) causes severe coughing fits that can be fatal in infants and lead to pneumonia and brain damage.",
       "recommendations": [
         {
           "label": "Routine 5-dose childhood series",
@@ -661,7 +661,7 @@
       "abbr": "Hib",
       "immunizingAgent": "Haemophilus influenzae type b vaccine",
       "category": "vaccine",
-      "why": "Prevents invasive Hib disease (meningitis, pneumonia).",
+      "why": "Prevents invasive Hib disease (meningitis, pneumonia). Haemophilus influenzae type b was once the leading cause of bacterial meningitis in children under 5, causing severe brain damage, hearing loss, and death. The vaccine has dramatically reduced these devastating infections.",
       "recommendations": [
         {
           "label": "Routine infant/toddler series + booster",
@@ -744,7 +744,7 @@
       "immunizingAgent": "Pneumococcal conjugate",
       "abbr": "PCV15/PCV20",
       "category": "vaccine",
-      "why": "Prevents pneumococcal pneumonia, meningitis, and bacteremia.",
+      "why": "Prevents pneumococcal pneumonia, meningitis, and bacteremia. Streptococcus pneumoniae causes serious infections including pneumonia, blood infections, and meningitis. These diseases can lead to hospitalization, long-term complications like hearing loss and brain damage, and death, especially in young children and older adults.",
       "recommendations": [
         {
           "label": "Routine infant series",
@@ -793,7 +793,7 @@
       "immunizingAgent": "Inactivated Poliovirus",
       "abbr": "IPV",
       "category": "vaccine",
-      "why": "Prevents paralytic polio.",
+      "why": "Prevents paralytic polio. Poliovirus can cause permanent paralysis, difficulty breathing, and death. While polio has been eliminated in most countries, vaccination remains crucial to prevent outbreaks and protect against imported cases. The disease can cause lifelong disability and requires intensive medical care.",
       "recommendations": [
         {
           "label": "Routine childhood series",
@@ -844,7 +844,7 @@
       "immunizingAgent": "COVID-19",
       "abbr": "COVID-19",
       "category": "vaccine",
-      "why": "Reduces risk of severe disease and hospitalization; schedules vary by manufacturer, age, and immune status.",
+      "why": "Reduces risk of severe disease and hospitalization; schedules vary by manufacturer, age, and immune status. COVID-19 can cause severe respiratory illness, blood clots, heart problems, and long-term symptoms. Vaccination significantly reduces the risk of severe disease, hospitalization, and death, while also helping to prevent long COVID complications.",
       "recommendations": [
         {
           "label": "Ages 6 months–17 years (not immunocompromised) — SCDM",
@@ -899,7 +899,7 @@
       "immunizingAgent": "Influenza",
       "abbr": "IIV3/ccIIV3/LAIV3",
       "category": "vaccine",
-      "why": "Annual vaccination reduces hospitalization and protects vulnerable contacts.",
+      "why": "Annual vaccination reduces hospitalization and protects vulnerable contacts. Influenza can cause severe respiratory illness, pneumonia, and death, especially in young children, older adults, and those with chronic conditions. Annual vaccination is necessary because flu viruses change each year, and it helps protect vulnerable populations through herd immunity.",
       "recommendations": [
         {
           "label": "Annual vaccination (seasonal)",
@@ -929,7 +929,7 @@
       "immunizingAgent": "Measles, Mumps, Rubella",
       "abbr": "MMR",
       "category": "vaccine",
-      "why": "Measles is highly contagious; mumps and rubella have serious complications.",
+      "why": "Measles is highly contagious; mumps and rubella have serious complications. Measles can cause high fever, rash, pneumonia, brain inflammation, and death. Mumps can lead to painful swelling of salivary glands, meningitis, and infertility. Rubella during pregnancy can cause severe birth defects, miscarriage, or stillbirth. These diseases are highly preventable through vaccination.",
       "recommendations": [
         {
           "label": "Routine 2-dose",
@@ -969,7 +969,7 @@
       "immunizingAgent": "Varicella",
       "abbr": "VAR",
       "category": "vaccine",
-      "why": "Prevents chickenpox and complications (pneumonia, encephalitis).",
+      "why": "Prevents chickenpox and complications (pneumonia, encephalitis). Chickenpox causes itchy rash, fever, and can lead to serious complications including bacterial skin infections, pneumonia, brain inflammation, and death. The virus can also reactivate later in life as shingles, causing severe nerve pain and rash. Vaccination prevents both chickenpox and reduces shingles risk.",
       "recommendations": [
         {
           "label": "Routine 2-dose",
@@ -1008,7 +1008,7 @@
       "immunizingAgent": "Hepatitis A",
       "abbr": "HepA",
       "category": "vaccine",
-      "why": "Prevents liver infection spread via contaminated food/water or close contact.",
+      "why": "Prevents liver infection spread via contaminated food/water or close contact. Hepatitis A causes inflammation of the liver, leading to jaundice, fatigue, abdominal pain, and in severe cases, liver failure and death. The virus is highly contagious and can spread through contaminated food, water, or close personal contact. Vaccination provides long-term protection against this preventable disease.",
       "recommendations": [
         {
           "label": "Routine 2-dose toddler",
@@ -1071,7 +1071,7 @@
       "immunizingAgent": "Tdap (≥7 years)",
       "abbr": "Tdap",
       "category": "vaccine",
-      "why": "Protects against tetanus, diphtheria, and pertussis; adolescent booster reduces spread.",
+      "why": "Protects against tetanus, diphtheria, and pertussis; adolescent booster reduces spread. Tetanus causes painful muscle spasms and can lead to death from respiratory failure. Diphtheria creates a thick coating in the throat that can block breathing and damage heart and nerves. Pertussis causes severe coughing that can break ribs and lead to pneumonia. The adolescent booster is crucial for protecting vulnerable infants.",
       "recommendations": [
         {
           "label": "Adolescent booster",
@@ -1144,7 +1144,7 @@
       "immunizingAgent": "Human papillomavirus",
       "abbr": "HPV",
       "category": "vaccine",
-      "why": "Prevents HPV-related cancers; greatest benefit before exposure.",
+      "why": "Prevents HPV-related cancers; greatest benefit before exposure. Human papillomavirus causes nearly all cases of cervical cancer, as well as cancers of the throat, anus, penis, and vagina. HPV also causes genital warts. Vaccination before sexual activity provides the best protection, as it prevents infection with the most dangerous cancer-causing HPV types. This vaccine can prevent thousands of cancer cases annually.",
       "recommendations": [
         {
           "label": "Routine/catch-up through 18 years",
@@ -1233,7 +1233,7 @@
       "immunizingAgent": "Meningococcal ACWY",
       "abbr": "MenACWY",
       "category": "vaccine",
-      "why": "Prevents rapidly progressive meningitis and bloodstream infection.",
+      "why": "Prevents rapidly progressive meningitis and bloodstream infection. Meningococcal disease can progress from mild symptoms to death within hours. It causes severe inflammation of the brain and spinal cord membranes, leading to brain damage, hearing loss, limb amputations, and death. The disease is particularly dangerous for adolescents and young adults, and vaccination provides crucial protection during this high-risk period.",
       "recommendations": [
         {
           "label": "Routine adolescent series",
@@ -1318,7 +1318,7 @@
       "immunizingAgent": "Meningococcal B",
       "abbr": "MenB",
       "category": "vaccine",
-      "why": "Prevents serogroup B disease; shared clinical decision-making for healthy adolescents.",
+      "why": "Prevents serogroup B disease; shared clinical decision-making for healthy adolescents. Meningococcal B disease causes the same devastating effects as other meningococcal types - rapid progression to meningitis, bloodstream infection, and death. While less common than other serogroups, it's equally deadly and can cause permanent disabilities. The vaccine is recommended for adolescents and young adults who are at increased risk.",
       "recommendations": [
         {
           "label": "SCDM (healthy 16–23 years)",
@@ -1412,7 +1412,7 @@
       "immunizingAgent": "Maternal RSV (Abrysvo)",
       "abbr": "RSV (Abrysvo)",
       "category": "vaccine",
-      "why": "Maternal vaccination during pregnancy protects newborns via transplacental antibodies.",
+      "why": "Maternal vaccination during pregnancy protects newborns via transplacental antibodies. RSV is the leading cause of severe respiratory illness in infants. Maternal vaccination during pregnancy provides antibodies that cross the placenta to protect newborns during their first months of life when they're most vulnerable. This approach prevents severe RSV disease and reduces hospitalizations in the critical early months.",
       "recommendations": [
         {
           "label": "Seasonal administration in pregnancy",
@@ -1442,7 +1442,7 @@
       "immunizingAgent": "Dengue (DEN4CYD)",
       "abbr": "DEN4CYD",
       "category": "vaccine",
-      "why": "Prevents dengue in seropositive children living in endemic U.S. territories.",
+      "why": "Prevents dengue in seropositive children living in endemic U.S. territories. Dengue fever causes high fever, severe headache, joint pain, and in severe cases, dengue hemorrhagic fever which can lead to shock, bleeding, and death. The vaccine is specifically for children who have had a previous dengue infection and live in endemic areas, as it can prevent severe disease in subsequent infections.",
       "recommendations": [
         {
           "label": "Residents in endemic areas with prior dengue infection",
@@ -1488,7 +1488,7 @@
       "immunizingAgent": "Mpox (Jynneos)",
       "abbr": "Mpox",
       "category": "vaccine",
-      "why": "Reduces mpox risk in persons with defined sexual exposure risks.",
+      "why": "Reduces mpox risk in persons with defined sexual exposure risks. Mpox (formerly monkeypox) causes painful skin lesions, fever, and swollen lymph nodes. While usually self-limiting, it can cause severe complications including secondary infections, scarring, and in rare cases, death. The vaccine provides protection for individuals at higher risk of exposure and helps prevent outbreaks in vulnerable populations.",
       "recommendations": [
         {
           "label": "Risk-based (≥18 years)",

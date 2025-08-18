@@ -1,45 +1,56 @@
 package com.endevitylabs.vaccinator.model;
 
-import jakarta.persistence.*;
-import java.time.LocalDate;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-@Entity
-@Table(name = "prequalified_vaccines")
-public class PrequalifiedVaccineEntity {
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Document(collection = "prequalified_vaccines")
+public class PrequalifiedVaccineDocument {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
-    @Column(name = "date_of_prequalification", nullable = false)
+    @Field("date_of_prequalification")
     private LocalDate dateOfPreQualification;
 
-    @Column(name = "vaccine_type", nullable = false)
+    @Field("vaccine_type")
     private String vaccineType;
 
-    @Column(name = "commercial_name", nullable = false)
+    @Field("commercial_name")
     private String commercialName;
 
-    @Column(name = "presentation", nullable = false)
+    @Field("presentation")
     private String presentation;
 
-    @Column(name = "number_of_doses")
+    @Field("number_of_doses")
     private Integer numberOfDoses;
 
-    @Column(name = "manufacturer", nullable = false)
+    @Field("manufacturer")
     private String manufacturer;
 
-    @Column(name = "responsible_nra", nullable = false)
+    @Field("responsible_nra")
     private String responsibleNRA;
 
+    @Field("created_at")
+    private LocalDateTime createdAt;
+
+    @Field("updated_at")
+    private LocalDateTime updatedAt;
+
     // Default constructor
-    public PrequalifiedVaccineEntity() {
+    public PrequalifiedVaccineDocument() {
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
     }
 
     // Constructor with all fields
-    public PrequalifiedVaccineEntity(LocalDate dateOfPreQualification, String vaccineType,
-                                     String commercialName, String presentation, Integer numberOfDoses,
-                                     String manufacturer, String responsibleNRA) {
+    public PrequalifiedVaccineDocument(LocalDate dateOfPreQualification, String vaccineType,
+                                       String commercialName, String presentation, Integer numberOfDoses,
+                                       String manufacturer, String responsibleNRA) {
+        this();
         this.dateOfPreQualification = dateOfPreQualification;
         this.vaccineType = vaccineType;
         this.commercialName = commercialName;
@@ -50,11 +61,11 @@ public class PrequalifiedVaccineEntity {
     }
 
     // Getters and Setters
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -114,17 +125,35 @@ public class PrequalifiedVaccineEntity {
         this.responsibleNRA = responsibleNRA;
     }
 
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
     @Override
     public String toString() {
-        return "PrequalifiedVaccineEntity{" +
-                "id=" + id +
-                ", dateOfPrequalification=" + dateOfPreQualification +
+        return "PrequalifiedVaccineDocument{" +
+                "id='" + id + '\'' +
+                ", dateOfPreQualification=" + dateOfPreQualification +
                 ", vaccineType='" + vaccineType + '\'' +
                 ", commercialName='" + commercialName + '\'' +
                 ", presentation='" + presentation + '\'' +
                 ", numberOfDoses=" + numberOfDoses +
                 ", manufacturer='" + manufacturer + '\'' +
                 ", responsibleNRA='" + responsibleNRA + '\'' +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
                 '}';
     }
 
@@ -133,7 +162,7 @@ public class PrequalifiedVaccineEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        PrequalifiedVaccineEntity that = (PrequalifiedVaccineEntity) o;
+        PrequalifiedVaccineDocument that = (PrequalifiedVaccineDocument) o;
 
         if (!dateOfPreQualification.equals(that.dateOfPreQualification)) return false;
         if (!vaccineType.equals(that.vaccineType)) return false;
@@ -155,4 +184,4 @@ public class PrequalifiedVaccineEntity {
         result = 31 * result + responsibleNRA.hashCode();
         return result;
     }
-} 
+}
